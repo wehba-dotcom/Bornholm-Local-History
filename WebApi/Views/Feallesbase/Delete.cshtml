@@ -1,0 +1,100 @@
+﻿@model WebApi.SharedModels.Feallesbase
+
+<div class="card shadow border-0 mt-4">
+    <div class="card-header bg-secondary bg-gradient ml-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-black-50 pl-3 ">Slet Side</h2>
+            </div>
+        </div>
+    </div>
+    <div class="card-body p-4">
+
+      <form method="post" asp-action="Index2">
+    <input asp-for="ID" hidden />
+     <div class="border p-3">
+         <div class="col">
+            <div class="row-12">
+                <div class="form-group col">
+                    <div class="mp-3">
+                        <label asp-for="AvisTypeID" class="form-label"></label>
+                        <input asp-for="AvisTypeID" disabled class="form-control" />
+                    </div>
+                    <div class="mp-3">
+                        <label asp-for="Avisdato" class="form-label"></label>
+                        <input asp-for="Avisdato" disabled class="form-control" />
+
+                    </div>
+                    <div class="mp-3">
+                        <label asp-for="Efternavn" class="form-label"></label>
+                        <input asp-for="Efternavn" disabled class="form-control" />
+                    </div>
+                    <div class="mp-3">
+                        <label asp-for="Fornavne" class="form-label"></label>
+                        <input asp-for="Fornavne" disabled class="form-control" />
+                    </div>
+                    <div class="mp-3">
+                        <label asp-for="Foedt" class="form-label"></label>
+                        <input asp-for="Foedt" disabled class="form-control" />
+
+                    </div>
+                    <div class="mp-3">
+                        <label asp-for="Alder" class="form-label"></label>
+                        <input asp-for="Alder" disabled class="form-control" />
+                    </div>
+                    <div class="mp-3">
+                        <label asp-for="Doebenavn" class="form-label"></label>
+                        <input asp-for="Doebenavn" disabled class="form-control" />
+                    </div>
+                    <div class="mp-3">
+                        <label asp-for="Erhverv" class="form-label"></label>
+                        <input asp-for="Erhverv" disabled class="form-control" />
+
+                    </div>
+                    <div class="mp-3">
+                        <label asp-for="Adresser" class="form-label"></label>
+                        <input asp-for="Adresser" disabled class="form-control" />
+                    </div>
+                    <div class="mp-3">
+                        <label asp-for="SognID" class="form-label"></label>
+                        <input asp-for="SognID" disabled class="form-control" />
+                    </div>
+                    <div class="mp-3">
+                        <label asp-for="TidlBopael" class="form-label"></label>
+                        <input asp-for="TidlBopael" disabled class="form-control" />
+
+                    </div>
+                    <div class="mp-3">
+                        <label asp-for="Doedsdato" class="form-label"></label>
+                        <input asp-for="Doedsdato" disabled class="form-control" />
+                    </div>
+                    <div class="mp-3">
+                        <label asp-for="Begravelsesdato" class="form-label"></label>
+                        <input asp-for="Begravelsesdato" disabled class="form-control" />
+                    </div>
+                    <div class="mp-3">
+                        <label asp-for="Begravelsessted" class="form-label"></label>
+                        <input asp-for="Begravelsessted" disabled class="form-control" />
+
+                </div>
+                <br/>
+                <div class="form-group row">
+                    <div class="col-8 offset-2 row">
+                        <div class="col">
+                            <input type="submit" class="btn btn-primary w-75" value="Slet" />
+                        </div>
+                        <div class="col">
+                            <a asp-action="Index" class="btn btn-primary w-75">TilBage</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+ </form>
+</div>
+</div>
+
+
+

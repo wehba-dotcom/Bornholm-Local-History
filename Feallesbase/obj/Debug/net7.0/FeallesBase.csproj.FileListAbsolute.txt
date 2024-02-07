@@ -1,0 +1,7 @@
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Feallesbase\obj\Debug\net7.0\FeallesBase.csproj.AssemblyReference.cache
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Feallesbase\obj\Debug\net7.0\FeallesBase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Feallesbase\obj\Debug\net7.0\FeallesBase.AssemblyInfoInputs.cache
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Feallesbase\obj\Debug\net7.0\FeallesBase.AssemblyInfo.cs
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Feallesbase\obj\Debug\net7.0\FeallesBase.csproj.CoreCompileInputs.cache
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Feallesbase\obj\Debug\net7.0\FeallesBase.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Feallesbase\obj\Debug\net7.0\FeallesBase.MvcApplicationPartsAssemblyInfo.cache
