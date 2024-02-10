@@ -16,16 +16,16 @@ SD.AuthAPIBase = builder.Configuration["ServiceUrls:AuthAPI"];
 builder.Services.AddScoped<ITokenProvider, TokenProvider>();
 builder.Services.AddScoped<IBaseService, BaseService>();
 
-
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 builder.Services.AddControllersWithViews();
 
 
-builder.Services.AddHttpClient("MyClient", client =>
-{
-    // Set the timeout to 30 seconds (or any other duration you prefer)
-    client.Timeout = TimeSpan.FromSeconds(30);
-});
+//builder.Services.AddHttpClient("MyClient", client =>
+//{
+//    // Set the timeout to 30 seconds (or any other duration you prefer)
+//    client.Timeout = TimeSpan.FromSeconds(30);
+//});
 
 
 
