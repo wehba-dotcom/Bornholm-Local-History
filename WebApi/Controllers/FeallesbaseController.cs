@@ -8,6 +8,8 @@ using Newtonsoft.Json;
 using System.Text;
 using System.Net;
 using WebApi.SharedModels;
+using DocumentFormat.OpenXml.Wordprocessing;
+
 
 namespace WebApi.Controllers
 {
@@ -24,8 +26,8 @@ namespace WebApi.Controllers
             _httpClientFactory = httpClientFactory;
         }
 
-       
 
+        [Authorize(Roles="ADMIN")]
         public async Task<IActionResult> Index(string? Fornavne, DateTime? DoedDato, int pg)
         {
             var client = _httpClientFactory.CreateClient("MyClient");

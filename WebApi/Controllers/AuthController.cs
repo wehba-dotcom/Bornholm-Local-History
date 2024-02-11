@@ -106,7 +106,11 @@ namespace WebApi.Controllers
             return RedirectToAction("Index","Home");
         }
 
-
+        public async Task<IActionResult> AccessDenied()
+        {
+            
+            return View();
+        }
         private async Task SignInUser(LoginResponse model)
         {
             var handler = new JwtSecurityTokenHandler();

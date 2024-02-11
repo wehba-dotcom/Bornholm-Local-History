@@ -37,3 +37,9 @@ C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\b
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Bogus.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\DocumentFormat.OpenXml.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\DocumentFormat.OpenXml.Framework.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Elasticsearch.Net.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Nest.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\System.IO.Packaging.dll
