@@ -11,11 +11,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddHttpClient();
 builder.Services.AddHttpClient<IAuthService, AuthService>();
+builder.Services.AddHttpClient<IFeallesService, FeallesService>();
 SD.AuthAPIBase = builder.Configuration["ServiceUrls:AuthAPI"];
+SD.FeallesAPIBase = builder.Configuration["ServiceUrls:Feallesbase"];
 
 builder.Services.AddScoped<ITokenProvider, TokenProvider>();
 builder.Services.AddScoped<IBaseService, BaseService>();
-
+builder.Services.AddScoped<IFeallesService, FeallesService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 
 builder.Services.AddControllersWithViews();

@@ -6,12 +6,14 @@ using System.Net.Sockets;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FeallesService.Controllers
 {
 
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/feallesbase")]
+    [Authorize]
     public class FeallesbaseController : ControllerBase
 
     {

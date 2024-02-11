@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "FPuC2fH/J3Iy+4UwfshHSRKHiXTSaavkpQ0r4p6lFQjG4OpRkXB4mC+F10M5AafC5VvOMg8gkgiD1Tqn8EQ35g==",
+  "dgSpecHash": "F4ipufhSZ825r1dgYQ3OR6XFTjsUnnrrBVOc5t00kQboqKT9abv31Did4MSKXVJEbBEvUST3aqKioo+PnW57Tw==",
   "success": true,
   "projectFilePath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\exam_projekt\\BornholmSlaughterhouses\\Fealles\\Fealles.csproj",
   "expectedPackageFiles": [
@@ -56,6 +56,7 @@
     "C:\\Users\\WEHBA\\.nuget\\packages\\humanizer.core.zh-cn\\2.14.1\\humanizer.core.zh-cn.2.14.1.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\humanizer.core.zh-hans\\2.14.1\\humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\humanizer.core.zh-hant\\2.14.1\\humanizer.core.zh-hant.2.14.1.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.0\\microsoft.aspnetcore.authentication.jwtbearer.7.0.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.13\\microsoft.aspnetcore.openapi.7.0.13.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.11\\microsoft.aspnetcore.razor.language.6.0.11.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
