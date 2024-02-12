@@ -50,12 +50,12 @@ namespace WebApi.Service
             });
         }
 
-        public async Task<Response?> GetFeallesByIdAsync(int id)
+        public async Task<Response?> GetFeallesByIdAsync(int ID)
         {
             return await _baseService.SendAsync(new Request()
             {
                 ApiType = SD.ApiType.GET,
-                Url = SD.FeallesAPIBase + "/api/feallesbase/" + id
+                Url = SD.FeallesAPIBase + "/api/feallesbase/" + ID
             });
         }
 

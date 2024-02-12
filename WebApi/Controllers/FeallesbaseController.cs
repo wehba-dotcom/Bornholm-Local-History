@@ -15,6 +15,7 @@ using Nest;
 using DocumentFormat.OpenXml.Office2010.ExcelAc;
 using System.Collections.Generic;
 using Microsoft.Xrm.Sdk.Messages;
+using Microsoft.AspNetCore.Mvc.TagHelpers.Cache;
 
 
 namespace WebApi.Controllers
@@ -362,30 +363,73 @@ namespace WebApi.Controllers
 
             return View(data);
         }
+
+
+        public async Task<IActionResult> Create()
+        {
+            return View();
+        }
         //    public async Task<IActionResult> CouponCreate()
         //    {
         //        return View();
         //    }
 
-        //    [HttpPost]
-        //    public async Task<IActionResult> CouponCreate(CouponDto model)
-        //    {
-        //        if (ModelState.IsValid)
-        //        {
-        //            ResponseDto? response = await _couponService.CreateCouponsAsync(model);
+        [HttpPost]
+        public async Task<IActionResult> Create(Feallesbase model)
+        {
+            if (ModelState.IsValid)
+            {
+                Response? response = await _feallesService.CreateFeallesAsync(model);
 
-        //            if (response != null && response.IsSuccess)
-        //            {
-        //                TempData["success"] = "Coupon created successfully";
-        //                return RedirectToAction(nameof(CouponIndex));
-        //            }
-        //            else
-        //            {
-        //                TempData["error"] = response?.Message;
-        //            }
-        //        }
-        //        return View(model);
-        //    }
+                if (response != null && response.IsSuccess)
+                {
+                    TempData["success"] = "Coupon created successfully";
+                    return RedirectToAction(nameof(Index));
+                }
+                else
+                {
+                    TempData["error"] = response?.Message;
+                }
+            }
+            return View(model);
+        }
+
+
+        public async Task<IActionResult> Update(int ID)
+        {
+            Response? response = await _feallesService.GetFeallesByIdAsync(ID);
+
+            if (response != null && response.IsSuccess)
+            {
+                Feallesbase? model = JsonConvert.DeserializeObject<Feallesbase>(Convert.ToString(response.Result));
+                return View(model);
+            }
+            else
+            {
+                TempData["error"] = response?.Message;
+            }
+            return NotFound();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdatePut(Feallesbase feallesbase)
+        {
+            if (ModelState.IsValid)
+            {
+                Response? response = await _feallesService.UpdateFeallesAsync(feallesbase);
+
+                if (response != null && response.IsSuccess)
+                {
+                    TempData["success"] = "Product updated successfully";
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    TempData["error"] = response?.Message;
+                }
+            }
+            return View(feallesbase);
+        }
 
         //    public async Task<IActionResult> CouponDelete(int couponId)
         //    {

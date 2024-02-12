@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using FeallesService.Models;
 using AutoMapper;
+using Stripe;
 
 namespace FeallesService.Controllers
 {
@@ -54,72 +55,58 @@ namespace FeallesService.Controllers
 
             // GET: api/Feallesbase/5
             [HttpGet("{id}")]
-        public async Task<ActionResult<Feallesbase>> GetFeallesbase(int id)
+        public Response GetFeallesbase(int id)
         {
-            var feallesbase = await _db.Feallesbases.FindAsync(id);
-
-            if (feallesbase == null)
+            try
             {
-                return NotFound();
+                Feallesbase obj = _db.Feallesbases.First(u => u.ID== id);
+                _response.Result = _mapper.Map<Feallesbase>(obj);
             }
-
-            return feallesbase;
+            catch (Exception ex)
+            {
+                _response.IsSuccess = false;
+                _response.Message = ex.Message;
+            }
+            return _response;
         }
 
         // POST: api/Feallesbase
         [HttpPost]
-        public async Task<ActionResult> Create([FromBody] Feallesbase feallesbase)
+        public Response Create([FromBody] Feallesbase feallesbase)
         {
-            if (ModelState.IsValid)
+            try
             {
-                try
-                {
-
-                    await _db.Feallesbases.AddAsync(feallesbase);
-                    await _db.SaveChangesAsync();
-                    return Ok(200);
-                }
-                catch (Exception ex)
-                {
-                    // Log the exception or handle it appropriately
-                    return BadRequest("Failed to create the resource: " + ex.Message);
-                }
+                Feallesbase obj = _mapper.Map<Feallesbase>(feallesbase);
+                _db.Feallesbases.Add(obj);
+                _db.SaveChanges();
+                _response.Result = _mapper.Map<Feallesbase>(obj);
             }
-            return BadRequest();
+            catch (Exception ex)
+            {
+                _response.IsSuccess = false;
+                _response.Message = ex.Message;
+            }
+            return _response;
 
         }
         // PUT: api/Feallesbase/5
         [HttpPut("{ID}")]
-        public async Task<IActionResult> PutFeallesbase( int ID, [FromBody] Feallesbase feallesbase)
+        public Response PutFeallesbase( int ID, [FromBody] Feallesbase feallesbase)
         {
-            Console.WriteLine($"Received ID: {ID}, Feallesbase: {JsonConvert.SerializeObject(feallesbase)}");
-
-            if (ID != feallesbase.ID)
-            {
-                // Log the mismatch for debugging
-                Console.WriteLine("ID mismatch");
-                return BadRequest();
-            }
-
-            _db.Entry(feallesbase).State = EntityState.Modified;
-
             try
             {
-                await _db.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!FeallesbaseExists(ID))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+                Feallesbase obj = _mapper.Map<Feallesbase>(feallesbase);
+                _db.Feallesbases.Update(obj);
+                _db.SaveChanges();
 
-            return NoContent();
+                _response.Result = _mapper.Map<Feallesbase>(obj);
+            }
+            catch (Exception ex)
+            {
+                _response.IsSuccess = false;
+                _response.Message = ex.Message;
+            }
+            return _response;
         }
 
         // DELETE: api/Feallesbase/5

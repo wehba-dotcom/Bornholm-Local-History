@@ -5,9 +5,11 @@ C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\bin\Debug\net7.0\Fealles.runtimeconfig.json
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\bin\Debug\net7.0\Fealles.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\bin\Debug\net7.0\Fealles.pdb
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\bin\Debug\net7.0\AutoMapper.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\bin\Debug\net7.0\Azure.Core.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\bin\Debug\net7.0\Azure.Identity.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\bin\Debug\net7.0\Humanizer.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -62,6 +64,7 @@ C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\bin\Debug\net7.0\NuGet.ProjectModel.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\bin\Debug\net7.0\NuGet.Protocol.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\bin\Debug\net7.0\NuGet.Versioning.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\bin\Debug\net7.0\Stripe.net.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -253,5 +256,3 @@ C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\obj\Debug\net7.0\Fealles.pdb
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\obj\Debug\net7.0\Fealles.genruntimeconfig.cache
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\obj\Debug\net7.0\ref\Fealles.dll
-C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\bin\Debug\net7.0\AutoMapper.dll
