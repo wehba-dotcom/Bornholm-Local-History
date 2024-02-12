@@ -7,12 +7,15 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
+using FeallesService.Models;
+using AutoMapper;
 
 namespace FeallesService.Controllers
 {
 
-    [ApiController]
+    
     [Route("api/feallesbase")]
+    [ApiController]
     [Authorize]
     public class FeallesbaseController : ControllerBase
 
@@ -20,33 +23,31 @@ namespace FeallesService.Controllers
 
 
         private readonly AppDbContext _db;
-
-        public FeallesbaseController(AppDbContext db)
+        private Response _response;
+        private IMapper _mapper;
+        public FeallesbaseController(AppDbContext db,IMapper mapper)
         {
             _db = db;
+            _mapper = mapper;
+            _response = new Response();
 
         }
 
         // GET: api/Feallesbase
         [HttpGet]
-        public async Task<ActionResult> GetFeallesbases()
+        public  Response GetFeallesbases()
         {
-
             try
             {
-                var objList = from b in await _db.Feallesbases.ToListAsync() select b;
-
-                // Process 'data' or return it as needed
-                return Ok(objList); // Return HTTP 200 OK with the 'data'
-
-
+                IEnumerable<Feallesbase> objList = _db.Feallesbases.ToList();
+                _response.Result = _mapper.Map<IEnumerable<Feallesbase>>(objList);
             }
             catch (Exception ex)
             {
-                // Log the exception
-                Console.WriteLine(ex);
-                return StatusCode(500, "Internal Server Error");
+                _response.IsSuccess = false;
+                _response.Message = ex.Message;
             }
+            return _response;
 
         }
 

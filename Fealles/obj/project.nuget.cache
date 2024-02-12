@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "F4ipufhSZ825r1dgYQ3OR6XFTjsUnnrrBVOc5t00kQboqKT9abv31Did4MSKXVJEbBEvUST3aqKioo+PnW57Tw==",
+  "dgSpecHash": "gRyJtbzFIe3I7L2Vf5AvH6xFXwIiuUZepUtggJwPswpr1PyebBAhl/gT917aqjUUhW4CIuINCfK1/JRodmy7Bw==",
   "success": true,
   "projectFilePath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\exam_projekt\\BornholmSlaughterhouses\\Fealles\\Fealles.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\WEHBA\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",

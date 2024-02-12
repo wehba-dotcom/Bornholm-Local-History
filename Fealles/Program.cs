@@ -7,6 +7,7 @@ using NuGet.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using FeallesService.Extensions;
+using AutoMapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +26,12 @@ catch (Exception ex)
     Console.WriteLine("An error occurred while setting up the DbContext:");
     Console.WriteLine(ex.Message);
 }
+
+
+//IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
+//builder.Services.AddSingleton(mapper);
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 //builder.Services.AddSwaggerGen();
 
 builder.Services.AddControllers();

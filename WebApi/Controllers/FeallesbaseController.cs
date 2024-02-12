@@ -11,6 +11,10 @@ using WebApi.SharedModels;
 using DocumentFormat.OpenXml.Wordprocessing;
 using WebApi.Service.IService;
 using WebApi.Models;
+using Nest;
+using DocumentFormat.OpenXml.Office2010.ExcelAc;
+using System.Collections.Generic;
+using Microsoft.Xrm.Sdk.Messages;
 
 
 namespace WebApi.Controllers
@@ -22,304 +26,304 @@ namespace WebApi.Controllers
     {
 
 
-    //    private readonly IHttpClientFactory _httpClientFactory;
-    //    public FeallesbaseController(IHttpClientFactory httpClientFactory)
-    //    {
-    //        _httpClientFactory = httpClientFactory;
-    //    }
+        //    private readonly IHttpClientFactory _httpClientFactory;
+        //    public FeallesbaseController(IHttpClientFactory httpClientFactory)
+        //    {
+        //        _httpClientFactory = httpClientFactory;
+        //    }
 
 
 
-    //    public async Task<IActionResult> Index(string? Fornavne, DateTime? DoedDato, int pg)
-    //    {
-    //        var client = _httpClientFactory.CreateClient("MyClient");
+        //    public async Task<IActionResult> Index(string? Fornavne, DateTime? DoedDato, int pg)
+        //    {
+        //        var client = _httpClientFactory.CreateClient("MyClient");
 
 
-    //        var request = new HttpRequestMessage(HttpMethod.Get, $"https://localhost:7128/Feallesbase");
+        //        var request = new HttpRequestMessage(HttpMethod.Get, $"https://localhost:7128/Feallesbase");
 
-    //        var response = await client.SendAsync(request);
+        //        var response = await client.SendAsync(request);
 
-    //        var result = await response.Content.ReadAsStringAsync();
+        //        var result = await response.Content.ReadAsStringAsync();
 
-    //        if (!response.IsSuccessStatusCode)
-    //        {
-    //            ViewBag.Alert = $"Noget er galt! Grunden: {response.ReasonPhrase}";
-    //            return View();
-    //        }
+        //        if (!response.IsSuccessStatusCode)
+        //        {
+        //            ViewBag.Alert = $"Noget er galt! Grunden: {response.ReasonPhrase}";
+        //            return View();
+        //        }
 
-    //        // var feallesbaseobj = JsonConvert.DeserializeObject<Feallesbase>(result);
-    //        List<Feallesbase>? convert = JsonConvert.DeserializeObject<List<Feallesbase>>(result) as List<Feallesbase>;
+        //        // var feallesbaseobj = JsonConvert.DeserializeObject<Feallesbase>(result);
+        //        List<Feallesbase>? convert = JsonConvert.DeserializeObject<List<Feallesbase>>(result) as List<Feallesbase>;
 
-    //        //var convertlist = convert.ToList();
-    //        if (!String.IsNullOrEmpty(Fornavne) && DoedDato != null)
-    //        {
-    //            convert = (List<Feallesbase>)convert.Where(b => b.Fornavne.Contains(Fornavne) && b.Doedsdato == DoedDato);
+        //        //var convertlist = convert.ToList();
+        //        if (!String.IsNullOrEmpty(Fornavne) && DoedDato != null)
+        //        {
+        //            convert = (List<Feallesbase>)convert.Where(b => b.Fornavne.Contains(Fornavne) && b.Doedsdato == DoedDato);
 
-    //        }
-    //        else if (String.IsNullOrEmpty(Fornavne) && DoedDato != null)
-    //        {
-    //            convert = (List<Feallesbase>)convert.Where(b => b.Doedsdato == DoedDato);
-    //        }
-    //        else if (!String.IsNullOrEmpty(Fornavne) && DoedDato == null)
-    //        {
-    //            convert = (List<Feallesbase>)convert.Where(b => b.Fornavne.Contains(Fornavne));
-    //        }
+        //        }
+        //        else if (String.IsNullOrEmpty(Fornavne) && DoedDato != null)
+        //        {
+        //            convert = (List<Feallesbase>)convert.Where(b => b.Doedsdato == DoedDato);
+        //        }
+        //        else if (!String.IsNullOrEmpty(Fornavne) && DoedDato == null)
+        //        {
+        //            convert = (List<Feallesbase>)convert.Where(b => b.Fornavne.Contains(Fornavne));
+        //        }
 
-    //        const int pageSize = 10;
-    //        if (pg < 1)
-    //        {
-    //            pg = 1;
-    //        }
-    //        int recsCount = convert.Count();
-    //        var pager = new WebApi.Models.Pager(recsCount, pg, pageSize);
-    //        int resSkip = (pg - 1) * pageSize;
-    //        var data = convert.Skip(resSkip).Take(pager.PageSize).ToList();
+        //        const int pageSize = 10;
+        //        if (pg < 1)
+        //        {
+        //            pg = 1;
+        //        }
+        //        int recsCount = convert.Count();
+        //        var pager = new WebApi.Models.Pager(recsCount, pg, pageSize);
+        //        int resSkip = (pg - 1) * pageSize;
+        //        var data = convert.Skip(resSkip).Take(pager.PageSize).ToList();
 
-    //        //var data = objLists.ToList();
-    //        this.ViewBag.Pager = pager;
+        //        //var data = objLists.ToList();
+        //        this.ViewBag.Pager = pager;
 
-    //        return View(data);
+        //        return View(data);
 
-    //    }
+        //    }
 
-    //    public IActionResult Create()
-    //    {
-    //        return View();
-    //    }
-
-
-    //    [HttpPost]
-    //    public async Task<IActionResult> Create(Feallesbase feallesbase)
-    //    {
-    //        try
-    //        {
-    //            using (var client = _httpClientFactory.CreateClient("MyClient"))
-    //            {
-    //                // Serialize the Feallesbase object and send it in the request body
-    //                var content = new StringContent(JsonConvert.SerializeObject(feallesbase), Encoding.UTF8, "application/json");
-
-    //                // Use Uri.EscapeUriString to ensure proper URL encoding
-    //                var request = new HttpRequestMessage(HttpMethod.Post, $"https://localhost:7128/Feallesbase")
-    //                {
-    //                    Content = content
-    //                };
-
-    //                var response = await client.SendAsync(request);
-
-    //                response.EnsureSuccessStatusCode(); // Ensure a successful response (status code 2xx)
-
-    //                TempData["success"] = "En annonccer tilføjet successfully";
-    //                return RedirectToAction("Index");
-    //            }
-    //        }
-    //        catch (HttpRequestException ex)
-    //        {
-    //            // Log the exception or handle it appropriately
-    //            ViewBag.Alert = $"Noget er galt! Grunden: {ex.Message}";
-    //            return View();
-    //        }
-    //    }
+        //    public IActionResult Create()
+        //    {
+        //        return View();
+        //    }
 
 
-    //    [HttpGet]
-    //    public async Task<IActionResult> Update(Feallesbase feallesbase)
-    //    {
-    //        try
-    //        {
-    //            using (var client = _httpClientFactory.CreateClient("MyClient"))
-    //            {
-    //                // Serialize the Feallesbase object and send it in the request body
-    //                var content = new StringContent(JsonConvert.SerializeObject(feallesbase), Encoding.UTF8, "application/json");
+        //    [HttpPost]
+        //    public async Task<IActionResult> Create(Feallesbase feallesbase)
+        //    {
+        //        try
+        //        {
+        //            using (var client = _httpClientFactory.CreateClient("MyClient"))
+        //            {
+        //                // Serialize the Feallesbase object and send it in the request body
+        //                var content = new StringContent(JsonConvert.SerializeObject(feallesbase), Encoding.UTF8, "application/json");
 
-    //                // Use Uri.EscapeUriString to ensure proper URL encoding
-    //                var request = new HttpRequestMessage(HttpMethod.Get, $"https://localhost:7128/Feallesbase/{feallesbase.ID}")
-    //                {
-    //                    Content = content
-    //                };
+        //                // Use Uri.EscapeUriString to ensure proper URL encoding
+        //                var request = new HttpRequestMessage(HttpMethod.Post, $"https://localhost:7128/Feallesbase")
+        //                {
+        //                    Content = content
+        //                };
 
-    //                var response = await client.SendAsync(request);
+        //                var response = await client.SendAsync(request);
 
+        //                response.EnsureSuccessStatusCode(); // Ensure a successful response (status code 2xx)
 
-    //                if (response.IsSuccessStatusCode)
-    //                {
-    //                    var result = await response.Content.ReadAsStringAsync();
-    //                    var feallesbaseobj = JsonConvert.DeserializeObject<Feallesbase>(result);
-
-    //                    TempData["success"] = "Annoncen er taked successfully";
-    //                    return View(feallesbaseobj);
-    //                }
-    //                else if (response.StatusCode == HttpStatusCode.NotFound)
-    //                {
-    //                    // Handle not found case
-    //                    return NotFound();
-    //                }
-    //                else
-    //                {
-    //                    // Handle other error cases
-    //                    ViewBag.Alert = $"Noget er galt! Status Code: {response.StatusCode}";
-    //                    return View("Index");
-    //                }
-    //            }
-    //        }
-    //        catch (HttpRequestException ex)
-    //        {
-    //            // Log the exception or handle it appropriately
-    //            ViewBag.Alert = $"Noget er galt! Grunden: {ex.Message}";
-    //            return View("Index");
-    //        }
-    //    }
+        //                TempData["success"] = "En annonccer tilføjet successfully";
+        //                return RedirectToAction("Index");
+        //            }
+        //        }
+        //        catch (HttpRequestException ex)
+        //        {
+        //            // Log the exception or handle it appropriately
+        //            ViewBag.Alert = $"Noget er galt! Grunden: {ex.Message}";
+        //            return View();
+        //        }
+        //    }
 
 
-    //    [HttpPost]
-    //    public async Task<IActionResult> Index1(Feallesbase feallesbase)
-    //    {
-    //        try
-    //        {
+        //    [HttpGet]
+        //    public async Task<IActionResult> Update(Feallesbase feallesbase)
+        //    {
+        //        try
+        //        {
+        //            using (var client = _httpClientFactory.CreateClient("MyClient"))
+        //            {
+        //                // Serialize the Feallesbase object and send it in the request body
+        //                var content = new StringContent(JsonConvert.SerializeObject(feallesbase), Encoding.UTF8, "application/json");
 
-    //            using (var client = _httpClientFactory.CreateClient("MyClient"))
-    //            {
-    //                // Serialize the Feallesbase object and send it in the request body
-    //                var content = new StringContent(JsonConvert.SerializeObject(feallesbase), Encoding.UTF8, "application/json");
+        //                // Use Uri.EscapeUriString to ensure proper URL encoding
+        //                var request = new HttpRequestMessage(HttpMethod.Get, $"https://localhost:7128/Feallesbase/{feallesbase.ID}")
+        //                {
+        //                    Content = content
+        //                };
 
-    //                // Use Uri.EscapeUriString to ensure proper URL encoding
-    //                var request = new HttpRequestMessage(HttpMethod.Put, $"https://localhost:7128/Feallesbase/{feallesbase.ID}")
-    //                {
-    //                    Content = content
-    //                };
-
-    //                var response = await client.SendAsync(request);
-    //                if (response.IsSuccessStatusCode)
-    //                {
-    //                    //var result = await response.Content.ReadAsStringAsync();
-    //                    //var feallesbaseobj = JsonConvert.DeserializeObject<Feallesbase>(result);
-    //                    response.EnsureSuccessStatusCode();
-    //                    TempData["success"] = "Annoncen er opdateret successfully";
-    //                    return RedirectToAction("Index");
-    //                }
-    //                else if (response.StatusCode == HttpStatusCode.NotFound)
-    //                {
-    //                    // Handle not found case
-    //                    return NotFound();
-    //                }
-    //                else
-    //                {
-    //                    // Handle other error cases
-    //                    ViewBag.Alert = $"Noget er galt! Status Code: {response.StatusCode}";
-    //                    return View("Index");
-    //                }
-    //            }
-    //        }
-    //        catch (HttpRequestException ex)
-    //        {
-    //            // Log the exception or handle it appropriately
-    //            ViewBag.Alert = $"Noget er galt! Grunden: {ex.Message}";
-    //            return View("Index");
-    //        }
-    //    }
+        //                var response = await client.SendAsync(request);
 
 
-    //    [HttpGet]
-    //    public async Task<IActionResult> Delete(Feallesbase feallesbase)
-    //    {
-    //        try
-    //        {
-    //            using (var client = _httpClientFactory.CreateClient("MyClient"))
-    //            {
-    //                // Serialize the Feallesbase object and send it in the request body
-    //                var content = new StringContent(JsonConvert.SerializeObject(feallesbase), Encoding.UTF8, "application/json");
+        //                if (response.IsSuccessStatusCode)
+        //                {
+        //                    var result = await response.Content.ReadAsStringAsync();
+        //                    var feallesbaseobj = JsonConvert.DeserializeObject<Feallesbase>(result);
 
-    //                // Use Uri.EscapeUriString to ensure proper URL encoding
-    //                var request = new HttpRequestMessage(HttpMethod.Get, $"https://localhost:7128/Feallesbase/{feallesbase.ID}")
-    //                {
-    //                    Content = content
-    //                };
-
-    //                var response = await client.SendAsync(request);
-
-
-    //                if (response.IsSuccessStatusCode)
-    //                {
-    //                    var result = await response.Content.ReadAsStringAsync();
-    //                    var feallesbaseobj = JsonConvert.DeserializeObject<Feallesbase>(result);
-
-    //                    TempData["success"] = "Annoncen er taked successfully";
-    //                    return View(feallesbaseobj);
-    //                }
-    //                else if (response.StatusCode == HttpStatusCode.NotFound)
-    //                {
-    //                    // Handle not found case
-    //                    return NotFound();
-    //                }
-    //                else
-    //                {
-    //                    // Handle other error cases
-    //                    ViewBag.Alert = $"Noget er galt! Status Code: {response.StatusCode}";
-    //                    return View("Index");
-    //                }
-    //            }
-    //        }
-    //        catch (HttpRequestException ex)
-    //        {
-    //            // Log the exception or handle it appropriately
-    //            ViewBag.Alert = $"Noget er galt! Grunden: {ex.Message}";
-    //            return View("Index");
-    //        }
-    //    }
+        //                    TempData["success"] = "Annoncen er taked successfully";
+        //                    return View(feallesbaseobj);
+        //                }
+        //                else if (response.StatusCode == HttpStatusCode.NotFound)
+        //                {
+        //                    // Handle not found case
+        //                    return NotFound();
+        //                }
+        //                else
+        //                {
+        //                    // Handle other error cases
+        //                    ViewBag.Alert = $"Noget er galt! Status Code: {response.StatusCode}";
+        //                    return View("Index");
+        //                }
+        //            }
+        //        }
+        //        catch (HttpRequestException ex)
+        //        {
+        //            // Log the exception or handle it appropriately
+        //            ViewBag.Alert = $"Noget er galt! Grunden: {ex.Message}";
+        //            return View("Index");
+        //        }
+        //    }
 
 
+        //    [HttpPost]
+        //    public async Task<IActionResult> Index1(Feallesbase feallesbase)
+        //    {
+        //        try
+        //        {
+
+        //            using (var client = _httpClientFactory.CreateClient("MyClient"))
+        //            {
+        //                // Serialize the Feallesbase object and send it in the request body
+        //                var content = new StringContent(JsonConvert.SerializeObject(feallesbase), Encoding.UTF8, "application/json");
+
+        //                // Use Uri.EscapeUriString to ensure proper URL encoding
+        //                var request = new HttpRequestMessage(HttpMethod.Put, $"https://localhost:7128/Feallesbase/{feallesbase.ID}")
+        //                {
+        //                    Content = content
+        //                };
+
+        //                var response = await client.SendAsync(request);
+        //                if (response.IsSuccessStatusCode)
+        //                {
+        //                    //var result = await response.Content.ReadAsStringAsync();
+        //                    //var feallesbaseobj = JsonConvert.DeserializeObject<Feallesbase>(result);
+        //                    response.EnsureSuccessStatusCode();
+        //                    TempData["success"] = "Annoncen er opdateret successfully";
+        //                    return RedirectToAction("Index");
+        //                }
+        //                else if (response.StatusCode == HttpStatusCode.NotFound)
+        //                {
+        //                    // Handle not found case
+        //                    return NotFound();
+        //                }
+        //                else
+        //                {
+        //                    // Handle other error cases
+        //                    ViewBag.Alert = $"Noget er galt! Status Code: {response.StatusCode}";
+        //                    return View("Index");
+        //                }
+        //            }
+        //        }
+        //        catch (HttpRequestException ex)
+        //        {
+        //            // Log the exception or handle it appropriately
+        //            ViewBag.Alert = $"Noget er galt! Grunden: {ex.Message}";
+        //            return View("Index");
+        //        }
+        //    }
 
 
-    //    [HttpPost]
-    //    public async Task<IActionResult> Index2(Feallesbase feallesbase)
-    //    {
+        //    [HttpGet]
+        //    public async Task<IActionResult> Delete(Feallesbase feallesbase)
+        //    {
+        //        try
+        //        {
+        //            using (var client = _httpClientFactory.CreateClient("MyClient"))
+        //            {
+        //                // Serialize the Feallesbase object and send it in the request body
+        //                var content = new StringContent(JsonConvert.SerializeObject(feallesbase), Encoding.UTF8, "application/json");
 
-    //        try
-    //        {
+        //                // Use Uri.EscapeUriString to ensure proper URL encoding
+        //                var request = new HttpRequestMessage(HttpMethod.Get, $"https://localhost:7128/Feallesbase/{feallesbase.ID}")
+        //                {
+        //                    Content = content
+        //                };
 
-    //            using (var client = _httpClientFactory.CreateClient("MyClient"))
-    //            {
-    //                // Serialize the Feallesbase object and send it in the request body
-    //                var content = new StringContent(JsonConvert.SerializeObject(feallesbase), Encoding.UTF8, "application/json");
-
-    //                // Use Uri.EscapeUriString to ensure proper URL encoding
-    //                var request = new HttpRequestMessage(HttpMethod.Delete, $"https://localhost:7128/Feallesbase/{feallesbase.ID}")
-    //                {
-    //                    Content = content
-    //                };
-
-    //                var response = await client.SendAsync(request);
-    //                if (response.IsSuccessStatusCode)
-    //                {
-    //                    //var result = await response.Content.ReadAsStringAsync();
-    //                    //var feallesbaseobj = JsonConvert.DeserializeObject<Feallesbase>(result);
-    //                    response.EnsureSuccessStatusCode();
-    //                    TempData["success"] = "Annoncen er sletet successfully";
-    //                    return RedirectToAction("Index");
-    //                }
-    //                else if (response.StatusCode == HttpStatusCode.NotFound)
-    //                {
-    //                    // Handle not found case
-    //                    return NotFound();
-    //                }
-    //                else
-    //                {
-    //                    // Handle other error cases
-    //                    ViewBag.Alert = $"Noget er galt! Status Code: {response.StatusCode}";
-    //                    return View("Index");
-    //                }
-    //            }
-    //        }
-    //        catch (HttpRequestException ex)
-    //        {
-    //            // Log the exception or handle it appropriately
-    //            ViewBag.Alert = $"Noget er galt! Grunden: {ex.Message}";
-    //            return View("Index");
-    //        }
-    //    }
-    //}
+        //                var response = await client.SendAsync(request);
 
 
-   
+        //                if (response.IsSuccessStatusCode)
+        //                {
+        //                    var result = await response.Content.ReadAsStringAsync();
+        //                    var feallesbaseobj = JsonConvert.DeserializeObject<Feallesbase>(result);
+
+        //                    TempData["success"] = "Annoncen er taked successfully";
+        //                    return View(feallesbaseobj);
+        //                }
+        //                else if (response.StatusCode == HttpStatusCode.NotFound)
+        //                {
+        //                    // Handle not found case
+        //                    return NotFound();
+        //                }
+        //                else
+        //                {
+        //                    // Handle other error cases
+        //                    ViewBag.Alert = $"Noget er galt! Status Code: {response.StatusCode}";
+        //                    return View("Index");
+        //                }
+        //            }
+        //        }
+        //        catch (HttpRequestException ex)
+        //        {
+        //            // Log the exception or handle it appropriately
+        //            ViewBag.Alert = $"Noget er galt! Grunden: {ex.Message}";
+        //            return View("Index");
+        //        }
+        //    }
+
+
+
+
+        //    [HttpPost]
+        //    public async Task<IActionResult> Index2(Feallesbase feallesbase)
+        //    {
+
+        //        try
+        //        {
+
+        //            using (var client = _httpClientFactory.CreateClient("MyClient"))
+        //            {
+        //                // Serialize the Feallesbase object and send it in the request body
+        //                var content = new StringContent(JsonConvert.SerializeObject(feallesbase), Encoding.UTF8, "application/json");
+
+        //                // Use Uri.EscapeUriString to ensure proper URL encoding
+        //                var request = new HttpRequestMessage(HttpMethod.Delete, $"https://localhost:7128/Feallesbase/{feallesbase.ID}")
+        //                {
+        //                    Content = content
+        //                };
+
+        //                var response = await client.SendAsync(request);
+        //                if (response.IsSuccessStatusCode)
+        //                {
+        //                    //var result = await response.Content.ReadAsStringAsync();
+        //                    //var feallesbaseobj = JsonConvert.DeserializeObject<Feallesbase>(result);
+        //                    response.EnsureSuccessStatusCode();
+        //                    TempData["success"] = "Annoncen er sletet successfully";
+        //                    return RedirectToAction("Index");
+        //                }
+        //                else if (response.StatusCode == HttpStatusCode.NotFound)
+        //                {
+        //                    // Handle not found case
+        //                    return NotFound();
+        //                }
+        //                else
+        //                {
+        //                    // Handle other error cases
+        //                    ViewBag.Alert = $"Noget er galt! Status Code: {response.StatusCode}";
+        //                    return View("Index");
+        //                }
+        //            }
+        //        }
+        //        catch (HttpRequestException ex)
+        //        {
+        //            // Log the exception or handle it appropriately
+        //            ViewBag.Alert = $"Noget er galt! Grunden: {ex.Message}";
+        //            return View("Index");
+        //        }
+        //    }
+        //}
+
+
+
         private readonly IFeallesService _feallesService;
         public FeallesbaseController(IFeallesService feallesService)
         {
@@ -327,99 +331,100 @@ namespace WebApi.Controllers
         }
 
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int pg)
         {
-            List<Feallesbase>? data = new();
+            List<Feallesbase>? list = new();
 
             Response? response = await _feallesService.GetAllFeallesesAsync();
 
             if (response != null && response.IsSuccess)
             {
-                data = JsonConvert.DeserializeObject<List<Feallesbase>>(Convert.ToString(response.Result));
-                //const int pageSize = 10;
-                //int pg = 0;
-                //if (pg < 1)
-                //{
-                //    pg = 1;
-                //}
-                //int recsCount = data.Count();
-                //var pager = new WebApi.Models.Pager(recsCount, pg, pageSize);
-                //int resSkip = (pg - 1) * pageSize;
-                // data.Skip(resSkip).Take(pager.PageSize);
-
-                //var data = objLists.ToList();
-                //this.ViewBag.Pager = pager;
+                list = JsonConvert.DeserializeObject<List<Feallesbase>>(Convert.ToString(response.Result));
             }
             else
             {
                 TempData["error"] = response?.Message;
             }
 
+          
+            const int pageSize = 10;
+            if (pg < 1)
+            {
+                pg = 1;
+            }
+            int recsCount = list.Count();
+            var pager = new WebApi.Models.Pager(recsCount, pg, pageSize);
+            int resSkip = (pg - 1) * pageSize;
+            var data = list.Skip(resSkip).Take(pager.PageSize);
+
+            //var data = objLists.ToList();
+            this.ViewBag.Pager = pager;
+
             return View(data);
         }
+        //    public async Task<IActionResult> CouponCreate()
+        //    {
+        //        return View();
+        //    }
 
-    //    public async Task<IActionResult> CouponCreate()
-    //    {
-    //        return View();
-    //    }
+        //    [HttpPost]
+        //    public async Task<IActionResult> CouponCreate(CouponDto model)
+        //    {
+        //        if (ModelState.IsValid)
+        //        {
+        //            ResponseDto? response = await _couponService.CreateCouponsAsync(model);
 
-    //    [HttpPost]
-    //    public async Task<IActionResult> CouponCreate(CouponDto model)
-    //    {
-    //        if (ModelState.IsValid)
-    //        {
-    //            ResponseDto? response = await _couponService.CreateCouponsAsync(model);
+        //            if (response != null && response.IsSuccess)
+        //            {
+        //                TempData["success"] = "Coupon created successfully";
+        //                return RedirectToAction(nameof(CouponIndex));
+        //            }
+        //            else
+        //            {
+        //                TempData["error"] = response?.Message;
+        //            }
+        //        }
+        //        return View(model);
+        //    }
 
-    //            if (response != null && response.IsSuccess)
-    //            {
-    //                TempData["success"] = "Coupon created successfully";
-    //                return RedirectToAction(nameof(CouponIndex));
-    //            }
-    //            else
-    //            {
-    //                TempData["error"] = response?.Message;
-    //            }
-    //        }
-    //        return View(model);
-    //    }
+        //    public async Task<IActionResult> CouponDelete(int couponId)
+        //    {
+        //        ResponseDto? response = await _couponService.GetCouponByIdAsync(couponId);
 
-    //    public async Task<IActionResult> CouponDelete(int couponId)
-    //    {
-    //        ResponseDto? response = await _couponService.GetCouponByIdAsync(couponId);
+        //        if (response != null && response.IsSuccess)
+        //        {
+        //            CouponDto? model = JsonConvert.DeserializeObject<CouponDto>(Convert.ToString(response.Result));
+        //            return View(model);
+        //        }
+        //        else
+        //        {
+        //            TempData["error"] = response?.Message;
+        //        }
+        //        return NotFound();
+        //    }
 
-    //        if (response != null && response.IsSuccess)
-    //        {
-    //            CouponDto? model = JsonConvert.DeserializeObject<CouponDto>(Convert.ToString(response.Result));
-    //            return View(model);
-    //        }
-    //        else
-    //        {
-    //            TempData["error"] = response?.Message;
-    //        }
-    //        return NotFound();
-    //    }
+        //    [HttpPost]
+        //    public async Task<IActionResult> CouponDelete(CouponDto couponDto)
+        //    {
+        //        ResponseDto? response = await _couponService.DeleteCouponsAsync(couponDto.CouponId);
 
-    //    [HttpPost]
-    //    public async Task<IActionResult> CouponDelete(CouponDto couponDto)
-    //    {
-    //        ResponseDto? response = await _couponService.DeleteCouponsAsync(couponDto.CouponId);
+        //        if (response != null && response.IsSuccess)
+        //        {
+        //            TempData["success"] = "Coupon deleted successfully";
+        //            return RedirectToAction(nameof(CouponIndex));
+        //        }
+        //        else
+        //        {
+        //            TempData["error"] = response?.Message;
+        //        }
+        //        return View(couponDto);
+        //    }
 
-    //        if (response != null && response.IsSuccess)
-    //        {
-    //            TempData["success"] = "Coupon deleted successfully";
-    //            return RedirectToAction(nameof(CouponIndex));
-    //        }
-    //        else
-    //        {
-    //            TempData["error"] = response?.Message;
-    //        }
-    //        return View(couponDto);
-    //    }
-
-
-    }
 
     }
+
+}
+
 
 
 

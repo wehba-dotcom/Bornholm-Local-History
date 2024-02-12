@@ -254,3 +254,4 @@ C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\obj\Debug\net7.0\Fealles.genruntimeconfig.cache
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\obj\Debug\net7.0\ref\Fealles.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Fealles\bin\Debug\net7.0\AutoMapper.dll

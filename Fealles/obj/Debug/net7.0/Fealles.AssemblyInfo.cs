@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Fealles")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a0ef261bf66fc72776b8738e8bf4e0b7ae5a1a83")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c10b2f7b7a36c1058358173c7021ce7cd9fbf2d2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Fealles")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Fealles")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

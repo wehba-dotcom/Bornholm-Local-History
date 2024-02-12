@@ -43,3 +43,5 @@ C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\b
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Elasticsearch.Net.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Nest.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\System.IO.Packaging.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Microsoft.Crm.Sdk.Proxy.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Microsoft.Xrm.Sdk.dll
