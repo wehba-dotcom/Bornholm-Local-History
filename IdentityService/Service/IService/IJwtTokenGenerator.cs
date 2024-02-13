@@ -1,7 +1,7 @@
-﻿using IdentityService.Data;
-using IdentityService.Models;
+﻿using IdentityApi.Data;
+using IdentityApi.Models;
 
-namespace IdentityService.Service.IService
+namespace IdentityApi.Service.IService
 {
     public interface IJwtTokenGenerator
     {

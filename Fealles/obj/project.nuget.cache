@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nY0eyk/hqn/F3ENFX1tF9NgxQHG39c04LbPCjxMa/nTJrY11pRecxONhznEylbxJ69Zhyw09neU83QF5Y3U3tg==",
+  "dgSpecHash": "7FH7kwFUKMDtSmgCD5tkB+hoYoTSKnNXPxDLXZOP1c5R+SwgJVoCJy0i6IT/DNzrRkUFG0QQbkqiyTQhL8Jw4A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\exam_projekt\\BornholmSlaughterhouses\\Fealles\\Fealles.csproj",
+  "projectFilePath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\exam_projekt\\BornholmSlaughterhouses\\Fealles\\FeallesBaseApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WEHBA\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",

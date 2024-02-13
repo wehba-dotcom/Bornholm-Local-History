@@ -12278,9 +12278,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\exam_projekt\\BornholmSlaughterhouses\\IdentityService\\IdentityService.csproj",
-      "projectName": "IdentityService",
-      "projectPath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\exam_projekt\\BornholmSlaughterhouses\\IdentityService\\IdentityService.csproj",
+      "projectUniqueName": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\exam_projekt\\BornholmSlaughterhouses\\IdentityService\\IdentityApi.csproj",
+      "projectName": "IdentityApi",
+      "projectPath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\exam_projekt\\BornholmSlaughterhouses\\IdentityService\\IdentityApi.csproj",
       "packagesPath": "C:\\Users\\WEHBA\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\exam_projekt\\BornholmSlaughterhouses\\IdentityService\\obj\\",
       "projectStyle": "PackageReference",

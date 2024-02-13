@@ -1,7 +1,7 @@
-﻿using Fealles.Models;
+﻿using FeallesBaseApi.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Fealles.Data
+namespace FeallesBaseApi.Data
 {
     public class AppDbContext : DbContext
     {

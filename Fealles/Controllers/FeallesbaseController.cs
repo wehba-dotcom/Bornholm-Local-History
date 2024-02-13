@@ -1,17 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Fealles.Models;
-using Fealles.Data;
+using FeallesBaseApi.Models;
+using FeallesBaseApi.Data;
 using System.Net.Sockets;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
-using FeallesService.Models;
+using FeallesBaseApi.Models;
 using AutoMapper;
 using Stripe;
 
-namespace FeallesService.Controllers
+namespace FeallesBaseApi.Controllers
 {
 
     

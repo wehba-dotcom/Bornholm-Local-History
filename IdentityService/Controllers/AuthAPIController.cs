@@ -1,9 +1,9 @@
-﻿using IdentityService.Models;
-using IdentityService.Service.IService;
+﻿using IdentityApi.Models;
+using IdentityApi.Service.IService;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace IdentityService.Controllers
+namespace IdentityApi.Controllers
 {
     [Route("api/auth")]
     [ApiController]

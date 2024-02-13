@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "M14ChZyTP2DM1XQbVHphdeJz2Zrg3cxlA3+gTgzcC+w=",
-  "Source": "IdentityService",
-  "BasePath": "_content/IdentityService",
+  "Hash": "4oxxUh7oY/6MI7VsoSht3p3qjsugx1X8wHB/gUFHdr8=",
+  "Source": "IdentityApi",
+  "BasePath": "_content/IdentityApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

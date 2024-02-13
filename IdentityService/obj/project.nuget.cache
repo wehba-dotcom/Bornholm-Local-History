@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FMRLIvJ1fILjFfpjs++yrMCf7mkDtVGILLNValsHELbkUnF4LbhC/Ux/NTuM6jkV/fOf3Om0KxcUj+zfkpL4qw==",
+  "dgSpecHash": "DocPrG4IY5OLJLJXnRrngs+GupQ2UVFZakIWCnyY0tl33FlIEg87Qrw3RhEbTd1bP1LLxaWPq0SPhSxQ9zzCiQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\exam_projekt\\BornholmSlaughterhouses\\IdentityService\\IdentityService.csproj",
+  "projectFilePath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\exam_projekt\\BornholmSlaughterhouses\\IdentityService\\IdentityApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WEHBA\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

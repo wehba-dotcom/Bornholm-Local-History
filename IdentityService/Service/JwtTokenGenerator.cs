@@ -1,13 +1,13 @@
-﻿using IdentityService.Data;
-using IdentityService.Models;
-using IdentityService.Service.IService;
+﻿using IdentityApi.Data;
+using IdentityApi.Models;
+using IdentityApi.Service.IService;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace IdentityService.Service
+namespace IdentityApi.Service
 {
     public class JwtTokenGenerator : IJwtTokenGenerator
     {

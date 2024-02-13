@@ -11940,9 +11940,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\exam_projekt\\BornholmSlaughterhouses\\Fealles\\Fealles.csproj",
-      "projectName": "Fealles",
-      "projectPath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\exam_projekt\\BornholmSlaughterhouses\\Fealles\\Fealles.csproj",
+      "projectUniqueName": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\exam_projekt\\BornholmSlaughterhouses\\Fealles\\FeallesBaseApi.csproj",
+      "projectName": "FeallesBaseApi",
+      "projectPath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\exam_projekt\\BornholmSlaughterhouses\\Fealles\\FeallesBaseApi.csproj",
       "packagesPath": "C:\\Users\\WEHBA\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\exam_projekt\\BornholmSlaughterhouses\\Fealles\\obj\\",
       "projectStyle": "PackageReference",

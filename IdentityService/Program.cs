@@ -1,7 +1,7 @@
-using IdentityService.Data;
-using IdentityService.Models;
-using IdentityService.Service.IService;
-using IdentityService.Service;
+using IdentityApi.Data;
+using IdentityApi.Models;
+using IdentityApi.Service.IService;
+using IdentityApi.Service;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 

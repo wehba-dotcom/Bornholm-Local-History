@@ -1,9 +1,9 @@
-﻿using IdentityService.Data;
-using IdentityService.Models;
-using IdentityService.Service.IService;
+﻿using IdentityApi.Data;
+using IdentityApi.Models;
+using IdentityApi.Service.IService;
 using Microsoft.AspNetCore.Identity;
 
-namespace IdentityService.Service
+namespace IdentityApi.Service
 {
     public class AuthService : IAuthService
     {

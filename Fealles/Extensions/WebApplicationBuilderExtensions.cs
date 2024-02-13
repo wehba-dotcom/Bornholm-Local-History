@@ -2,7 +2,7 @@
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
-namespace FeallesService.Extensions
+namespace FeallesBaseApi.Extensions
 {
     public static class WebApplicationBuilderExtensions
     {

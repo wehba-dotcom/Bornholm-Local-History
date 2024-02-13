@@ -1,4 +1,4 @@
-﻿namespace FeallesService.Models
+﻿namespace FeallesBaseApi.Models
 {
     public class Response
     {

@@ -1,12 +1,12 @@
-﻿using IdentityService.Data;
-using IdentityService.Models;
+﻿using IdentityApi.Data;
+using IdentityApi.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 
-namespace IdentityService.Data;
+namespace IdentityApi.Data;
 
 public class ApplicationDbContext : IdentityDbContext<ApplicationUser, IdentityRole, string>
 {

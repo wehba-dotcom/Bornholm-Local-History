@@ -1,4 +1,4 @@
-using Fealles.Data;
+using FeallesBaseApi.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.EntityFrameworkCore;
@@ -6,7 +6,7 @@ using Microsoft.OpenApi.Models;
 using NuGet.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using FeallesService.Extensions;
+using FeallesBaseApi.Extensions;
 using AutoMapper;
 
 var builder = WebApplication.CreateBuilder(args);

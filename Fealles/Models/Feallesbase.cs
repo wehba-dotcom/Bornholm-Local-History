@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 
-namespace Fealles.Models
+namespace FeallesBaseApi.Models
 {
     public class Feallesbase
     {

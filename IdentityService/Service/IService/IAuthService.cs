@@ -1,5 +1,5 @@
-﻿using IdentityService.Models;
-namespace IdentityService.Service.IService
+﻿using IdentityApi.Models;
+namespace IdentityApi.Service.IService
 {
     public interface IAuthService
     {
