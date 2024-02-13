@@ -38,6 +38,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVhbGxlc2Jhc2VcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/WEHBA/OneDrive/Skrivebord/exam_projekt/BornholmSlaughterhouses/WebApi/Views/Feallesbase/FeallesEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVhbGxlc2Jhc2VcRmVhbGxlc0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/WEHBA/OneDrive/Skrivebord/exam_projekt/BornholmSlaughterhouses/WebApi/Views/Feallesbase/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVhbGxlc2Jhc2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -52,14 +56,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/WEHBA/OneDrive/Skrivebord/exam_projekt/BornholmSlaughterhouses/WebApi/Views/Feallesbase/Search.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVhbGxlc2Jhc2VcU2VhcmNoLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/WEHBA/OneDrive/Skrivebord/exam_projekt/BornholmSlaughterhouses/WebApi/Views/Feallesbase/Update.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVhbGxlc2Jhc2VcVXBkYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/WEHBA/OneDrive/Skrivebord/exam_projekt/BornholmSlaughterhouses/WebApi/Views/Feallesbase/UpdatePut.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVhbGxlc2Jhc2VcVXBkYXRlUHV0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/WEHBA/OneDrive/Skrivebord/exam_projekt/BornholmSlaughterhouses/WebApi/Views/Home/Index.cshtml]

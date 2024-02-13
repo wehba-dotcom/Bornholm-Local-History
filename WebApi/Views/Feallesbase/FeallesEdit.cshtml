@@ -1,0 +1,315 @@
+﻿ @model WebApi.SharedModels.Feallesbase
+<div class="card shadow border-0 mt-4">
+    <div class="card-header bg-secondary bg-gradient ml-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-black-50 pl-3">Redigere</h2>
+            </div>
+        </div>
+    </div>
+    <div class="card-body p-4">
+        <form asp-action="FeallesEdit" enctype="multipart/form-data">
+            <input asp-for="ID" hidden />
+            <div class="border p-3">
+                <div class="col">
+                    <div class="row-12">
+                        <div class="form-group col">
+                            <div class="row">
+                                <label asp-for="AvisTypeID"></label>
+                                <input asp-for="AvisTypeID" class="form-control" />
+                                <span asp-validation-for="AvisTypeID" class="form-text"></span>
+                            </div>
+                            <div class="row-4">
+                                <label asp-for="Avisdato"></label>
+                                <input asp-for="Avisdato" class="form-control" />
+                                <span asp-validation-for="Avisdato" class="text-danger"></span>
+                            </div>
+                            <div class="row-4">
+                                <label asp-for="Efternavn"></label>
+                                <input asp-for="Efternavn" class="form-control" />
+                                <span asp-validation-for="Efternavn" class="text-danger"></span>
+                            </div>
+                            <div class="row">
+                                <label asp-for="Fornavne"></label>
+                                <input asp-for="Fornavne" class="form-control" />
+                                <span asp-validation-for="Fornavne" class="text-danger"></span>
+                            </div>
+                            <div class="row-4">
+                                <label asp-for="Foedt"></label>
+                                <input asp-for="Foedt" class="form-control" />
+                                <span asp-validation-for="Foedt" class="text-danger"></span>
+                            </div>
+                            <div class="row-4">
+                                <label asp-for="Alder"></label>
+                                <input asp-for="Alder" class="form-control" />
+                                <span asp-validation-for="Alder" class="text-danger"></span>
+                            </div>
+                            <div class="row">
+                                <label asp-for="Doebenavn"></label>
+                                <input asp-for="Doebenavn" class="form-control" />
+                                <span asp-validation-for="Doebenavn" class="text-danger"></span>
+                            </div>
+                            <div class="row-4">
+                                <label asp-for="Erhverv"></label>
+                                <input asp-for="Erhverv" class="form-control" />
+                                <span asp-validation-for="Erhverv" class="text-danger"></span>
+
+                            </div>
+                            <div class="row-4">
+                                <label asp-for="Adresser"></label>
+                                <input asp-for="Adresser" class="form-control" />
+                                <span asp-validation-for="Adresser" class="text-danger"></span>
+                            </div>
+                            <div class="row">
+                                <label asp-for="SognID"></label>
+                                <input asp-for="SognID" class="form-control" />
+                                <span asp-validation-for="SognID" class="text-danger"></span>
+                            </div>
+                            <div class="row-4">
+                                <label asp-for="TidlBopael"></label>
+                                <input asp-for="TidlBopael" class="form-control" />
+                                <span asp-validation-for="TidlBopael" class="text-danger"></span>
+                            </div>
+                            <div class="row-4">
+                                <label asp-for="Doedsdato"></label>
+                                <input asp-for="Doedsdato" class="form-control" />
+                                <span asp-validation-for="Doedsdato" class="text-danger"></span>
+                            </div>
+                            <div class="row">
+                                <label asp-for="Begravelsesdato"></label>
+                                <input asp-for="Begravelsesdato" class="form-control" />
+                                <span asp-validation-for="Begravelsesdato" class="text-danger"></span>
+                            </div>
+                            <div class="row-4">
+                                <label asp-for="Begravelsessted"></label>
+                                <input asp-for="Begravelsessted" class="form-control" />
+                                <span asp-validation-for="Begravelsessted" class="text-danger"></span>
+                            </div>
+                            <div class="row-4">
+                                <label asp-for="Efterladte"></label>
+                                <input asp-for="Efterladte" class="form-control" />
+                                <span asp-validation-for="Efterladte" class="text-danger"></span>
+                            </div>
+                            <div class="row">
+                                <label asp-for="FlereDoedsannoncer"></label>
+                                <input asp-for="FlereDoedsannoncer" class="form-control" />
+                                <span asp-validation-for="FlereDoedsannoncer" class="text-danger"></span>
+                            </div>
+                            <div class="row-4">
+                                <label asp-for="AndreDataFraAnnoncen"></label>
+                                <input asp-for="AndreDataFraAnnoncen" class="form-control" />
+                                <span asp-validation-for="AndreDataFraAnnoncen" class="text-danger"></span>
+                            </div>
+                            <div class="row-4">
+                                <label asp-for="Oegenavne"></label>
+                                <input asp-for="Oegenavne" class="form-control" />
+                                <span asp-validation-for="Oegenavne" class="text-danger"></span>
+                            </div>
+                            <div class="row">
+                                <label asp-for="Nekrolog"></label>
+                                <input asp-for="Nekrolog" class="form-control" />
+                                <span asp-validation-for="Nekrolog" class="text-danger"></span>
+                            </div>
+                            <div class="row-4">
+                                <label asp-for="Mindeord"></label>
+                                <input asp-for="Mindeord" class="form-control" />
+                                <span asp-validation-for="Mindeord" class="text-danger"></span>
+                            </div>
+                            <div class="row-4">
+                                <label asp-for="Statstidende"></label>
+                                <input asp-for="Statstidende" class="form-control" />
+                                <span asp-validation-for="Statstidende" class="text-danger"></span>
+                            </div>
+                            <div class="row">
+                                <label asp-for="Partnerlink"></label>
+                                <input asp-for="Partnerlink" class="form-control" />
+                                <span asp-validation-for="Partnerlink" class="text-danger"></span>
+                            </div>
+
+                        </div>
+                        </br>
+                        <div class="form-group row">
+                            <div class="col-8 offset-2 row">
+                                <div class="col">
+                                    <input type="submit" class="btn btn-primary w-75" value="Update" />
+                                </div>
+                                <div class="col">
+                                    <a asp-action="Index" class="btn btn-primary w-75">TilBage</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+@*
+
+@{
+    ViewBag.Title = "Update Feallesbase";
+}
+
+<h2>Update Feallesbase</h2>
+
+@if (TempData["success"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["success"]
+    </div>
+}
+
+@if (ViewBag.Alert != null)
+{
+    <div class="alert alert-danger">
+        @ViewBag.Alert
+    </div>
+}
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.ID)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.AvisTypeID)
+        @Html.EditorFor(model => model.AvisTypeID)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Avisdato)
+        @Html.EditorFor(model => model.Avisdato, new { @class = "form-control datepicker" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Efternavn)
+        @Html.EditorFor(model => model.Efternavn)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Fornavne)
+        @Html.EditorFor(model => model.Fornavne, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Foedt)
+        @Html.EditorFor(model => model.Foedt, new { @class = "form-control datepicker" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Alder)
+        @Html.EditorFor(model => model.Alder)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Doebenavn)
+        @Html.EditorFor(model => model.Doebenavn)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Erhverv)
+        @Html.EditorFor(model => model.Erhverv)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Adresser)
+        @Html.EditorFor(model => model.Adresser)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.SognID)
+        @Html.EditorFor(model => model.SognID)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.TidlBopael)
+        @Html.EditorFor(model => model.TidlBopael)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Doedsdato)
+        @Html.EditorFor(model => model.Doedsdato)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Begravelsesdato)
+        @Html.EditorFor(model => model.Begravelsesdato)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Begravelsessted)
+        @Html.EditorFor(model => model.Begravelsessted)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Efterladte)
+        @Html.EditorFor(model => model.Efterladte)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.FlereDoedsannoncer)
+        @Html.EditorFor(model => model.FlereDoedsannoncer)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.AndreDataFraAnnoncen)
+        @Html.EditorFor(model => model.AndreDataFraAnnoncen)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Oegenavne)
+        @Html.EditorFor(model => model.Oegenavne)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Nekrolog)
+        @Html.EditorFor(model => model.Nekrolog)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Mindeord)
+        @Html.EditorFor(model => model.Mindeord)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Statstidende)
+        @Html.EditorFor(model => model.Statstidende)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Partnerlink)
+        @Html.EditorFor(model => model.Partnerlink)
+    </div>
+
+
+    <!-- Add similar sections for other properties -->
+
+    <button type="submit" class="btn btn-primary">Update</button>
+}
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+@section scripts {
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.datepicker').datepicker({
+                format: 'yyyy-mm-dd',
+                autoclose: true
+            });
+        });
+    </script>
+}
+
+
+
+
+ *@

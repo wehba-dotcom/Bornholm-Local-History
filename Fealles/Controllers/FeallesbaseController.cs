@@ -90,8 +90,8 @@ namespace FeallesService.Controllers
 
         }
         // PUT: api/Feallesbase/5
-        [HttpPut("{ID}")]
-        public Response PutFeallesbase( int ID, [FromBody] Feallesbase feallesbase)
+        [HttpPut]
+        public Response Put(  Feallesbase feallesbase)
         {
             try
             {
@@ -111,23 +111,26 @@ namespace FeallesService.Controllers
 
         // DELETE: api/Feallesbase/5
         [HttpDelete("{ID}")]
-        public async Task<IActionResult> DeleteFeallesbase(int? ID)
+        public Response DeleteFeallesbase(int? ID)
         {
-            var feallesbase = await _db.Feallesbases.FindAsync(ID);
-            if (feallesbase == null)
+            try
             {
-                return NotFound();
+                Feallesbase obj = _db.Feallesbases.First(u => u.ID == ID);
+               
+                _db.Feallesbases.Remove(obj);
+                _db.SaveChanges();
             }
-
-            _db.Feallesbases.Remove(feallesbase);
-            await _db.SaveChangesAsync();
-
-            return NoContent();
+            catch (Exception ex)
+            {
+                _response.IsSuccess = false;
+                _response.Message = ex.Message;
+            }
+            return _response;
         }
 
-        private bool FeallesbaseExists(int id)
+        private bool FeallesbaseExists(int ID)
         {
-            return _db.Feallesbases.Any(e => e.ID == id);
+            return _db.Feallesbases.Any(e => e.ID == ID);
         }
 
     }

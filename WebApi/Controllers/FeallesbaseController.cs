@@ -395,7 +395,7 @@ namespace WebApi.Controllers
         }
 
 
-        public async Task<IActionResult> Update(int ID)
+        public async Task<IActionResult> FeallesEdit(int ID)
         {
             Response? response = await _feallesService.GetFeallesByIdAsync(ID);
 
@@ -412,7 +412,7 @@ namespace WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> UpdatePut(Feallesbase feallesbase)
+        public async Task<IActionResult> FeallesEdit(Feallesbase feallesbase)
         {
             if (ModelState.IsValid)
             {
@@ -421,7 +421,7 @@ namespace WebApi.Controllers
                 if (response != null && response.IsSuccess)
                 {
                     TempData["success"] = "Product updated successfully";
-                    return RedirectToAction("Index");
+                    return RedirectToAction(nameof(Index));
                 }
                 else
                 {
