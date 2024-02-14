@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Se95HH5aIYGTkNHsvsnKjjRMUwR5DEGV08ImtqadDl2KuPNdPtiwIkM3qM2mjATuGp6AD14IHCtfzRSLEql5gQ==",
+  "dgSpecHash": "//KbRrx3hLkX/WEC84vCSzghBZLhdu/bWNzT9Wvmeov2Tt9u/hWkErAPIq1MBcoaiVE7QYFOroPPx5D/U5n5Gw==",
   "success": true,
   "projectFilePath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\exam_projekt\\BornholmSlaughterhouses\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
@@ -8,7 +8,6 @@
     "C:\\Users\\WEHBA\\.nuget\\packages\\documentformat.openxml\\3.0.1\\documentformat.openxml.3.0.1.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\documentformat.openxml.framework\\3.0.1\\documentformat.openxml.framework.3.0.1.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\elasticsearch.net\\7.17.5\\elasticsearch.net.7.17.5.nupkg.sha512",
-    "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.crmsdk.coreassemblies\\9.0.2.52\\microsoft.crmsdk.coreassemblies.9.0.2.52.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.csharp\\4.6.0\\microsoft.csharp.4.6.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.identitymodel.abstractions\\7.3.1\\microsoft.identitymodel.abstractions.7.3.1.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\7.3.1\\microsoft.identitymodel.jsonwebtokens.7.3.1.nupkg.sha512",
@@ -19,21 +18,7 @@
     "C:\\Users\\WEHBA\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.3.1\\system.identitymodel.tokens.jwt.7.3.1.nupkg.sha512",
-    "C:\\Users\\WEHBA\\.nuget\\packages\\system.io.packaging\\8.0.0\\system.io.packaging.8.0.0.nupkg.sha512",
-    "C:\\Users\\WEHBA\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "C:\\Users\\WEHBA\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
-    "C:\\Users\\WEHBA\\.nuget\\packages\\system.text.json\\6.0.7\\system.text.json.6.0.7.nupkg.sha512"
+    "C:\\Users\\WEHBA\\.nuget\\packages\\system.io.packaging\\8.0.0\\system.io.packaging.8.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.CrmSdk.CoreAssemblies 9.0.2.52' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Microsoft.CrmSdk.CoreAssemblies",
-      "targetGraphs": [
-        "net7.0"
-      ]
-    }
-  ]
+  "logs": []
 }

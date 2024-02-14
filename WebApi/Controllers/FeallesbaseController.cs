@@ -1,21 +1,9 @@
 ﻿
 using Microsoft.AspNetCore.Mvc;
-
-using String = System.String;
-
-using Microsoft.AspNetCore.Authorization;
 using Newtonsoft.Json;
-using System.Text;
-using System.Net;
 using WebApi.SharedModels;
-using DocumentFormat.OpenXml.Wordprocessing;
 using WebApi.Service.IService;
 using WebApi.Models;
-using Nest;
-using DocumentFormat.OpenXml.Office2010.ExcelAc;
-using System.Collections.Generic;
-using Microsoft.Xrm.Sdk.Messages;
-using Microsoft.AspNetCore.Mvc.TagHelpers.Cache;
 
 
 namespace WebApi.Controllers
@@ -369,11 +357,7 @@ namespace WebApi.Controllers
         {
             return View();
         }
-        //    public async Task<IActionResult> CouponCreate()
-        //    {
-        //        return View();
-        //    }
-
+      
         [HttpPost]
         public async Task<IActionResult> Create(Feallesbase model)
         {

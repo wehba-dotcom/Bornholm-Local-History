@@ -53,10 +53,6 @@
               "target": "Package",
               "version": "[3.0.1, )"
             },
-            "Microsoft.CrmSdk.CoreAssemblies": {
-              "target": "Package",
-              "version": "[9.0.2.52, )"
-            },
             "NEST": {
               "target": "Package",
               "version": "[7.17.5, )"

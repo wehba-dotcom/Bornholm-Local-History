@@ -10,8 +10,6 @@ C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\b
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\DocumentFormat.OpenXml.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\DocumentFormat.OpenXml.Framework.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Elasticsearch.Net.dll
-C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Microsoft.Crm.Sdk.Proxy.dll
-C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Microsoft.Xrm.Sdk.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
