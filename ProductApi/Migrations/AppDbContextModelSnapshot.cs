@@ -78,9 +78,42 @@ namespace ProductApi.Migrations
                     b.Property<string>("Sogn")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("bogId")
+                        .HasColumnType("int");
+
                     b.HasKey("ID");
 
+                    b.HasIndex("bogId");
+
                     b.ToTable("FastningBooks");
+                });
+
+            modelBuilder.Entity("ProductApi.Models.FastningBook+Bog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Bind")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Navn")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Bog");
+                });
+
+            modelBuilder.Entity("ProductApi.Models.FastningBook", b =>
+                {
+                    b.HasOne("ProductApi.Models.FastningBook+Bog", "bog")
+                        .WithMany()
+                        .HasForeignKey("bogId");
+
+                    b.Navigation("bog");
                 });
 #pragma warning restore 612, 618
         }

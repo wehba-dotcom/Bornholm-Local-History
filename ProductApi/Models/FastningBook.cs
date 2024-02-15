@@ -1,9 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProductApi.Models
 {
     public class FastningBook
     {
+        [Key]
         public int ID { get; set; }
         public int? Indskrivningsnr { get; set; }
         public string? FaesterNavn { get; set; }
@@ -19,11 +21,19 @@ namespace ProductApi.Models
         public string? Sogn { get; set; }
         public string? FaestebrevUdstedt { get; set; }
         public string? Side {  get; set; }
-        [NotMapped]
-        public Object? book {  get; set; }
+    
+        public Bog? bog {  get; set; }
         public string? Film { get; set; }
         public string? Herred { get; set; }
 
+        public class Bog
+        {
+            public int Id { get; set; }
+            
+           public string? Navn { get; set; }
 
+            public string? Bind { get; set; }
+           
+        }
     }
 }
