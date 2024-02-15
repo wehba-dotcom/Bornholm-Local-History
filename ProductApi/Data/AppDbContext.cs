@@ -9,6 +9,6 @@ namespace ProductApi.Data
            : base(options)
         {
         }
-        public DbSet<Product> FastningBooks { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }

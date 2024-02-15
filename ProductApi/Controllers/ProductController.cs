@@ -29,7 +29,7 @@ namespace ProductApi.Controllers
         {
             try
             {
-                IEnumerable<Product> objList = _db.FastningBooks.ToList();
+                IEnumerable<Product> objList = _db.Products.ToList();
                 _response.Result = _mapper.Map<IEnumerable<ProductDto>>(objList);
             }
             catch (Exception ex)
@@ -46,7 +46,7 @@ namespace ProductApi.Controllers
         {
             try
             {
-                Product obj = _db.FastningBooks.First(u=>u.ID==id);
+                Product obj = _db.Products.First(u=>u.ID==id);
                 _response.Result = _mapper.Map<ProductDto>(obj);
             }
             catch (Exception ex)
@@ -66,7 +66,7 @@ namespace ProductApi.Controllers
             try
             {
                 Product obj = _mapper.Map<Product>(couponDto);
-                _db.FastningBooks.Add(obj);
+                _db.Products.Add(obj);
                 _db.SaveChanges();
                 _response.Result = _mapper.Map<ProductDto>(obj);
             }
@@ -86,7 +86,7 @@ namespace ProductApi.Controllers
             try
             {
                 Product obj = _mapper.Map<Product>(fastningbookDto);
-                _db.FastningBooks.Update(obj);
+                _db.Products.Update(obj);
                 _db.SaveChanges();
 
                 _response.Result = _mapper.Map<ProductDto>(obj);
@@ -106,8 +106,8 @@ namespace ProductApi.Controllers
         {
             try
             {
-                Product obj = _db.FastningBooks.First(u=>u.ID==id);
-                _db.FastningBooks.Remove(obj);
+                Product obj = _db.Products.First(u=>u.ID==id);
+                _db.Products.Remove(obj);
                 _db.SaveChanges();
 
 
