@@ -30,7 +30,7 @@ namespace ProductApi.Controllers
             try
             {
                 IEnumerable<Product> objList = _db.Products.ToList();
-                _response.Result = _mapper.Map<IEnumerable<ProductDto>>(objList);
+                _response.Result = _mapper.Map<IEnumerable<Product>>(objList);
             }
             catch (Exception ex)
             {
