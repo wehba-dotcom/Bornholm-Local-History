@@ -12,9 +12,9 @@ namespace WebApi.Service
             _baseService = baseService;
         }
 
-        public async Task<Response?> AssignRoleAsync(RegistrationRequest registrationRequest)
+        public async Task<ResponseDto?> AssignRoleAsync(RegistrationRequest registrationRequest)
         {
-            return await _baseService.SendAsync(new Request()
+            return await _baseService.SendAsync(new RequestDto()
             {
                 ApiType = SD.ApiType.POST,
                 Data = registrationRequest,
@@ -22,9 +22,9 @@ namespace WebApi.Service
             });
         }
 
-        public async Task<Response?> LoginAsync(LoginRequest loginRequest)
+        public async Task<ResponseDto?> LoginAsync(LoginRequest loginRequest)
         {
-            return await _baseService.SendAsync(new Request()
+            return await _baseService.SendAsync(new RequestDto()
             {
                 ApiType = SD.ApiType.POST,
                 Data = loginRequest,
@@ -32,9 +32,9 @@ namespace WebApi.Service
             }, withBearer: false);
         }
 
-        public async Task<Response?> RegisterAsync(RegistrationRequest registrationRequest)
+        public async Task<ResponseDto?> RegisterAsync(RegistrationRequest registrationRequest)
         {
-            return await _baseService.SendAsync(new Request()
+            return await _baseService.SendAsync(new RequestDto()
             {
                 ApiType = SD.ApiType.POST,
                 Data = registrationRequest,

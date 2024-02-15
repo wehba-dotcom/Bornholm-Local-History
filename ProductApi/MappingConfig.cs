@@ -10,8 +10,8 @@ namespace ProductApi.CouponAPI
         {
             var mappingConfig = new MapperConfiguration(config =>
             {
-                config.CreateMap<FastningBookDto, FastningBook>();
-                config.CreateMap<FastningBook, FastningBookDto>();
+                config.CreateMap<ProductDto, Product>();
+                config.CreateMap<Product, ProductDto>();
             });
             return mappingConfig;
         }

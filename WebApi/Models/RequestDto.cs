@@ -2,7 +2,7 @@
 
 namespace WebApi.Models
 {
-    public class Request
+    public class RequestDto
     {
         public ApiType ApiType { get; set; } = ApiType.GET;
         public string Url { get; set; }

@@ -5,11 +5,11 @@ namespace WebApi.Service.IService
 {
     public interface IFeallesService
     {
-        Task<Response?> GetFeallesAsync(string feallesname);
-        Task<Response?> GetAllFeallesesAsync();
-        Task<Response?> GetFeallesByIdAsync(int id);
-        Task<Response?> CreateFeallesAsync(Feallesbase feallesbase);
-        Task<Response?> UpdateFeallesAsync(Feallesbase feallesbase);
-        Task<Response?> DeleteFeallesAsync(int id);
+        Task<ResponseDto?> GetFeallesAsync(string feallesname);
+        Task<ResponseDto?> GetAllFeallesesAsync();
+        Task<ResponseDto?> GetFeallesByIdAsync(int id);
+        Task<ResponseDto?> CreateFeallesAsync(Feallesbase feallesbase);
+        Task<ResponseDto?> UpdateFeallesAsync(Feallesbase feallesbase);
+        Task<ResponseDto?> DeleteFeallesAsync(int id);
     }
 }

@@ -3,21 +3,21 @@ using ProductApi.Models;
 using ProductApi.Models.Dto;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using productApi.Data;
+using ProductApi.Data;
 
 
 namespace ProductApi.Controllers
 {
-    [Route("api/fastningbook")]
+    [Route("api/product")]
     [ApiController]
-    //[Authorize]
-    public class FastningBookController : ControllerBase
+    [Authorize]
+    public class ProductController : ControllerBase
     {
         private readonly AppDbContext _db;
         private ResponseDto _response;
         private IMapper _mapper;
 
-        public FastningBookController(AppDbContext db, IMapper mapper)
+        public ProductController(AppDbContext db, IMapper mapper)
         {
             _db = db;
             _mapper = mapper;
@@ -29,8 +29,8 @@ namespace ProductApi.Controllers
         {
             try
             {
-                IEnumerable<FastningBook> objList = _db.FastningBooks.ToList();
-                _response.Result = _mapper.Map<IEnumerable<FastningBookDto>>(objList);
+                IEnumerable<Product> objList = _db.FastningBooks.ToList();
+                _response.Result = _mapper.Map<IEnumerable<ProductDto>>(objList);
             }
             catch (Exception ex)
             {
@@ -46,8 +46,8 @@ namespace ProductApi.Controllers
         {
             try
             {
-                FastningBook obj = _db.FastningBooks.First(u=>u.ID==id);
-                _response.Result = _mapper.Map<FastningBookDto>(obj);
+                Product obj = _db.FastningBooks.First(u=>u.ID==id);
+                _response.Result = _mapper.Map<ProductDto>(obj);
             }
             catch (Exception ex)
             {
@@ -61,14 +61,14 @@ namespace ProductApi.Controllers
 
         [HttpPost]
         //[Authorize(Roles = "ADMIN")]
-        public ResponseDto Post([FromBody] FastningBookDto couponDto)
+        public ResponseDto Post([FromBody] ProductDto couponDto)
         {
             try
             {
-                FastningBook obj = _mapper.Map<FastningBook>(couponDto);
+                Product obj = _mapper.Map<Product>(couponDto);
                 _db.FastningBooks.Add(obj);
                 _db.SaveChanges();
-                _response.Result = _mapper.Map<FastningBookDto>(obj);
+                _response.Result = _mapper.Map<ProductDto>(obj);
             }
             catch (Exception ex)
             {
@@ -81,15 +81,15 @@ namespace ProductApi.Controllers
 
         [HttpPut]
         //[Authorize(Roles = "ADMIN")]
-        public ResponseDto Put([FromBody] FastningBookDto fastningbookDto)
+        public ResponseDto Put([FromBody] ProductDto fastningbookDto)
         {
             try
             {
-                FastningBook obj = _mapper.Map<FastningBook>(fastningbookDto);
+                Product obj = _mapper.Map<Product>(fastningbookDto);
                 _db.FastningBooks.Update(obj);
                 _db.SaveChanges();
 
-                _response.Result = _mapper.Map<FastningBookDto>(obj);
+                _response.Result = _mapper.Map<ProductDto>(obj);
             }
             catch (Exception ex)
             {
@@ -106,7 +106,7 @@ namespace ProductApi.Controllers
         {
             try
             {
-                FastningBook obj = _db.FastningBooks.First(u=>u.ID==id);
+                Product obj = _db.FastningBooks.First(u=>u.ID==id);
                 _db.FastningBooks.Remove(obj);
                 _db.SaveChanges();
 

@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProductApi.Models;
 
-namespace productApi.Data
+namespace ProductApi.Data
 {
     public class AppDbContext : DbContext
     {
@@ -9,6 +9,6 @@ namespace productApi.Data
            : base(options)
         {
         }
-        public DbSet<FastningBook> FastningBooks { get; set; }
+        public DbSet<Product> FastningBooks { get; set; }
     }
 }

@@ -324,7 +324,7 @@ namespace WebApi.Controllers
         {
             List<Feallesbase>? list = new();
 
-            Response? response = await _feallesService.GetAllFeallesesAsync();
+            ResponseDto? response = await _feallesService.GetAllFeallesesAsync();
 
             if (response != null && response.IsSuccess)
             {
@@ -363,7 +363,7 @@ namespace WebApi.Controllers
         {
             if (ModelState.IsValid)
             {
-                Response? response = await _feallesService.CreateFeallesAsync(model);
+                ResponseDto? response = await _feallesService.CreateFeallesAsync(model);
 
                 if (response != null && response.IsSuccess)
                 {
@@ -381,7 +381,7 @@ namespace WebApi.Controllers
 
         public async Task<IActionResult> FeallesEdit(int ID)
         {
-            Response? response = await _feallesService.GetFeallesByIdAsync(ID);
+            ResponseDto? response = await _feallesService.GetFeallesByIdAsync(ID);
 
             if (response != null && response.IsSuccess)
             {
@@ -400,7 +400,7 @@ namespace WebApi.Controllers
         {
             if (ModelState.IsValid)
             {
-                Response? response = await _feallesService.UpdateFeallesAsync(feallesbase);
+                ResponseDto? response = await _feallesService.UpdateFeallesAsync(feallesbase);
 
                 if (response != null && response.IsSuccess)
                 {

@@ -18,7 +18,7 @@ namespace WebApi.Service
             _tokenProvider = tokenProvider;
         }
 
-        public async Task<Response?> SendAsync(Request request, bool withBearer = true)
+        public async Task<ResponseDto?> SendAsync(RequestDto request, bool withBearer = true)
         {
             try
             {
@@ -107,12 +107,12 @@ namespace WebApi.Service
                         return new() { IsSuccess = false, Message = "Internal Server Error" };
                     default:
                         var apiContent = await apiResponse.Content.ReadAsStringAsync();
-                        var result = JsonConvert.DeserializeObject<Response>(apiContent);
+                        var result = JsonConvert.DeserializeObject<ResponseDto>(apiContent);
                         return result;
                 }
             }catch (Exception ex)
             {
-                var dto = new Response
+                var dto = new ResponseDto
                 {
                     Message = ex.Message.ToString(),
                     IsSuccess = false

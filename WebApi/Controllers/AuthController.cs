@@ -32,7 +32,7 @@ namespace WebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginRequest obj)
         {
-            Response response = await _authService.LoginAsync(obj);
+            ResponseDto response = await _authService.LoginAsync(obj);
 
             if (response != null && response.IsSuccess)
             {
@@ -67,8 +67,8 @@ namespace WebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(RegistrationRequest obj)
         {
-            Response result = await _authService.RegisterAsync(obj);
-            Response assingRole;
+            ResponseDto result = await _authService.RegisterAsync(obj);
+            ResponseDto assingRole;
 
             if(result!=null && result.IsSuccess)
             {
