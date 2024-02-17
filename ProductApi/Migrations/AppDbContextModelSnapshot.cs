@@ -41,6 +41,9 @@ namespace ProductApi.Migrations
                     b.Property<string>("Gaard")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("ItemsReserved")
+                        .HasColumnType("int");
+
                     b.Property<string>("Kommentarer")
                         .HasColumnType("nvarchar(max)");
 

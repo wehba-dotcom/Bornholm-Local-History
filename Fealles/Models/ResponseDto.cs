@@ -1,6 +1,6 @@
 ﻿namespace FeallesBaseApi.Models
 {
-    public class Response
+    public class ResponseDto
     {
         public object? Result { get; set; }
         public bool IsSuccess { get; set; } = true;

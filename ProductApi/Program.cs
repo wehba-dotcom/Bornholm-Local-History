@@ -8,10 +8,13 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using ProductApi.Extensions;
 using AutoMapper;
+using ProductApi.Models;
+using ProductApi.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+string ConnectionString = "host=cow-01.rmq2.cloudamqp.com ;virtualHost=vohieqyo;username=vohieqyo;password=hRtXREuzSQwNnU085CF8r_3DCKXhsQZv";
 
 
 try
@@ -27,6 +30,9 @@ catch (Exception ex)
     Console.WriteLine(ex.Message);
 }
 
+
+// Register repositories for dependency injection
+builder.Services.AddScoped<IRepository<Product>, ProductRepository>();
 
 //IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
 //builder.Services.AddSingleton(mapper);
@@ -66,11 +72,16 @@ builder.Services.AddSwaggerGen(option =>
     });
 });
 
+
+
 builder.AddAppAuthetication();
 
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
+
+Task.Factory.StartNew(() =>
+    new MessageListener(app.Services, ConnectionString).Start());
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

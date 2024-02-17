@@ -24,19 +24,19 @@ namespace FeallesBaseApi.Controllers
 
 
         private readonly AppDbContext _db;
-        private Response _response;
+        private ResponseDto _response;
         private IMapper _mapper;
         public FeallesbaseController(AppDbContext db,IMapper mapper)
         {
             _db = db;
             _mapper = mapper;
-            _response = new Response();
+            _response = new ResponseDto();
 
         }
 
         // GET: api/Feallesbase
         [HttpGet]
-        public  Response GetFeallesbases()
+        public  ResponseDto GetFeallesbases()
         {
             try
             {
@@ -55,7 +55,7 @@ namespace FeallesBaseApi.Controllers
 
             // GET: api/Feallesbase/5
             [HttpGet("{id}")]
-        public Response GetFeallesbase(int id)
+        public ResponseDto GetFeallesbase(int id)
         {
             try
             {
@@ -72,7 +72,7 @@ namespace FeallesBaseApi.Controllers
 
         // POST: api/Feallesbase
         [HttpPost]
-        public Response Create([FromBody] Feallesbase feallesbase)
+        public ResponseDto Create([FromBody] Feallesbase feallesbase)
         {
             try
             {
@@ -91,7 +91,7 @@ namespace FeallesBaseApi.Controllers
         }
         // PUT: api/Feallesbase/5
         [HttpPut]
-        public Response Put(  Feallesbase feallesbase)
+        public ResponseDto Put(  Feallesbase feallesbase)
         {
             try
             {
@@ -111,7 +111,7 @@ namespace FeallesBaseApi.Controllers
 
         // DELETE: api/Feallesbase/5
         [HttpDelete("{ID}")]
-        public Response DeleteFeallesbase(int? ID)
+        public ResponseDto DeleteFeallesbase(int? ID)
         {
             try
             {
