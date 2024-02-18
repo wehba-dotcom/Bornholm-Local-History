@@ -34,6 +34,7 @@ catch (Exception ex)
 // Register repositories for dependency injection
 builder.Services.AddScoped<IRepository<Product>, ProductRepository>();
 
+
 //IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
 //builder.Services.AddSingleton(mapper);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
@@ -90,7 +91,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 
