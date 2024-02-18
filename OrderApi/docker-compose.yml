@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  product-api:
+    build:
+      context: .
+      dockerfile: ProductApi/Dockerfile
+    ports:
+      - "8000:80"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__ApplicationDbContextConnection: "Server=database;Database=productService;User Id=SA;Password=Asd123asd;trusted_connection=false;Persist Security Info=False;Encrypt=False"
+    depends_on:
+      - database
+
+  identity-api:
+    build:
+      context: .
+      dockerfile: IdentityService/Dockerfile
+    ports:
+      - "8001:80"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__ApplicationDbContextConnection: "Server=database;Database=IdentityService;User Id=SA;Password=Asd123asd;trusted_connection=false;Persist Security Info=False;Encrypt=False"
+    depends_on:
+      - database
+
+  database:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: "Asd123asd"
+      MSSQL_PID: Express
+    ports:
+      - "1433:1433"

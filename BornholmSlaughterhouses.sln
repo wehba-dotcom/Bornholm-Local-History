@@ -10,9 +10,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration", "{373FDBC0-3AC3-4A38-8D56-8457096DF251}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{2B499455-3A76-452C-892A-BDA1E7B8CD00}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\docker-compose\docker_compose.yml = ..\..\docker-compose\docker_compose.yml
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeallesBaseApi", "Fealles\FeallesBaseApi.csproj", "{D209B0FF-C96F-418A-A29D-4B094DBE72D2}"
 EndProject

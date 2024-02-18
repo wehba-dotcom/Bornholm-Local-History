@@ -25,11 +25,11 @@ namespace OrderApi.Infrastructure
             );
         }
 
-        public async Task<ApplicationUser> GetAsync(int ID)
+        public async Task<ApplicationUser> GetAsync(int id)
         {
             RestClient c = new RestClient(customerServiceBaseUrl);
 
-            var request = new RestRequest(ID.ToString());
+            var request = new RestRequest(id.ToString());
             var resp = await _retryPolicy.ExecuteAsync(async () =>
             {
                 var response = await c.GetAsync<ApplicationUser>(request);
