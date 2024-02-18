@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using EasyNetQ;
 using SharedModels;
 
+
 namespace OrderApi.Infrastructure
 {
     public class MessagePublisher : IMessagePublisher, IDisposable
@@ -19,7 +20,7 @@ namespace OrderApi.Infrastructure
             bus.Dispose();
         }
 
-        public void PublishOrderStatusChangedMessage(int? customerId, IList<OrderLine> orderLines, string topic)
+        public void PublishOrderStatusChangedMessage(string? customerId, IList<OrderLine> orderLines, string topic)
         {
             var message = new OrderStatusChangedMessage
             { 

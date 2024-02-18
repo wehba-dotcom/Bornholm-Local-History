@@ -6,7 +6,7 @@ using Polly.Retry;
 
 namespace OrderApi.Infrastructure
 {
-    public class CustomerServiceGateway : IServiceGateway<CustomerDto>
+    public class CustomerServiceGateway : IServiceGateway<ApplicationUser>
     {
         string customerServiceBaseUrl;
         private readonly AsyncRetryPolicy _retryPolicy;
@@ -25,14 +25,14 @@ namespace OrderApi.Infrastructure
             );
         }
 
-        public async Task<CustomerDto> GetAsync(int ID)
+        public async Task<ApplicationUser> GetAsync(int ID)
         {
             RestClient c = new RestClient(customerServiceBaseUrl);
 
             var request = new RestRequest(ID.ToString());
             var resp = await _retryPolicy.ExecuteAsync(async () =>
             {
-                var response = await c.GetAsync<CustomerDto>(request);
+                var response = await c.GetAsync<ApplicationUser>(request);
                 return response;
 
             });

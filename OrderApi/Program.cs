@@ -1,6 +1,8 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using OrderApi.CouponAPI;
 using OrderApi.Data;
 using OrderApi.Extensions;
 using OrderApi.Infrastructure;
@@ -17,10 +19,12 @@ string ConnectionString = "host=cow-01.rmq2.cloudamqp.com ;virtualHost=vohieqyo;
 
 // Add services to the container.
 
-string productServiceBaseUrl = "https://localhost:7056/api/auth/";
-string customerServiceBaseUrl = "https://localhost:7066/api/product/";
+string productServiceBaseUrl =  "https://localhost:5033/api/product/";
+string customerServiceBaseUrl = "https://localhost:7056/api/auth/";
 
-
+IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
+builder.Services.AddSingleton(mapper);
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 try
 {
@@ -44,7 +48,7 @@ builder.Services.AddSingleton<IServiceGateway<ProductDto>>(new
     ProductServiceGateway(productServiceBaseUrl));
 
 // Register product service gateway for dependency injection
-builder.Services.AddSingleton<IServiceGateway<CustomerDto>>(new
+builder.Services.AddSingleton<IServiceGateway<ApplicationUser>>(new
     CustomerServiceGateway(customerServiceBaseUrl));
 
 

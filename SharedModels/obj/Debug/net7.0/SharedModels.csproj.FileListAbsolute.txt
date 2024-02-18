@@ -10,3 +10,4 @@ C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\SharedMo
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\SharedModels\obj\Debug\net7.0\refint\SharedModels.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\SharedModels\obj\Debug\net7.0\SharedModels.pdb
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\SharedModels\obj\Debug\net7.0\ref\SharedModels.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\SharedModels\obj\Debug\net7.0\SharedModels.csproj.AssemblyReference.cache

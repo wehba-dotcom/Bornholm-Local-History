@@ -22,7 +22,7 @@ namespace OrderApi.Models
             {
                 Id = hiddenOrder.Id,
                 Date = hiddenOrder.Date,
-                CustomerId = hiddenOrder.CustomerId,
+                CustomerId =hiddenOrder.CustomerId,
                 Status = (OrderDto.OrderStatus)hiddenOrder.Status,
                 OrderLines = hiddenOrder.OrderLines.Select(Convert).ToList()
             };
