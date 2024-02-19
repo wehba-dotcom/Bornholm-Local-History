@@ -19,8 +19,8 @@ string ConnectionString = "host=cow-01.rmq2.cloudamqp.com ;virtualHost=vohieqyo;
 
 // Add services to the container.
 
-string productServiceBaseUrl =  "https://localhost:5033/api/product/";
-string customerServiceBaseUrl = "https://localhost:7056/api/auth/";
+string productServiceBaseUrl = "http://localhost:8000/api/product/";
+string customerServiceBaseUrl = "http://localhost:8001/api/auth/";
 
 IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
 builder.Services.AddSingleton(mapper);
@@ -104,7 +104,7 @@ if (app.Environment.IsDevelopment())
 
 
 
-//app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 
 app.UseAuthorization();
 

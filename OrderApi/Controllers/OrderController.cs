@@ -9,10 +9,10 @@ using SharedModels;
 
 namespace OrderApi.Controllers
 {
-   
-        [ApiController]
-        [Route("api/order")]
-        [Authorize]
+
+    [ApiController]
+    [Route("[controller]")]
+    [Authorize]
         public class OrderController : ControllerBase
         {
             private readonly IRepository<Order> repository;
@@ -21,9 +21,9 @@ namespace OrderApi.Controllers
             private IMessagePublisher messagePublisher;
             IServiceGateway<ProductDto> productServiceGateway;
             IServiceGateway<ApplicationUser> customerServiceGateway;
-            private readonly OrderApiContext _db;
+            
         public OrderController(
-               OrderApiContext db,
+               
                 IMapper mapper,
                 IRepository<Order> repos,
                 IConverter<Order, OrderDto> orderConverter,
@@ -37,7 +37,7 @@ namespace OrderApi.Controllers
                 customerServiceGateway = customerGateway;
                 messagePublisher = publisher;
                 _mapper = mapper;
-                _db = db;
+                
             }
 
             // GET: orders
@@ -129,7 +129,7 @@ namespace OrderApi.Controllers
                         // Create order.
                         order.Status = OrderDto.OrderStatus.completed;
                         Order newOrder = await repository.AddAsync(_mapper.Map<Order>(order));
-                           await _db.SaveChangesAsync();
+                           
                     return CreatedAtRoute("GetOrder", new { id = newOrder.Id }, newOrder);
                     }
                     catch

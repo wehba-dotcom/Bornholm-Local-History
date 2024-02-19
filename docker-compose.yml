@@ -9,7 +9,7 @@ services:
       - "8000:80"
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ConnectionStrings__ApplicationDbContextConnection: "Server=database;Database=productService;User Id=SA;Password=Asd123asd;trusted_connection=false;Persist Security Info=False;Encrypt=False"
+      ConnectionStrings__ApplicationDbContextConnection: "Server=192.168.0.52;Database=productService;User Id=SA;Password=Asd123asd;trusted_connection=false;Persist Security Info=False;Encrypt=False"
     depends_on:
       - database
 
@@ -21,7 +21,7 @@ services:
       - "8001:80"
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ConnectionStrings__ApplicationDbContextConnection: "Server=database;Database=IdentityService;User Id=SA;Password=Asd123asd;trusted_connection=false;Persist Security Info=False;Encrypt=False"
+      ConnectionStrings__ApplicationDbContextConnection: "Server=192.168.0.52;Database=IdentityService;User Id=SA;Password=Asd123asd;trusted_connection=false;Persist Security Info=False;Encrypt=False"
     depends_on:
       - database
 

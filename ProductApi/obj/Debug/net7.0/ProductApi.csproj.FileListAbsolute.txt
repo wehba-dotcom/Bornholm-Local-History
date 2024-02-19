@@ -255,9 +255,9 @@ C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\ProductA
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\ProductApi\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.ProductApi.props
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\ProductApi\obj\Debug\net7.0\staticwebassets.pack.json
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\ProductApi\obj\Debug\net7.0\scopedcss\bundle\ProductApi.styles.css
-C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\ProductApi\obj\Debug\net7.0\ProductApi.csproj.CopyComplete
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\ProductApi\obj\Debug\net7.0\ProductApi.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\ProductApi\obj\Debug\net7.0\refint\ProductApi.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\ProductApi\obj\Debug\net7.0\ProductApi.pdb
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\ProductApi\obj\Debug\net7.0\ProductApi.genruntimeconfig.cache
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\ProductApi\obj\Debug\net7.0\ref\ProductApi.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\ProductApi\obj\Debug\net7.0\ProductApi.csproj.Up2Date
