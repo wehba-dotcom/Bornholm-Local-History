@@ -1,7 +1,11 @@
-﻿namespace OrderApi.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace OrderApi.Models
 {
     public class Order
     {
+        [Key]
         public int Id { get; set; }
         public DateTime? Date { get; set; }
         public string? CustomerId { get; set; }
@@ -21,6 +25,7 @@
     public class OrderLine
     {
         public int Id { get; set; }
+        [ForeignKey(nameof(OrderLine.Id))]
         public int OrderId { get; set; }
         public int ProductId { get; set; }
         public int Quantity { get; set; }

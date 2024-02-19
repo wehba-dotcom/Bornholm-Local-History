@@ -6,6 +6,7 @@ using OrderApi.Infrastructure;
 using OrderApi.Models;
 using Shared.Models;
 using SharedModels;
+using System.Drawing.Text;
 
 namespace OrderApi.Controllers
 {
@@ -15,6 +16,7 @@ namespace OrderApi.Controllers
     [Authorize]
         public class OrderController : ControllerBase
         {
+            private readonly OrderApiContext _context;
             private readonly IRepository<Order> repository;
             private IMapper _mapper;
             private readonly IConverter<Order, OrderDto> orderConverter;
@@ -23,7 +25,7 @@ namespace OrderApi.Controllers
             IServiceGateway<ApplicationUser> customerServiceGateway;
             
         public OrderController(
-               
+                OrderApiContext context,
                 IMapper mapper,
                 IRepository<Order> repos,
                 IConverter<Order, OrderDto> orderConverter,
@@ -37,6 +39,7 @@ namespace OrderApi.Controllers
                 customerServiceGateway = customerGateway;
                 messagePublisher = publisher;
                 _mapper = mapper;
+            _context = context;
                 
             }
 
@@ -129,7 +132,8 @@ namespace OrderApi.Controllers
                         // Create order.
                         order.Status = OrderDto.OrderStatus.completed;
                         Order newOrder = await repository.AddAsync(_mapper.Map<Order>(order));
-                           
+                    await _context.SaveChangesAsync(); 
+
                     return CreatedAtRoute("GetOrder", new { id = newOrder.Id }, newOrder);
                     }
                     catch

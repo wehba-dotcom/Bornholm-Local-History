@@ -5,9 +5,10 @@ using IdentityApi.Service;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using SharedModels;
+using IdentityApi.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
-
+string ConnectionString = "host=cow-01.rmq2.cloudamqp.com;virtualHost=vohieqyo;username=vohieqyo;password=hRtXREuzSQwNnU085CF8r_3DCKXhsQZv";
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("ApplicationDbContextConnection");
 
@@ -36,7 +37,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
+Task.Factory.StartNew(() =>
+    new MessageListener(app.Services, ConnectionString).Start());
+
 app.UseAuthentication();
 app.UseAuthorization();
 

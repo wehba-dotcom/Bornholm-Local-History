@@ -14,7 +14,7 @@ using ProductApi.Infrastructure;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-string ConnectionString = "host=cow-01.rmq2.cloudamqp.com ;virtualHost=vohieqyo;username=vohieqyo;password=hRtXREuzSQwNnU085CF8r_3DCKXhsQZv";
+string ConnectionString = "host=cow-01.rmq2.cloudamqp.com;virtualHost=vohieqyo;username=vohieqyo;password=hRtXREuzSQwNnU085CF8r_3DCKXhsQZv";
 
 
 try
@@ -81,8 +81,7 @@ builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
-Task.Factory.StartNew(() =>
-    new MessageListener(app.Services, ConnectionString).Start());
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -91,7 +90,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
+Task.Factory.StartNew(() =>
+    new MessageListener(app.Services, ConnectionString).Start());
+
 app.UseAuthentication();
 app.UseAuthorization();
 

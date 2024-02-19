@@ -68,9 +68,9 @@ namespace IdentityApi.Infrastructure
                 // Beware that this operation is not idempotent.
                 foreach (var orderLine in message.OrderLines)
                 {
-                    var product = userRepos.Get(orderLine.Id.ToString());
+                    var user = userRepos.Get(orderLine.Id.ToString());
                     
-                    userRepos.Edit(product);
+                    userRepos.Edit(user);
                 }
             }
         }
