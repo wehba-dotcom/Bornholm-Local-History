@@ -25,7 +25,7 @@ string customerServiceBaseUrl = "http://localhost:8001/api/auth/";
 IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
 builder.Services.AddSingleton(mapper);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
+builder.Services.AddTransient<IDbInitializer, DbInitializer>();
 try
 {
     var connectionString = builder.Configuration.GetConnectionString("ApplicationDbContextConnection");
@@ -47,10 +47,9 @@ builder.Services.AddScoped<IRepository<Order>, OrderRepository>();
 builder.Services.AddSingleton<IServiceGateway<ProductDto>>(new
     ProductServiceGateway(productServiceBaseUrl));
 
-// Register product service gateway for dependency injection
+// Register customer service gateway for dependency injection
 builder.Services.AddSingleton<IServiceGateway<ApplicationUser>>(new
     CustomerServiceGateway(customerServiceBaseUrl));
-
 
 // Register MessagePublisher (a messaging gateway) for dependency injection
 builder.Services.AddSingleton<IMessagePublisher>(new
@@ -58,6 +57,7 @@ builder.Services.AddSingleton<IMessagePublisher>(new
 
 // Register OrderConverter for dependency injection
 builder.Services.AddSingleton<IConverter<Order, OrderDto>, OrderConverter>();
+//builder.Services.AddScoped<IMessagePublisher, MessagePublisher>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -103,7 +103,13 @@ if (app.Environment.IsDevelopment())
 }
 
 
-
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var dbContext = services.GetService<OrderApiContext>();
+    var dbInitializer = services.GetService<IDbInitializer>();
+    dbInitializer.Initialize(dbContext);
+}
 //app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
