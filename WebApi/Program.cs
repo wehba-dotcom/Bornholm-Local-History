@@ -2,27 +2,34 @@ using WebApi.Service;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using WebApi.Service.IService;
 using WebApi.Utility;
+using Mango.Web.Service.IService;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 
+// Add services to the container.
 
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddHttpClient();
 builder.Services.AddHttpClient<IAuthService, AuthService>();
 builder.Services.AddHttpClient<IFeallesService, FeallesService>();
 builder.Services.AddHttpClient<IProductService, ProductService>();
+builder.Services.AddHttpClient<IOrderService, OrderService>();
+
+
+
 SD.AuthAPIBase = builder.Configuration["ServiceUrls:AuthAPI"];
 SD.FeallesAPIBase = builder.Configuration["ServiceUrls:Feallesbase"];
 SD.ProductAPIBase = builder.Configuration["ServiceUrls:Product"];
-
+SD.OrderAPIBase = builder.Configuration["ServiceUrls:Order"];
 
 builder.Services.AddScoped<ITokenProvider, TokenProvider>();
 builder.Services.AddScoped<IBaseService, BaseService>();
 builder.Services.AddScoped<IFeallesService, FeallesService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
 
 builder.Services.AddControllersWithViews();
 

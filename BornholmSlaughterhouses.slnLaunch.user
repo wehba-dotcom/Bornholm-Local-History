@@ -9,10 +9,16 @@
       },
       {
         "Name": "OrderApi\\OrderApi.csproj",
-        "Action": "Start"
+        "Action": "Start",
+        "DebugTarget": ""
       },
       {
         "Name": "ProductApi\\ProductApi.csproj",
+        "Action": "Start",
+        "DebugTarget": ""
+      },
+      {
+        "Name": "WebApi\\WebApi.csproj",
         "Action": "Start"
       }
     ]
