@@ -106,6 +106,10 @@
               "target": "Package",
               "version": "[110.2.0, )"
             },
+            "ServiceStack.Interfaces": {
+              "target": "Package",
+              "version": "[8.1.2, )"
+            },
             "Stripe.net": {
               "target": "Package",
               "version": "[41.13.0, )"

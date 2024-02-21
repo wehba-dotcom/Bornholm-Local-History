@@ -1,24 +1,36 @@
 ﻿using System;
+using Newtonsoft.Json;
 using RestSharp;
 using SharedModels;
+using OrderApi.Models;
+using OrderAPI.Models.Dto;
+using ProductDto = OrderApi.Models.ProductDto;
+using ServiceStack;
 
 namespace OrderApi.Infrastructure
 {
     public class ProductServiceGateway : IServiceGateway<ProductDto>
     {
-        string productServiceBaseUrl;
+        
+        private readonly IHttpClientFactory _httpClientFactory;
 
-        public ProductServiceGateway(string baseUrl)
+        public ProductServiceGateway( IHttpClientFactory httpClientFactory)
         {
-            productServiceBaseUrl = baseUrl;
+            
+            _httpClientFactory = httpClientFactory;
         }
 
-        public async Task<ProductDto> GetAsync(int ID)
+        public async Task<ProductDto> GetAsync(int id)
         {
-            RestClient c = new RestClient(productServiceBaseUrl);
-
-            var request = new RestRequest(ID.ToString());
-            return await c.GetAsync<ProductDto>(request);
+            var client = _httpClientFactory.CreateClient("Product");
+            var response = await client.GetAsync($"/api/product/{id}");
+            var apiContet = await response.Content.ReadAsStringAsync();
+            var resp = JsonConvert.DeserializeObject<ResponseDto>(apiContet);
+            if (resp.IsSuccess)
+            {
+                return JsonConvert.DeserializeObject<ProductDto>(Convert.ToString(resp.Result));
+            }
+            return new ProductDto();
         }
     }
 }

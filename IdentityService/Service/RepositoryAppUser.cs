@@ -15,9 +15,9 @@ namespace IdentityApi.Service
         }
         public ApplicationUser Add(ApplicationUser entity)
         {
-            var newProduct = _db.ApplicationUsers.Add(entity).Entity;
+            var newUser = _db.ApplicationUsers.Add(entity).Entity;
             _db.SaveChanges();
-            return newProduct;
+            return newUser;
         }
 
         public void Edit(ApplicationUser entity)
@@ -37,16 +37,13 @@ namespace IdentityApi.Service
             return _db.ApplicationUsers.ToList();
         }
 
+       
+
         public void Remove(string id)
         {
             var applicationUser = _db.ApplicationUsers.FirstOrDefault(p => p.Id == id);
             _db.ApplicationUsers.Remove(applicationUser);
             _db.SaveChanges();
-        }
-
-        public void Remove(int id)
-        {
-            throw new NotImplementedException();
         }
     }
 }

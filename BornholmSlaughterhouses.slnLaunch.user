@@ -1,0 +1,20 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Name": "IdentityService\\IdentityApi.csproj",
+        "Action": "Start",
+        "DebugTarget": "https"
+      },
+      {
+        "Name": "OrderApi\\OrderApi.csproj",
+        "Action": "Start"
+      },
+      {
+        "Name": "ProductApi\\ProductApi.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

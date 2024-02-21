@@ -2565,6 +2565,15 @@
           }
         }
       },
+      "ServiceStack.Interfaces/8.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/ServiceStack.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/ServiceStack.Interfaces.dll": {}
+        }
+      },
       "Stripe.net/41.13.0": {
         "type": "package",
         "dependencies": {
@@ -8263,6 +8272,21 @@
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
+    "ServiceStack.Interfaces/8.1.2": {
+      "sha512": "Vs/fmiGjQgC+LJYIP/i75yPQqCy/ggM+OexEb4G15oEjrGhhLQ6bNngbbE61nVntOd+R/ktjhsKRHBH4SlmdsA==",
+      "type": "package",
+      "path": "servicestack.interfaces/8.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net472/ServiceStack.Interfaces.dll",
+        "lib/net6.0/ServiceStack.Interfaces.dll",
+        "lib/net8.0/ServiceStack.Interfaces.dll",
+        "lib/netstandard2.0/ServiceStack.Interfaces.dll",
+        "servicestack.interfaces.8.1.2.nupkg.sha512",
+        "servicestack.interfaces.nuspec"
+      ]
+    },
     "Stripe.net/41.13.0": {
       "sha512": "CDtQKL8ksU6HJaI7kN17FSDWcJ5GrBTq/L7WbWqWusVctAcM8qqI6+RSE7sZ87fY0DzcZFp8xXxYoDpafAqOzA==",
       "type": "package",
@@ -12395,6 +12419,7 @@
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 7.0.11",
       "Polly >= 8.3.0",
       "RestSharp >= 110.2.0",
+      "ServiceStack.Interfaces >= 8.1.2",
       "SharedModels >= 1.0.0",
       "Stripe.net >= 41.13.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
@@ -12505,6 +12530,10 @@
           "RestSharp": {
             "target": "Package",
             "version": "[110.2.0, )"
+          },
+          "ServiceStack.Interfaces": {
+            "target": "Package",
+            "version": "[8.1.2, )"
           },
           "Stripe.net": {
             "target": "Package",

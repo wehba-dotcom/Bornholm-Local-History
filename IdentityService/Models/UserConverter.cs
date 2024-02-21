@@ -3,36 +3,36 @@ using System.ComponentModel;
 
 namespace IdentityApi.Models
 {
-  //  public class UserConverter : IConverter<User, CustomerDto>
+    //public class UserConverter : IConverter<ApplicationUser, ApplicationUser>
     //{
-    //    public User Convert(CustomerDto sharedCustomer)
+    //    public ApplicationUser Convert(ApplicationUser sharedCustomer)
     //    {
-    //        return new User
+    //        return new ApplicationUser
     //        {
-    //            ID = sharedCustomer.CustomerId.ToString(),
+    //            ID = sharedCustomer.ID,
     //            Name = sharedCustomer.Name,
     //            Email = sharedCustomer.Email,
     //            PhoneNumber = sharedCustomer.PhoneNumber,
-                
+
     //        };
     //    }
 
-    //    public OrderDto Convert(User hiddenuser)
+    //    public ApplicationUser Convert(ApplicationUser hiddenuser)
     //    {
-    //        return new CustomerDto
+    //        return new ApplicationUser
     //        {
-    //            CustomerId = hiddenuser.ID,
+    //            Id = hiddenuser.Id,
     //            Name = hiddenuser.Name,
     //            Email = hiddenuser.Email,
     //            PhoneNumber = hiddenuser.PhoneNumber,
-                
+
     //        };
     //    }
 
-        
 
-       
-   // }
-}
+    //}
+
+        
+    }
 
 

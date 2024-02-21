@@ -4,9 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using OrderApi.Data;
 using OrderApi.Infrastructure;
 using OrderApi.Models;
-using Shared.Models;
 using SharedModels;
-using System.Drawing.Text;
 
 namespace OrderApi.Controllers
 {
@@ -16,30 +14,33 @@ namespace OrderApi.Controllers
     [Authorize]
         public class OrderController : ControllerBase
         {
+            private readonly IConfiguration _configuration;
             private readonly OrderApiContext _context;
             private readonly IRepository<Order> repository;
             private IMapper _mapper;
             private readonly IConverter<Order, OrderDto> orderConverter;
             private IMessagePublisher messagePublisher;
-            IServiceGateway<ProductDto> productServiceGateway;
-            IServiceGateway<ApplicationUser> customerServiceGateway;
+             IServiceGateway<ProductDto> productServiceGateway;
+           // IServiceGateway<ApplicationUser> customerServiceGateway;
             
         public OrderController(
+                 IConfiguration configuration,
                 OrderApiContext context,
                 IMapper mapper,
                 IRepository<Order> repos,
                 IConverter<Order, OrderDto> orderConverter,
-                IServiceGateway<ProductDto> gateway,
-                IServiceGateway<ApplicationUser> customerGateway,
+                IServiceGateway<ProductDto> productServiceGateway,
+              //  IServiceGateway<ApplicationUser> customerGateway,
                 IMessagePublisher publisher)
             {
+               _configuration = configuration;
                 repository = repos;
                 this.orderConverter = orderConverter;
-                productServiceGateway = gateway;
-                customerServiceGateway = customerGateway;
+                productServiceGateway = productServiceGateway;
+               // customerServiceGateway = customerGateway;
                 messagePublisher = publisher;
                 _mapper = mapper;
-            _context = context;
+                _context = context;
                 
             }
 
@@ -120,45 +121,47 @@ namespace OrderApi.Controllers
                 //}
 
 
-                if (await ProductItemsAvailable(order))
-                {
+                //if (await ProductItemsAvailable(order))
+                //{
                     try
                     {
-                        // Publish OrderStatusChangedMessage. If this operation
-                        // fails, the order will not be created
-                        messagePublisher.PublishOrderStatusChangedMessage(
-                            order.CustomerId, order.OrderLines, "completed");
+                    // Publish OrderStatusChangedMessage. If this operation
+                    // fails, the order will not be created
+                  
+                    string topicName = _configuration.GetValue<string>("TopicAndQueueNames:OrderCreatedTopic");
+                   
+                    messagePublisher.PublishOrderStatusChangedMessage( order.OrderLines, topicName);
 
-                        // Create order.
-                        order.Status = OrderDto.OrderStatus.completed;
-                        Order newOrder = await repository.AddAsync(_mapper.Map<Order>(order));
-                    await _context.SaveChangesAsync(); 
+                order.Status = OrderDto.OrderStatus.completed;
+                var newOrder = await repository.AddAsync(orderConverter.Convert(order));
+                return CreatedAtRoute("GetOrder", new { id = newOrder.Id }, newOrder);
+               
 
-                    return CreatedAtRoute("GetOrder", new { id = newOrder.Id }, newOrder);
+                   
                     }
                     catch
                     {
                         return StatusCode(500, "An error happened. Try again.");
                     }
-                }
-                else
-                {
-                    // If there are not enough product items available.
-                    return StatusCode(500, "Not enough items in stock.");
-                }
+                //}
+                //else
+                //{
+                //    // If there are not enough product items available.
+                //    return StatusCode(500, "Not enough items in stock.");
+                //}
 
 
 
 
             }
 
-            private async Task<bool> CustomerExists(int customerId)
-            {
-                var customer = await customerServiceGateway.GetAsync(customerId);
-                if (customer == null)
-                { return false; }
-                return true;
-            }
+            //private async Task<bool> CustomerExists(string customerId)
+            //{
+            //    var customer = await customerServiceGateway.GetAsync(customerId);
+            //    if (customer == null)
+            //    { return false; }
+            //    return true;
+            //}
 
         //private async Task<bool> CustomerHasGoodCreditStanding(int customerId)
         //{
@@ -172,11 +175,11 @@ namespace OrderApi.Controllers
                 {
                     // Call product service to get the product ordered.
                     var orderedProduct = await productServiceGateway.GetAsync(orderLine.ProductId);
-                    if (orderLine.Quantity > orderedProduct.ItemsInStock - orderedProduct.ItemsReserved)
-                    {
-                        return false;
-                    }
+                if (orderLine.Quantity > orderedProduct.ItemsInStock - orderedProduct.ItemsReserved)
+                {
+                    return false;
                 }
+            }
                 return true;
             }
         }

@@ -23,7 +23,7 @@ namespace IdentityApi.Service
 
         public async Task<bool> AssignRole(string email, string roleName)
         {
-            var user = _db.Users.FirstOrDefault(u => u.Email.ToLower() == email.ToLower());
+            var user = _db.ApplicationUsers.FirstOrDefault(u => u.Email.ToLower() == email.ToLower());
             if (user != null)
             {
                 if (!_roleManager.RoleExistsAsync(roleName).GetAwaiter().GetResult())
@@ -38,22 +38,22 @@ namespace IdentityApi.Service
 
         }
 
-        public async Task<LoginResponse> Login(LoginRequest loginRequest)
+        public async Task<LoginResponse> Login(LoginRequest loginRequestDto)
         {
-            var user = _db.Users.FirstOrDefault(u => u.UserName.ToLower() == loginRequest.UserName.ToLower());
+            var user = _db.ApplicationUsers.FirstOrDefault(u => u.UserName.ToLower() == loginRequestDto.UserName.ToLower());
 
-            bool isValid = await _userManager.CheckPasswordAsync(user,loginRequest.Password);
+            bool isValid = await _userManager.CheckPasswordAsync(user, loginRequestDto.Password);
 
-            if(user==null || isValid == false)
+            if (user == null || isValid == false)
             {
-                return new LoginResponse() { User = null,Token="" };
+                return new LoginResponse() { User = null, Token = "" };
             }
 
             //if user was found , Generate JWT Token
             var roles = await _userManager.GetRolesAsync(user);
-            var token = _jwtTokenGenerator.GenerateToken(user,roles);
+            var token = _jwtTokenGenerator.GenerateToken(user, roles);
 
-            User userDTO = new()
+            UserDto userDTO = new()
             {
                 Email = user.Email,
                 ID = user.Id,
@@ -61,34 +61,34 @@ namespace IdentityApi.Service
                 PhoneNumber = user.PhoneNumber
             };
 
-            LoginResponse loginResponse = new LoginResponse()
+            LoginResponse loginResponseDto = new LoginResponse()
             {
                 User = userDTO,
                 Token = token
             };
 
-            return loginResponse;
+            return loginResponseDto;
         }
 
-        public async Task<string> Register(RegistrationRequest registrationRequest)
+        public async Task<string> Register(RegistrationRequest registrationRequestDto)
         {
             ApplicationUser user = new()
             {
-                UserName = registrationRequest.Email,
-                Email = registrationRequest.Email,
-                NormalizedEmail = registrationRequest.Email.ToUpper(),
-                Name = registrationRequest.Name,
-                PhoneNumber = registrationRequest.PhoneNumber
+                UserName = registrationRequestDto.Email,
+                Email = registrationRequestDto.Email,
+                NormalizedEmail = registrationRequestDto.Email.ToUpper(),
+                Name = registrationRequestDto.Name,
+                PhoneNumber = registrationRequestDto.PhoneNumber
             };
 
             try
             {
-                var result =await  _userManager.CreateAsync(user,registrationRequest.Password);
+                var result = await _userManager.CreateAsync(user, registrationRequestDto.Password);
                 if (result.Succeeded)
                 {
-                    var userToReturn = _db.Users.First(u => u.UserName == registrationRequest.Email);
+                    var userToReturn = _db.ApplicationUsers.First(u => u.UserName == registrationRequestDto.Email);
 
-                    User userDto = new()
+                    UserDto userDto = new()
                     {
                         Email = userToReturn.Email,
                         ID = userToReturn.Id,

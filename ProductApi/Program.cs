@@ -10,6 +10,7 @@ using ProductApi.Extensions;
 using AutoMapper;
 using ProductApi.Models;
 using ProductApi.Infrastructure;
+using ProductApi.Models.Dto;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,7 +34,7 @@ catch (Exception ex)
 
 // Register repositories for dependency injection
 builder.Services.AddScoped<IRepository<Product>, ProductRepository>();
-
+builder.Services.AddSingleton<IConverter<Product, ProductDto>, ProductConverter>();
 
 //IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
 //builder.Services.AddSingleton(mapper);

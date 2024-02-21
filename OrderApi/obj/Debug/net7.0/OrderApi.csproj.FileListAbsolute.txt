@@ -265,3 +265,4 @@ C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\OrderApi
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\OrderApi\obj\Debug\net7.0\OrderApi.genruntimeconfig.cache
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\OrderApi\obj\Debug\net7.0\ref\OrderApi.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\OrderApi\obj\Debug\net7.0\OrderApi.csproj.Up2Date
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\OrderApi\bin\Debug\net7.0\ServiceStack.Interfaces.dll

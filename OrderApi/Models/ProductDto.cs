@@ -1,4 +1,4 @@
-﻿namespace SharedModels
+﻿namespace OrderApi.Models
 {
     public class ProductDto
     {

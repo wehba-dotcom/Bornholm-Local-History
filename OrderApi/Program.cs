@@ -7,6 +7,8 @@ using OrderApi.Data;
 using OrderApi.Extensions;
 using OrderApi.Infrastructure;
 using OrderApi.Models;
+using OrderAPI.Utility;
+using ServiceStack;
 using SharedModels;
 
 
@@ -19,9 +21,14 @@ string ConnectionString = "host=cow-01.rmq2.cloudamqp.com;virtualHost=vohieqyo;u
 
 // Add services to the container.
 
-string productServiceBaseUrl = "http://localhost:8000/api/product/";
-string customerServiceBaseUrl = "http://localhost:8001/api/auth/";
+//string productServiceBaseUrl = "http://localhost:8000/api/product/";
+//string customerServiceBaseUrl = "http://localhost:8001/api/auth/";
 
+//string productServiceBaseUrl = "http://localhost:5033/api/product/";
+//string customerServiceBaseUrl = "http://localhost:7056/api/auth/";
+
+
+builder.Services.AddScoped<BackendApiAuthenticationHttpClientHandler>();
 IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
 builder.Services.AddSingleton(mapper);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
@@ -38,18 +45,21 @@ catch (Exception ex)
     Console.WriteLine("An error occurred while setting up the DbContext:");
     Console.WriteLine(ex.Message);
 }
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddHttpClient("Product", u => u.BaseAddress =
+
+new Uri(builder.Configuration["ServiceUrls:ProductAPI"])).AddHttpMessageHandler<BackendApiAuthenticationHttpClientHandler>();
 
 // Register repositories for dependency injection
 builder.Services.AddScoped<IRepository<Order>, OrderRepository>();
 
 
 // Register product service gateway for dependency injection
-builder.Services.AddSingleton<IServiceGateway<ProductDto>>(new
-    ProductServiceGateway(productServiceBaseUrl));
+builder.Services.AddScoped<IServiceGateway<OrderApi.Models.ProductDto>, ProductServiceGateway>();
 
 // Register customer service gateway for dependency injection
-builder.Services.AddSingleton<IServiceGateway<ApplicationUser>>(new
-    CustomerServiceGateway(customerServiceBaseUrl));
+//builder.Services.AddSingleton<IServiceGateway<ApplicationUser>>(new
+//    CustomerServiceGateway(customerServiceBaseUrl));
 
 // Register MessagePublisher (a messaging gateway) for dependency injection
 builder.Services.AddSingleton<IMessagePublisher>(new
