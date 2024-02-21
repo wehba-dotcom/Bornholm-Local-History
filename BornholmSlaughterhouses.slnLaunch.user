@@ -19,7 +19,8 @@
       },
       {
         "Name": "WebApi\\WebApi.csproj",
-        "Action": "Start"
+        "Action": "Start",
+        "DebugTarget": ""
       }
     ]
   }

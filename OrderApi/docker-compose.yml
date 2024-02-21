@@ -24,6 +24,17 @@ services:
       ConnectionStrings__ApplicationDbContextConnection: "Server=192.168.0.52;Database=IdentityService;User Id=SA;Password=Asd123asd;trusted_connection=false;Persist Security Info=False;Encrypt=False"
     depends_on:
       - database
+  order-api:
+    build:
+      context: .
+      dockerfile: OrderApi/Dockerfile
+    ports:
+      - "8002:80"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__ApplicationDbContextConnection: "Server=192.168.0.52;Database=orderService;User Id=SA;Password=Asd123asd;trusted_connection=false;Persist Security Info=False;Encrypt=False"
+    depends_on:
+      - database
 
   database:
     image: mcr.microsoft.com/mssql/server:2019-latest

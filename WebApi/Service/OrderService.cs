@@ -29,7 +29,7 @@ namespace WebApi.Service
             return await _baseService.SendAsync(new RequestDto()
             {
                 ApiType = SD.ApiType.GET,
-                Url = SD.OrderAPIBase + "/api/order/GetOrders"
+                Url = SD.OrderAPIBase + "/api/order"
             });
         }
 

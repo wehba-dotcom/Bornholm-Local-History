@@ -8,11 +8,10 @@ using SharedModels;
 
 namespace OrderApi.Controllers
 {
-
+    [Route("api/order")]
     [ApiController]
-    [Route("[controller]")]
     [Authorize]
-        public class OrderController : ControllerBase
+    public class OrderController : ControllerBase
         {
             private readonly IConfiguration _configuration;
             private readonly OrderApiContext _context;
