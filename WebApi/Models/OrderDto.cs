@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace WebApi.Models
 {
-    public class OrderDto
+    public class Order
     {
         public int Id { get; set; }
         public DateTime? Date { get; set; }

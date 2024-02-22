@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using OrderApi.Data;
 using OrderApi.Infrastructure;
 using OrderApi.Models;
+using OrderAPI.Models.Dto;
 using SharedModels;
 
 namespace OrderApi.Controllers
@@ -20,8 +22,8 @@ namespace OrderApi.Controllers
             private readonly IConverter<Order, OrderDto> orderConverter;
             private IMessagePublisher messagePublisher;
              IServiceGateway<ProductDto> productServiceGateway;
-         
-            
+            private ResponseDto _response;
+
         public OrderController(
                  IConfiguration configuration,
                 OrderApiContext context,
@@ -38,15 +40,27 @@ namespace OrderApi.Controllers
                 messagePublisher = publisher;
                 _mapper = mapper;
                 _context = context;
-                
-            }
+            _response = new ResponseDto();
+        }
 
             // GET: orders
             [HttpGet]
-            public async Task<IEnumerable<Order>> GetAsync()
+            public ResponseDto Get()
             {
-                return await repository.GetAllAsync();
+            try
+            {
+                //objList = _db.OrderHeaders.Include(u => u.OrderDetails).OrderByDescending(u => u.OrderHeaderId).ToList();
+                IEnumerable<Order> objList;
+                objList = _context.Orders.Include(u=> u.OrderLines).ToList();
+                _response.Result = _mapper.Map<IEnumerable<Order>>(objList);
             }
+            catch (Exception ex)
+            {
+                _response.IsSuccess = false;
+                _response.Message = ex.Message;
+            }
+            return _response;
+        }
 
             // GET orders/5
             [HttpGet("{ID}", Name = "GetOrder")]
@@ -77,10 +91,10 @@ namespace OrderApi.Controllers
 
                 return ordersWithSpecificProduct;
             }
-           
-            // POST orders
-            [HttpPost]
-            public async Task<IActionResult> PostAsync([FromBody] Order hiddenOrder)
+
+        // POST orders
+        [HttpPost("CreateOrder")]
+        public async Task<IActionResult> PostAsync([FromBody] Order hiddenOrder)
             {
                 if (hiddenOrder == null)
                 {

@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<WebApi.SharedModels.Order>
+
 @{
     ViewData["Title"] = "Index";
     // Pager pager = new Pager();
@@ -20,7 +21,7 @@
 
 <div class="row pt-4">
     <div class="col-4 text-right">
-        <a asp-controller="Product" asp-action="Create" class="btn btn-primary w-50"><i class="bi bi-plus-circle-fill"></i>  Tilføj Ny</a>
+        <a asp-controller="Order" asp-action="Create" class="btn btn-primary w-50"><i class="bi bi-plus-circle-fill"></i>Add New</a>
     </div>
     <div class="col-4 text-">
         <a asp-controller="Home" asp-action="Index" class="btn btn-primary w-50"><i class="bi bi-backspace"></i>  Tilbage</a>
@@ -47,38 +48,6 @@
 <hr />
 <br />
 
-@* @if (pager.TotalPages > 0)
-{ *@
-    <ul class="pagination justify-content-end">
-       @*  @if (pager.CurrentPage > 1)
-        {
-            <li class="page-item ">
-                <a class="page-link" asp-controller="Product" asp-action="Index" asp-route-pg="1">First</a>
-            </li>
-            <li class="page-item ">
-                <a class="page-link" asp-controller="Product" asp-action="Index" asp-route-pg="@(pager.CurrentPage-1)">Previouse</a>
-            </li>
-        }
-        @for (var pge = pager.StartPage; pge <= pager.EndPage; pge++)
-        {
-            <li class="page-item @(pge == pager.CurrentPage? "active":"")">
-                <a class="page-link" asp-controller="Product" asp-action="Index" asp-route-pg="@pge">@pge</a>
-            </li>
-        }
-        @if (pager.CurrentPage < pager.TotalPages)
-        {
-            <li class="page-item ">
-                <a class="page-link" asp-controller="Product" asp-action="Index" asp-route-pg="@(pager.CurrentPage+1)">Next</a>
-            </li>
-            <li class="page-item ">
-                <a class="page-link" asp-controller="Product" asp-action="Index" asp-route-pg="@(pager.TotalPages)">Last</a>
-            </li>
-        }
-    </ul>
-}
-
- *@
-
 @if (Model.Count() > 0)
 {
     <table class="table table-bordered table-striped">
@@ -88,7 +57,9 @@
                 <th> Date </th>
                 <th>CustomerId</th>
                 <th> Status </th>
-                <th> OrderLines </th>
+                <th>Line ID</th>
+                <th>Product ID</th>
+                <th>Quantity</th>
             </tr>
         </thead>
         <tbody>
@@ -98,11 +69,20 @@
                     <td width="5%">@item.Id</td>
                     <td width="5%">@item.Date</td>
                     <td width="5%">@item.CustomerId</td>
-                    <td width="5%">@item.OrderLines</td>
-                    <td width="5%">@item.OrderLines</td>
+                    <td width="5%">@item.Status</td>
+                   @* <td width="5%">@item.OrderLines.</td> *@
                    
 
-                    <td>
+                   
+                                @foreach (var orderLine in item.OrderLines)
+                                {
+                                    
+                                        <td>@orderLine.Id</td>
+                                        <td>@orderLine.ProductId</td>
+                                        <td>@orderLine.Quantity</td>
+                                    
+                                }
+                      <td>     
                         <div class=" btn-group" role="group">
 
                             <a asp-controller="Feallesbase" asp-action="FeallesEdit" asp-route-id="@item.Id" class="btn btn-primary  mx-2"><i class="bi bi-pencil-square"></i>Redigere</a>

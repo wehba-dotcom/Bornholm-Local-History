@@ -1,6 +1,7 @@
 ﻿using Mango.Web.Service.IService;
 using WebApi.Models;
 using WebApi.Service.IService;
+using WebApi.SharedModels;
 using WebApi.Utility;
 
 namespace WebApi.Service
@@ -14,7 +15,7 @@ namespace WebApi.Service
             _baseService = baseService;
         }
 
-        public async Task<ResponseDto?> CreateOrder(OrderDto orderDto)
+        public async Task<ResponseDto?> CreateOrder(Models.Order orderDto)
         {
             return await _baseService.SendAsync(new RequestDto()
             {
