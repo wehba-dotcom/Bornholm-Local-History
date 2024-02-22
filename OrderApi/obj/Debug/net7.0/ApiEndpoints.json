@@ -2,7 +2,7 @@
   {
     "ContainingType": "OrderApi.Controllers.OrderController",
     "Method": "GetAsync",
-    "RelativePath": "Order",
+    "RelativePath": "api/order",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -22,7 +22,7 @@
   {
     "ContainingType": "OrderApi.Controllers.OrderController",
     "Method": "PostAsync",
-    "RelativePath": "Order",
+    "RelativePath": "api/order",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -38,7 +38,7 @@
   {
     "ContainingType": "OrderApi.Controllers.OrderController",
     "Method": "GetAsync",
-    "RelativePath": "Order/{ID}",
+    "RelativePath": "api/order/{ID}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -53,29 +53,8 @@
   },
   {
     "ContainingType": "OrderApi.Controllers.OrderController",
-    "Method": "PostAsync",
-    "RelativePath": "Order/customer/{Id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "hiddenOrder",
-        "Type": "OrderApi.Models.Order",
-        "IsRequired": true
-      },
-      {
-        "Name": "Id",
-        "Type": "",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "OrderApi.Controllers.OrderController",
     "Method": "GetByProduct",
-    "RelativePath": "Order/product/{id}",
+    "RelativePath": "api/order/product/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

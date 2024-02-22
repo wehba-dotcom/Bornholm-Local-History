@@ -5,7 +5,7 @@
       {
         "Name": "IdentityService\\IdentityApi.csproj",
         "Action": "Start",
-        "DebugTarget": "https"
+        "DebugTarget": "http"
       },
       {
         "Name": "OrderApi\\OrderApi.csproj",
@@ -14,11 +14,6 @@
       },
       {
         "Name": "ProductApi\\ProductApi.csproj",
-        "Action": "Start",
-        "DebugTarget": ""
-      },
-      {
-        "Name": "WebApi\\WebApi.csproj",
         "Action": "Start",
         "DebugTarget": ""
       }

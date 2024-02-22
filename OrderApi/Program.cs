@@ -57,9 +57,6 @@ builder.Services.AddScoped<IRepository<Order>, OrderRepository>();
 // Register product service gateway for dependency injection
 builder.Services.AddScoped<IServiceGateway<OrderApi.Models.ProductDto>, ProductServiceGateway>();
 
-// Register customer service gateway for dependency injection
-//builder.Services.AddSingleton<IServiceGateway<ApplicationUser>>(new
-//    CustomerServiceGateway(customerServiceBaseUrl));
 
 // Register MessagePublisher (a messaging gateway) for dependency injection
 builder.Services.AddSingleton<IMessagePublisher>(new
@@ -113,13 +110,13 @@ if (app.Environment.IsDevelopment())
 }
 
 
-using (var scope = app.Services.CreateScope())
-{
-    var services = scope.ServiceProvider;
-    var dbContext = services.GetService<OrderApiContext>();
-    var dbInitializer = services.GetService<IDbInitializer>();
-    dbInitializer.Initialize(dbContext);
-}
+//using (var scope = app.Services.CreateScope())
+//{
+//    var services = scope.ServiceProvider;
+//    var dbContext = services.GetService<OrderApiContext>();
+//    var dbInitializer = services.GetService<IDbInitializer>();
+//    dbInitializer.Initialize(dbContext);
+//}
 //app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();

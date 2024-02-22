@@ -11,13 +11,11 @@ namespace IdentityApi.Controllers
     {
         private readonly IAuthService _authService;
         
-        private readonly IConfiguration _configuration;
+      
         protected Response _response;
-        public AuthAPIController(IAuthService authService, IConfiguration configuration)
+        public AuthAPIController(IAuthService authService)
         {
             _authService = authService;
-            _configuration = configuration;
-            
             _response = new();
         }
 
@@ -34,7 +32,7 @@ namespace IdentityApi.Controllers
                 _response.Message= errorMessage;
                 return BadRequest(_response);
             }
-           // await _messageBus.PublishMessage(model.Email, _configuration.GetValue<string>("TopicAndQueueNames:RegisterUserQueue"));
+          
                 return Ok(_response);
         }
 

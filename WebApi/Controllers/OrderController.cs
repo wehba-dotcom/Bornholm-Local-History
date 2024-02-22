@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using WebApi.Models;
+using WebApi.SharedModels;
 
 namespace WebApi.Controllers
 {
@@ -15,13 +16,13 @@ namespace WebApi.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            List<OrderDto>? list = new();
+            List<Order>? list =new ();
 
             ResponseDto? response = await _orderService.GetAllOrders();
 
             if (response != null && response.IsSuccess)
             {
-                list = JsonConvert.DeserializeObject<List<OrderDto>>(Convert.ToString(response.Result));
+                list = JsonConvert.DeserializeObject<List<Order>>(Convert.ToString(response.Result));
             }
             else
             {

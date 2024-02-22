@@ -36,8 +36,7 @@ catch (Exception ex)
 builder.Services.AddScoped<IRepository<Product>, ProductRepository>();
 builder.Services.AddSingleton<IConverter<Product, ProductDto>, ProductConverter>();
 
-//IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
-//builder.Services.AddSingleton(mapper);
+
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 //builder.Services.AddSwaggerGen();
@@ -46,9 +45,6 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
-//var secret = builder.Configuration.GetValue<string>("ApiSettings: Secret");
-//var issuer = builder.Configuration.GetValue<string>("ApiSettings:Issuer");
-//var audience = builder.Configuration.GetValue<string>("ApiSettings:Audience");
 builder.Services.AddSwaggerGen(option =>
 {
     option.AddSecurityDefinition(name: JwtBearerDefaults.AuthenticationScheme, securityScheme: new OpenApiSecurityScheme

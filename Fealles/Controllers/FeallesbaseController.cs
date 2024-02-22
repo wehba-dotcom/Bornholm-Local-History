@@ -5,9 +5,7 @@ using FeallesBaseApi.Data;
 using System.Net.Sockets;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using Newtonsoft.Json;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
-using FeallesBaseApi.Models;
 using AutoMapper;
 using Stripe;
 

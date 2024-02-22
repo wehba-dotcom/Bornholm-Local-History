@@ -71,6 +71,7 @@ C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\OrderApi
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\OrderApi\bin\Debug\net7.0\Polly.Core.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\OrderApi\bin\Debug\net7.0\RabbitMQ.Client.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\OrderApi\bin\Debug\net7.0\RestSharp.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\OrderApi\bin\Debug\net7.0\ServiceStack.Interfaces.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\OrderApi\bin\Debug\net7.0\Stripe.net.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\OrderApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\OrderApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -259,10 +260,9 @@ C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\OrderApi
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\OrderApi\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.OrderApi.props
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\OrderApi\obj\Debug\net7.0\staticwebassets.pack.json
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\OrderApi\obj\Debug\net7.0\scopedcss\bundle\OrderApi.styles.css
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\OrderApi\obj\Debug\net7.0\OrderApi.csproj.Up2Date
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\OrderApi\obj\Debug\net7.0\OrderApi.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\OrderApi\obj\Debug\net7.0\refint\OrderApi.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\OrderApi\obj\Debug\net7.0\OrderApi.pdb
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\OrderApi\obj\Debug\net7.0\OrderApi.genruntimeconfig.cache
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\OrderApi\obj\Debug\net7.0\ref\OrderApi.dll
-C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\OrderApi\obj\Debug\net7.0\OrderApi.csproj.Up2Date
-C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\OrderApi\bin\Debug\net7.0\ServiceStack.Interfaces.dll
