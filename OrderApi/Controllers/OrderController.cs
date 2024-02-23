@@ -6,7 +6,9 @@ using OrderApi.Data;
 using OrderApi.Infrastructure;
 using OrderApi.Models;
 using OrderAPI.Models.Dto;
+using ServiceStack;
 using SharedModels;
+using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 
 namespace OrderApi.Controllers
 {
@@ -45,13 +47,13 @@ namespace OrderApi.Controllers
 
             // GET: orders
             [HttpGet]
-            public ResponseDto Get()
+           
+            public async Task<ResponseDto> GetAsync()
             {
             try
             {
-                //objList = _db.OrderHeaders.Include(u => u.OrderDetails).OrderByDescending(u => u.OrderHeaderId).ToList();
                 IEnumerable<Order> objList;
-                objList = _context.Orders.Include(u=> u.OrderLines).ToList();
+                objList = await _context.Orders.Include(u=> u.OrderLines).ToListAsync();
                 _response.Result = _mapper.Map<IEnumerable<Order>>(objList);
             }
             catch (Exception ex)
@@ -60,7 +62,7 @@ namespace OrderApi.Controllers
                 _response.Message = ex.Message;
             }
             return _response;
-        }
+            }
 
             // GET orders/5
             [HttpGet("{ID}", Name = "GetOrder")]
@@ -94,18 +96,12 @@ namespace OrderApi.Controllers
 
         // POST orders
         [HttpPost("CreateOrder")]
-        public async Task<IActionResult> PostAsync([FromBody] Order hiddenOrder)
-            {
-                if (hiddenOrder == null)
-                {
-                    return BadRequest();
-                }
+        public async Task<ResponseDto> PostAsync([FromBody] Order hiddenOrder)
+        {
+              
              OrderDto order = orderConverter.Convert(hiddenOrder);
             
-                    if (order.CustomerId == null )
-                        {
-                            return StatusCode(500, "Customer does not exist");
-                        }
+                    
               
                     try
                     {
@@ -118,18 +114,19 @@ namespace OrderApi.Controllers
 
                         order.Status = OrderDto.OrderStatus.completed;
                         var newOrder = await repository.AddAsync(orderConverter.Convert(order));
-                        return CreatedAtRoute("GetOrder", new { id = newOrder.Id }, newOrder);
-               
+                //return CreatedAtRoute("GetOrder", new { id = newOrder.Id }, newOrder);
+                          _response.Result =newOrder;
 
-                   
+
                     }
-                    catch
+                    catch (Exception ex)
                     {
-                        return StatusCode(500, "An error happened. Try again.");
+                        _response.IsSuccess = false;
+                        _response.Message = ex.Message;
                     }
 
-
-            }
+            return _response;
+        }
 
           
 
@@ -143,8 +140,8 @@ namespace OrderApi.Controllers
                 {
                     return false;
                 }
-            }
+                }
                 return true;
-            }
+               }
         }
 }
