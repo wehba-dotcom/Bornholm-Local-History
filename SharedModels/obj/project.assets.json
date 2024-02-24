@@ -774,11 +774,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\exam_projekt\\BornholmSlaughterhouses\\SharedModels\\SharedModels.csproj",
+      "projectUniqueName": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet\\BornholmSlaughterhouses\\SharedModels\\SharedModels.csproj",
       "projectName": "SharedModels",
-      "projectPath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\exam_projekt\\BornholmSlaughterhouses\\SharedModels\\SharedModels.csproj",
+      "projectPath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet\\BornholmSlaughterhouses\\SharedModels\\SharedModels.csproj",
       "packagesPath": "C:\\Users\\WEHBA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\exam_projekt\\BornholmSlaughterhouses\\SharedModels\\obj\\",
+      "outputPath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet\\BornholmSlaughterhouses\\SharedModels\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

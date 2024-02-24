@@ -11,3 +11,16 @@ C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Monitori
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Monitoring\obj\Debug\net7.0\refint\Monitoring.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Monitoring\obj\Debug\net7.0\Monitoring.pdb
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\Monitoring\obj\Debug\net7.0\ref\Monitoring.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet\BornholmSlaughterhouses\Monitoring\bin\Debug\net7.0\Monitoring.deps.json
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet\BornholmSlaughterhouses\Monitoring\bin\Debug\net7.0\Monitoring.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet\BornholmSlaughterhouses\Monitoring\bin\Debug\net7.0\Monitoring.pdb
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet\BornholmSlaughterhouses\Monitoring\obj\Debug\net7.0\Monitoring.csproj.AssemblyReference.cache
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet\BornholmSlaughterhouses\Monitoring\obj\Debug\net7.0\Monitoring.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet\BornholmSlaughterhouses\Monitoring\obj\Debug\net7.0\Monitoring.AssemblyInfoInputs.cache
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet\BornholmSlaughterhouses\Monitoring\obj\Debug\net7.0\Monitoring.AssemblyInfo.cs
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet\BornholmSlaughterhouses\Monitoring\obj\Debug\net7.0\Monitoring.csproj.CoreCompileInputs.cache
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet\BornholmSlaughterhouses\Monitoring\obj\Debug\net7.0\Monitoring.sourcelink.json
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet\BornholmSlaughterhouses\Monitoring\obj\Debug\net7.0\Monitoring.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet\BornholmSlaughterhouses\Monitoring\obj\Debug\net7.0\refint\Monitoring.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet\BornholmSlaughterhouses\Monitoring\obj\Debug\net7.0\Monitoring.pdb
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet\BornholmSlaughterhouses\Monitoring\obj\Debug\net7.0\ref\Monitoring.dll

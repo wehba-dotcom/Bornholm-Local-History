@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ex+LQtvoWkWnQpZrksBGIYJwdmQoo5CGftOUkJhSf3R0wR9zqHd0z+g5C7RXc1ShHcRJIcRuUQy+tqwJBWjWrg==",
+  "dgSpecHash": "8NNc+7Hun0iYi0UJnbkIGSJQcaqNldrTzU0FXE/21vov2gU3GRSbAJtBBUQFvNBQxuyS+JbEyWlqTNJ6Yncgrg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\exam_projekt\\BornholmSlaughterhouses\\ProductApi\\ProductApi.csproj",
+  "projectFilePath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet\\BornholmSlaughterhouses\\ProductApi\\ProductApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WEHBA\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",

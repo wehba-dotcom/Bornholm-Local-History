@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dETp2+/uB/yE8RTm00/2cXDlc59KMSgBUgzlqrWJeVUofL5afm1Fwsd4X9obcNKzwG8zG/3uMFM176kgUPAglQ==",
+  "dgSpecHash": "6HHWAYGnJmAd9e+427JxGy5a9F4s9tmp3Tst9oLdqI41GBgQSpqmjr46AHeAr4Xv3SnhB5jKAFt4pgr8Uy3VuQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\exam_projekt\\BornholmSlaughterhouses\\Monitoring\\Monitoring.csproj",
+  "projectFilePath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet\\BornholmSlaughterhouses\\Monitoring\\Monitoring.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WEHBA\\.nuget\\packages\\serilog\\3.1.1\\serilog.3.1.1.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\serilog.enrichers.span\\3.1.0\\serilog.enrichers.span.3.1.0.nupkg.sha512",
