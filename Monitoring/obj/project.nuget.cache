@@ -1,9 +1,25 @@
 {
   "version": 2,
-  "dgSpecHash": "6HHWAYGnJmAd9e+427JxGy5a9F4s9tmp3Tst9oLdqI41GBgQSpqmjr46AHeAr4Xv3SnhB5jKAFt4pgr8Uy3VuQ==",
+  "dgSpecHash": "6v9aBOaF71gOb82bPkBx8V8LtlhNfZnI/EVKonmEnxJKP9/C7N5Txw21VOq3bvRe0sv9K9xldLsKFk5Jgl2flg==",
   "success": true,
   "projectFilePath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet\\BornholmSlaughterhouses\\Monitoring\\Monitoring.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.0\\microsoft.extensions.configuration.3.1.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.0\\microsoft.extensions.configuration.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.0\\microsoft.extensions.configuration.binder.3.1.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.0\\microsoft.extensions.dependencyinjection.3.1.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.0\\microsoft.extensions.dependencyinjection.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.logging\\3.1.0\\microsoft.extensions.logging.3.1.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.0\\microsoft.extensions.logging.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.logging.configuration\\3.1.0\\microsoft.extensions.logging.configuration.3.1.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.options\\3.1.0\\microsoft.extensions.options.3.1.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\3.1.0\\microsoft.extensions.options.configurationextensions.3.1.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.0\\microsoft.extensions.primitives.3.1.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\opentelemetry\\1.6.0\\opentelemetry.1.6.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\opentelemetry.api\\1.6.0\\opentelemetry.api.1.6.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\opentelemetry.api.providerbuilderextensions\\1.6.0\\opentelemetry.api.providerbuilderextensions.1.6.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\opentelemetry.exporter.console\\1.6.0\\opentelemetry.exporter.console.1.6.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\opentelemetry.exporter.zipkin\\1.6.0\\opentelemetry.exporter.zipkin.1.6.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\serilog\\3.1.1\\serilog.3.1.1.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\serilog.enrichers.span\\3.1.0\\serilog.enrichers.span.3.1.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\serilog.formatting.compact\\2.0.0\\serilog.formatting.compact.2.0.0.nupkg.sha512",
@@ -11,7 +27,9 @@
     "C:\\Users\\WEHBA\\.nuget\\packages\\serilog.sinks.file\\5.0.0\\serilog.sinks.file.5.0.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\serilog.sinks.periodicbatching\\3.1.0\\serilog.sinks.periodicbatching.3.1.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\serilog.sinks.seq\\6.0.0\\serilog.sinks.seq.6.0.0.nupkg.sha512",
-    "C:\\Users\\WEHBA\\.nuget\\packages\\system.diagnostics.diagnosticsource\\7.0.0\\system.diagnostics.diagnosticsource.7.0.0.nupkg.sha512"
+    "C:\\Users\\WEHBA\\.nuget\\packages\\system.diagnostics.diagnosticsource\\7.0.2\\system.diagnostics.diagnosticsource.7.0.2.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\system.text.encodings.web\\4.7.2\\system.text.encodings.web.4.7.2.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
   ],
   "logs": []
 }

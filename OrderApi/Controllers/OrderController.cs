@@ -9,6 +9,7 @@ using OrderApi.Models;
 using OrderAPI.Models.Dto;
 using ServiceStack;
 using SharedModels;
+using System.Diagnostics;
 using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 
 namespace OrderApi.Controllers
@@ -101,8 +102,9 @@ namespace OrderApi.Controllers
         [HttpPost("CreateOrder")]
         public async Task<ResponseDto> PostAsync([FromBody] Order hiddenOrder)
         {
-              
-             OrderDto order = orderConverter.Convert(hiddenOrder);
+             var activity = MonitorService.ActivitySource.StartActivity(" OrderService Create Method is called", ActivityKind.Consumer) ;
+
+                OrderDto order = orderConverter.Convert(hiddenOrder);
             
                     
               

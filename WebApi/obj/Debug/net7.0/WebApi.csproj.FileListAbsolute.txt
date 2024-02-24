@@ -106,3 +106,8 @@ C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet\BornholmSlaughterhouses\Web
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet\BornholmSlaughterhouses\WebApi\obj\Debug\net7.0\WebApi.pdb
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet\BornholmSlaughterhouses\WebApi\obj\Debug\net7.0\WebApi.genruntimeconfig.cache
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet\BornholmSlaughterhouses\WebApi\obj\Debug\net7.0\ref\WebApi.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\OpenTelemetry.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\OpenTelemetry.Api.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\OpenTelemetry.Api.ProviderBuilderExtensions.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\OpenTelemetry.Exporter.Console.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\OpenTelemetry.Exporter.Zipkin.dll

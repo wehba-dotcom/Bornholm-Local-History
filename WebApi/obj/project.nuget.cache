@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1KHE18pRFY12wCxyE3ydpQeArWqCRK3/rc8mIqBLcZ1eDvCK7DsQqCt9HbFDBmw7afrIgPj1HOhfGpSkET5Njw==",
+  "dgSpecHash": "7Onpl+pD/llaFaTivV7BQCbwWiz3sCqF68V8gveD5CZGeRGvyISo+Qyvcy1oUG0xz+sWFWvo5YYXDuL9TEhzrg==",
   "success": true,
   "projectFilePath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet\\BornholmSlaughterhouses\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,17 @@
     "C:\\Users\\WEHBA\\.nuget\\packages\\documentformat.openxml.framework\\3.0.1\\documentformat.openxml.framework.3.0.1.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\elasticsearch.net\\7.17.5\\elasticsearch.net.7.17.5.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.csharp\\4.6.0\\microsoft.csharp.4.6.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.0\\microsoft.extensions.configuration.3.1.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.0\\microsoft.extensions.configuration.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.0\\microsoft.extensions.configuration.binder.3.1.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.0\\microsoft.extensions.dependencyinjection.3.1.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.0\\microsoft.extensions.dependencyinjection.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.logging\\3.1.0\\microsoft.extensions.logging.3.1.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.0\\microsoft.extensions.logging.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.logging.configuration\\3.1.0\\microsoft.extensions.logging.configuration.3.1.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.options\\3.1.0\\microsoft.extensions.options.3.1.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\3.1.0\\microsoft.extensions.options.configurationextensions.3.1.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.0\\microsoft.extensions.primitives.3.1.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.identitymodel.abstractions\\7.3.1\\microsoft.identitymodel.abstractions.7.3.1.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\7.3.1\\microsoft.identitymodel.jsonwebtokens.7.3.1.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.identitymodel.logging\\7.3.1\\microsoft.identitymodel.logging.7.3.1.nupkg.sha512",
@@ -16,6 +27,11 @@
     "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.6\\microsoft.visualstudio.azure.containers.tools.targets.1.19.6.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\nest\\7.17.5\\nest.7.17.5.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\opentelemetry\\1.6.0\\opentelemetry.1.6.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\opentelemetry.api\\1.6.0\\opentelemetry.api.1.6.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\opentelemetry.api.providerbuilderextensions\\1.6.0\\opentelemetry.api.providerbuilderextensions.1.6.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\opentelemetry.exporter.console\\1.6.0\\opentelemetry.exporter.console.1.6.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\opentelemetry.exporter.zipkin\\1.6.0\\opentelemetry.exporter.zipkin.1.6.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\serilog\\3.1.1\\serilog.3.1.1.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\serilog.enrichers.span\\3.1.0\\serilog.enrichers.span.3.1.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\serilog.formatting.compact\\2.0.0\\serilog.formatting.compact.2.0.0.nupkg.sha512",
@@ -24,9 +40,11 @@
     "C:\\Users\\WEHBA\\.nuget\\packages\\serilog.sinks.periodicbatching\\3.1.0\\serilog.sinks.periodicbatching.3.1.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\serilog.sinks.seq\\6.0.0\\serilog.sinks.seq.6.0.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
-    "C:\\Users\\WEHBA\\.nuget\\packages\\system.diagnostics.diagnosticsource\\7.0.0\\system.diagnostics.diagnosticsource.7.0.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\system.diagnostics.diagnosticsource\\7.0.2\\system.diagnostics.diagnosticsource.7.0.2.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.3.1\\system.identitymodel.tokens.jwt.7.3.1.nupkg.sha512",
-    "C:\\Users\\WEHBA\\.nuget\\packages\\system.io.packaging\\8.0.0\\system.io.packaging.8.0.0.nupkg.sha512"
+    "C:\\Users\\WEHBA\\.nuget\\packages\\system.io.packaging\\8.0.0\\system.io.packaging.8.0.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\system.text.encodings.web\\4.7.2\\system.text.encodings.web.4.7.2.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
   ],
   "logs": []
 }

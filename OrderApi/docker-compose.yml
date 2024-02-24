@@ -12,6 +12,7 @@ services:
         - identity-api
         - order-api
         - seq
+        - zipkin
     restart:
         on-failure
   product-api:
@@ -60,13 +61,16 @@ services:
   seq:
     image: datalust/seq
     ports:
-     - 5341:5341
-     - 5342:80
+     - "5341:5341"
+     - "5342:80"
     volumes:
      - rps_seq_data1:/data
     environment:
      - ACCEPT_EULA=Y
-     
+  zipkin:
+    image: openzipkin/zipkin
+    ports:
+      - "9411:9411"  
      
 volumes:
  rps_seq_data1:

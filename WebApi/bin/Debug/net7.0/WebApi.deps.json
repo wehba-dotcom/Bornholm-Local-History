@@ -54,7 +54,7 @@
         "dependencies": {
           "Microsoft.CSharp": "4.6.0",
           "System.Buffers": "4.5.1",
-          "System.Diagnostics.DiagnosticSource": "7.0.0"
+          "System.Diagnostics.DiagnosticSource": "7.0.2"
         },
         "runtime": {
           "lib/netstandard2.1/Elasticsearch.Net.dll": {
@@ -64,6 +64,57 @@
         }
       },
       "Microsoft.CSharp/4.6.0": {},
+      "Microsoft.Extensions.Configuration/3.1.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "3.1.0"
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/3.1.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "3.1.0"
+        }
+      },
+      "Microsoft.Extensions.Configuration.Binder/3.1.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "3.1.0"
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/3.1.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.0"
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.0": {},
+      "Microsoft.Extensions.Logging/3.1.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Binder": "3.1.0",
+          "Microsoft.Extensions.DependencyInjection": "3.1.0",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.0",
+          "Microsoft.Extensions.Options": "3.1.0"
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/3.1.0": {},
+      "Microsoft.Extensions.Logging.Configuration/3.1.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "3.1.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "3.1.0"
+        }
+      },
+      "Microsoft.Extensions.Options/3.1.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.0",
+          "Microsoft.Extensions.Primitives": "3.1.0"
+        }
+      },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/3.1.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "3.1.0",
+          "Microsoft.Extensions.Configuration.Binder": "3.1.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.0",
+          "Microsoft.Extensions.Options": "3.1.0"
+        }
+      },
+      "Microsoft.Extensions.Primitives/3.1.0": {},
       "Microsoft.IdentityModel.Abstractions/7.3.1": {
         "runtime": {
           "lib/net6.0/Microsoft.IdentityModel.Abstractions.dll": {
@@ -125,6 +176,67 @@
           }
         }
       },
+      "OpenTelemetry/1.6.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Configuration": "3.1.0",
+          "OpenTelemetry.Api.ProviderBuilderExtensions": "1.6.0"
+        },
+        "runtime": {
+          "lib/net6.0/OpenTelemetry.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.6.0.1006"
+          }
+        }
+      },
+      "OpenTelemetry.Api/1.6.0": {
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "7.0.2"
+        },
+        "runtime": {
+          "lib/net6.0/OpenTelemetry.Api.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.6.0.1006"
+          }
+        }
+      },
+      "OpenTelemetry.Api.ProviderBuilderExtensions/1.6.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.0",
+          "OpenTelemetry.Api": "1.6.0"
+        },
+        "runtime": {
+          "lib/net6.0/OpenTelemetry.Api.ProviderBuilderExtensions.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.6.0.1006"
+          }
+        }
+      },
+      "OpenTelemetry.Exporter.Console/1.6.0": {
+        "dependencies": {
+          "OpenTelemetry": "1.6.0",
+          "System.Text.Encodings.Web": "4.7.2",
+          "System.Text.Json": "4.7.2"
+        },
+        "runtime": {
+          "lib/net6.0/OpenTelemetry.Exporter.Console.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.6.0.1006"
+          }
+        }
+      },
+      "OpenTelemetry.Exporter.Zipkin/1.6.0": {
+        "dependencies": {
+          "OpenTelemetry": "1.6.0",
+          "System.Text.Encodings.Web": "4.7.2",
+          "System.Text.Json": "4.7.2"
+        },
+        "runtime": {
+          "lib/net6.0/OpenTelemetry.Exporter.Zipkin.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.6.0.1006"
+          }
+        }
+      },
       "Serilog/3.1.1": {
         "runtime": {
           "lib/net7.0/Serilog.dll": {
@@ -136,7 +248,7 @@
       "Serilog.Enrichers.Span/3.1.0": {
         "dependencies": {
           "Serilog": "3.1.1",
-          "System.Diagnostics.DiagnosticSource": "7.0.0"
+          "System.Diagnostics.DiagnosticSource": "7.0.2"
         },
         "runtime": {
           "lib/net7.0/Serilog.Enrichers.Span.dll": {
@@ -204,7 +316,7 @@
         }
       },
       "System.Buffers/4.5.1": {},
-      "System.Diagnostics.DiagnosticSource/7.0.0": {},
+      "System.Diagnostics.DiagnosticSource/7.0.2": {},
       "System.IdentityModel.Tokens.Jwt/7.3.1": {
         "dependencies": {
           "Microsoft.IdentityModel.JsonWebTokens": "7.3.1",
@@ -225,8 +337,13 @@
           }
         }
       },
+      "System.Text.Encodings.Web/4.7.2": {},
+      "System.Text.Json/4.7.2": {},
       "Monitoring/1.0.0": {
         "dependencies": {
+          "OpenTelemetry": "1.6.0",
+          "OpenTelemetry.Exporter.Console": "1.6.0",
+          "OpenTelemetry.Exporter.Zipkin": "1.6.0",
           "Serilog": "3.1.1",
           "Serilog.Enrichers.Span": "3.1.0",
           "Serilog.Sinks.Console": "5.0.1",
@@ -279,6 +396,83 @@
       "path": "microsoft.csharp/4.6.0",
       "hashPath": "microsoft.csharp.4.6.0.nupkg.sha512"
     },
+    "Microsoft.Extensions.Configuration/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Lu41BWNmwhKr6LgyQvcYBOge0pPvmiaK8R5UHXX4//wBhonJyWcT2OK1mqYfEM5G7pTf31fPrpIHOT6sN7EGOA==",
+      "path": "microsoft.extensions.configuration/3.1.0",
+      "hashPath": "microsoft.extensions.configuration.3.1.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration.Abstractions/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ESz6bVoDQX7sgWdKHF6G9Pq672T8k+19AFb/txDXwdz7MoqaNQj2/in3agm/3qae9V+WvQZH86LLTNVo0it8vQ==",
+      "path": "microsoft.extensions.configuration.abstractions/3.1.0",
+      "hashPath": "microsoft.extensions.configuration.abstractions.3.1.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration.Binder/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-o9eELDBfNkR7sUtYysFZ1Q7BQ1mYt27DMkups/3vu7xgPyOpMD+iAfrBZFzUXT2iw0fmFb8s1gfNBZS+IgjKdQ==",
+      "path": "microsoft.extensions.configuration.binder/3.1.0",
+      "hashPath": "microsoft.extensions.configuration.binder.3.1.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KVkv3aF2MQpmGFRh4xRx2CNbc2sjDFk+lH4ySrjWSOS+XoY1Xc+sJphw3N0iYOpoeCCq8976ceVYDH8sdx2qIQ==",
+      "path": "microsoft.extensions.dependencyinjection/3.1.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.3.1.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-44rDtOf1JXXAFpNT2EXMExaDm/4OJ2RXOL9i9lE4bK427nzC7Exphv+beB6IgluyE2GIoo8zezTStMXI7MQ8WA==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/3.1.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.3.1.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-P+8sKQ8L4ooL79sxxqwFPxGGC3aBrUDLB/dZqhs4J0XjTyrkeeyJQ4D4nzJB6OnAhy78HIIgQ/RbD6upOXLynw==",
+      "path": "microsoft.extensions.logging/3.1.0",
+      "hashPath": "microsoft.extensions.logging.3.1.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging.Abstractions/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jjo4YXRx6MIpv6DiRxJjSpl+sPP0+5VW0clMEdLyIAz44PPwrDTFrd5PZckIxIXl1kKZ2KK6IL2nkt0+ug2MQg==",
+      "path": "microsoft.extensions.logging.abstractions/3.1.0",
+      "hashPath": "microsoft.extensions.logging.abstractions.3.1.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging.Configuration/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yW3nIoNM3T5iZg8bRViiCN4+vIU/02l+mlWSvKqWnr0Fd5Uk1zKdT9jBWKEcJhRIWKVWWSpFWXnM5yWoIAy1Eg==",
+      "path": "microsoft.extensions.logging.configuration/3.1.0",
+      "hashPath": "microsoft.extensions.logging.configuration.3.1.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Options/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9b6JHY7TAXrSfZ6EEGf+j8XnqKIiMPErfmaNXhJYSCb+BUW2H4RtzkNJvwLJzwgzqBP0wtTjyA6Uw4BPPdmkMw==",
+      "path": "microsoft.extensions.options/3.1.0",
+      "hashPath": "microsoft.extensions.options.3.1.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Options.ConfigurationExtensions/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tx6gMKE3rDspA1YZT8SlQJmyt1BaBSl6mNjB3g0ZO6m3NnoavCifXkGeBuDk9Ae4XjW8C+dty52p+0u38jPRIQ==",
+      "path": "microsoft.extensions.options.configurationextensions/3.1.0",
+      "hashPath": "microsoft.extensions.options.configurationextensions.3.1.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Primitives/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LEKAnX7lhUhSoIc2XraCTK3M4IU/LdVUzCe464Sa4+7F4ZJuXHHRzZli2mDbiT4xzAZhgqXbvfnb5+CNDcQFfg==",
+      "path": "microsoft.extensions.primitives/3.1.0",
+      "hashPath": "microsoft.extensions.primitives.3.1.0.nupkg.sha512"
+    },
     "Microsoft.IdentityModel.Abstractions/7.3.1": {
       "type": "package",
       "serviceable": true,
@@ -327,6 +521,41 @@
       "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "path": "newtonsoft.json/13.0.1",
       "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
+    },
+    "OpenTelemetry/1.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bTvLk9YIg0nUDb6K+f8mJkMK8b7sfGEyD0Zmg6ckD7kDCkBq1Hk1KjqlA/jEsypJIVnyclP0CGDcOELGYXGpAA==",
+      "path": "opentelemetry/1.6.0",
+      "hashPath": "opentelemetry.1.6.0.nupkg.sha512"
+    },
+    "OpenTelemetry.Api/1.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LTF4PB6UicJlgrBBg0rblAMyJJLMAVBujg8T9pGPQsl1vVgPNZoJNTLadhC3ZdYUzuKsvYLS31vT0/wl97JtEw==",
+      "path": "opentelemetry.api/1.6.0",
+      "hashPath": "opentelemetry.api.1.6.0.nupkg.sha512"
+    },
+    "OpenTelemetry.Api.ProviderBuilderExtensions/1.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-k8lqUAxjXkCV6yKdXfCbxsHMh5x7F7q8lAKm61rP/iP3EJPG1XhOy3j9nyubBYCm/xqlIy4ugWcqY1Inxolozw==",
+      "path": "opentelemetry.api.providerbuilderextensions/1.6.0",
+      "hashPath": "opentelemetry.api.providerbuilderextensions.1.6.0.nupkg.sha512"
+    },
+    "OpenTelemetry.Exporter.Console/1.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-M7icDNHjLRllgi6n3xlFEkBSQaPNnG1cwKm74RNUNT56XTmggHACmuiOxpqBXPchjOQNwsUS7We9fEz3ul97zg==",
+      "path": "opentelemetry.exporter.console/1.6.0",
+      "hashPath": "opentelemetry.exporter.console.1.6.0.nupkg.sha512"
+    },
+    "OpenTelemetry.Exporter.Zipkin/1.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-d9vi/xJyvbJDNnrEf6RnPWXmg1tJhWMNCJm2+7H45Fq/tF+6unkKGaYXBDDzl4omcu9KhMFUWbEMLVddd5iRIw==",
+      "path": "opentelemetry.exporter.zipkin/1.6.0",
+      "hashPath": "opentelemetry.exporter.zipkin.1.6.0.nupkg.sha512"
     },
     "Serilog/3.1.1": {
       "type": "package",
@@ -384,12 +613,12 @@
       "path": "system.buffers/4.5.1",
       "hashPath": "system.buffers.4.5.1.nupkg.sha512"
     },
-    "System.Diagnostics.DiagnosticSource/7.0.0": {
+    "System.Diagnostics.DiagnosticSource/7.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-9W0ewWDuAyDqS2PigdTxk6jDKonfgscY/hP8hm7VpxYhNHZHKvZTdRckberlFk3VnCmr3xBUyMBut12Q+T2aOw==",
-      "path": "system.diagnostics.diagnosticsource/7.0.0",
-      "hashPath": "system.diagnostics.diagnosticsource.7.0.0.nupkg.sha512"
+      "sha512": "sha512-hYr3I9N9811e0Bjf2WNwAGGyTuAFbbTgX1RPLt/3Wbm68x3IGcX5Cl75CMmgT6WlNwLQ2tCCWfqYPpypjaf2xA==",
+      "path": "system.diagnostics.diagnosticsource/7.0.2",
+      "hashPath": "system.diagnostics.diagnosticsource.7.0.2.nupkg.sha512"
     },
     "System.IdentityModel.Tokens.Jwt/7.3.1": {
       "type": "package",
@@ -404,6 +633,20 @@
       "sha512": "sha512-8g1V4YRpdGAxFcK8v9OjuMdIOJSpF30Zb1JGicwVZhly3I994WFyBdV6mQEo8d3T+URQe55/M0U0eIH0Hts1bg==",
       "path": "system.io.packaging/8.0.0",
       "hashPath": "system.io.packaging.8.0.0.nupkg.sha512"
+    },
+    "System.Text.Encodings.Web/4.7.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iTUgB/WtrZ1sWZs84F2hwyQhiRH6QNjQv2DkwrH+WP6RoFga2Q1m3f9/Q7FG8cck8AdHitQkmkXSY8qylcDmuA==",
+      "path": "system.text.encodings.web/4.7.2",
+      "hashPath": "system.text.encodings.web.4.7.2.nupkg.sha512"
+    },
+    "System.Text.Json/4.7.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TcMd95wcrubm9nHvJEQs70rC0H/8omiSGGpU4FQ/ZA1URIqD4pjmFJh2Mfv1yH1eHgJDWTi2hMDXwTET+zOOyg==",
+      "path": "system.text.json/4.7.2",
+      "hashPath": "system.text.json.4.7.2.nupkg.sha512"
     },
     "Monitoring/1.0.0": {
       "type": "project",
