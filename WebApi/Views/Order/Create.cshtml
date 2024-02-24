@@ -1,71 +1,76 @@
-﻿@model WebApi.Models.Order
+﻿@model WebApi.SharedModels.Order
+
+@{
+    ViewData["Title"] = "Create";
+}
 
 <div class="card shadow border-0 mt-4">
     <div class="card-header bg-secondary bg-gradient ml-0 py-3">
         <div class="row">
             <div class="col-12 text-center">
-                <h2 class="text-black-50 pl-3">Add New Order</h2>
+                <h2 class="text-black-50 pl-3">Make Order</h2>
             </div>
         </div>
     </div>
     <div class="card-body p-4">
-        <form method="post" asp-action="Create">
-            <div class=" border p-3">
-                <div class="form-group row text-center">
-                </div>
-                <div class="col">
-                    <div class="row-12">
-                        <div class="form-group col">
-                            <div asp-validation-summary="All"></div>
-                            <div class="mp-3">
-                                <label asp-for="CustomerId" class="form-label"></label>
-                                <input asp-for="CustomerId" class="form-control" />
-                                <span asp-validation-for="CustomerId" class="text-danger"></span>
-                            </div>
-                            <div class="mp-3">
-                                <label asp-for="Date" class="form-label"></label>
-                                <input asp-for="Date" class="form-control" />
-                                <span asp-validation-for="Date" class="text-danger"></span>
-                            </div>
-                            <div class="mp-3">
-                                <label asp-for="Status" class="form-label"></label>
-                                <input asp-for="Status" class="form-control" />
-                                <span asp-validation-for="Status" class="text-danger"></span>
-                            </div>
-                            <div id="orderLinesContainer">
-                                <div class="order-line">
-                                    <div class="form-group">
-                                        <label for="ProductId">Product ID</label>
-                                        <input type="text" name="ProductId" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="Quantity">Quantity</label>
-                                        <input type="text" name="Quantity" class="form-control" />
-                                    </div>
-                                </div>
-                            </div>
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerId" class="control-label"></label>
+                <input asp-for="CustomerId" class="form-control" />
+                <span asp-validation-for="CustomerId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <select asp-for="Status" class="form-control">
+                    <option value="tentative">Tentative</option>
+                    <option value="cancelled">Cancelled</option>
+                    <option value="completed">Completed</option>
+                    <option value="shipped">Shipped</option>
+                    <option value="paid">Paid</option>
+                </select>
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Order Lines</label>
+                <div id="orderLinesContainer">
+                    <!-- You can dynamically add order lines here if needed -->
+                    <!-- For simplicity, you can use JavaScript to add more order lines -->
+                    <div class="order-line">
+                        <div class="form-group">
+                            <label for="ProductId">Product ID</label>
+                            <input type="number" name="OrderLines[0].ProductId" class="form-control" />
                         </div>
-                        <br />
-                        <div class="row">
-                            <div class="col-6 col-md-3">
-
-                                <input type="submit" class="btn btn-primary w-75" value="Tilføj" />
-                            </div>
-                            <div class="col-6 col-md-3">
-                                <a asp-action="Index" class="btn btn-primary w-75">Tilbage</a>
-                            </div>
-
+                        <div class="form-group">
+                            <label for="Quantity">Quantity</label>
+                            <input type="number" name="OrderLines[0].Quantity" class="form-control" />
                         </div>
-
                     </div>
                 </div>
             </div>
+            </br>
+         <div class="row">
+                <div class="col-6 col-md-3">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+            <div class="col-6 col-md-3">
+                <a asp-action="Index" class="btn btn-primary w-75">Tilbage</a>
+            </div>
+         </div>
+          
         </form>
     </div>
 </div>
+
+
+
 @section Scripts {
     @{
-        <partial name="_ValidationScriptsPartial" />
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
 }
-<br />

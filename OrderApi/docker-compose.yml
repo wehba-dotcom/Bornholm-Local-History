@@ -1,6 +1,19 @@
 version: '3.8'
 
 services:
+  webapi-service:
+    build:
+        context: .
+        dockerfile: WebApi/Dockerfile
+    ports:
+        - "8003:80"
+    depends_on:
+        - product-api
+        - identity-api
+        - order-api
+        - seq
+    restart:
+        on-failure
   product-api:
     build:
       context: .
@@ -44,3 +57,16 @@ services:
       MSSQL_PID: Express
     ports:
       - "1433:1433"
+  seq:
+    image: datalust/seq
+    ports:
+     - 5341:5341
+     - 5342:80
+    volumes:
+     - rps_seq_data1:/data
+    environment:
+     - ACCEPT_EULA=Y
+     
+     
+volumes:
+ rps_seq_data1:

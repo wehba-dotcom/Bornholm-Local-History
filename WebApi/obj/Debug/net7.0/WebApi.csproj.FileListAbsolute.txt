@@ -43,3 +43,12 @@ C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\o
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\obj\Debug\net7.0\WebApi.pdb
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\obj\Debug\net7.0\WebApi.genruntimeconfig.cache
 C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\obj\Debug\net7.0\ref\WebApi.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Serilog.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Serilog.Enrichers.Span.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Serilog.Formatting.Compact.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Serilog.Sinks.Console.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Serilog.Sinks.File.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Serilog.Sinks.PeriodicBatching.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Serilog.Sinks.Seq.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Monitoring.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\exam_projekt\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Monitoring.pdb

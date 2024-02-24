@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Monitoring;
 using OrderApi.Data;
 using OrderApi.Infrastructure;
 using OrderApi.Models;
@@ -52,12 +53,14 @@ namespace OrderApi.Controllers
             {
             try
             {
+                MonitorService.Log.Here().Debug("WE Intered Get Method On OrderApi Controller");
                 IEnumerable<Order> objList;
                 objList = await _context.Orders.Include(u=> u.OrderLines).ToListAsync();
                 _response.Result = _mapper.Map<IEnumerable<Order>>(objList);
             }
             catch (Exception ex)
             {
+                MonitorService.Log.Here().Debug("Get An Error : {Message}", ex.Message);
                 _response.IsSuccess = false;
                 _response.Message = ex.Message;
             }
@@ -105,10 +108,10 @@ namespace OrderApi.Controllers
               
                     try
                     {
-                    // Publish OrderStatusChangedMessage. If this operation
-                    // fails, the order will not be created
-                  
-                        string topicName = _configuration.GetValue<string>("TopicAndQueueNames:OrderCreatedTopic");
+                // Publish OrderStatusChangedMessage. If this operation
+                // fails, the order will not be created
+                MonitorService.Log.Here().Debug("We Intered Post Method On OrderApi Controller");
+                string topicName = _configuration.GetValue<string>("TopicAndQueueNames:OrderCreatedTopic");
                    
                         messagePublisher.PublishOrderStatusChangedMessage( order.OrderLines, topicName);
 
@@ -116,12 +119,13 @@ namespace OrderApi.Controllers
                         var newOrder = await repository.AddAsync(orderConverter.Convert(order));
                 //return CreatedAtRoute("GetOrder", new { id = newOrder.Id }, newOrder);
                           _response.Result =newOrder;
+                MonitorService.Log.Here().Debug(" Return Obj {newOrder}",newOrder);
 
-
-                    }
+            }
                     catch (Exception ex)
                     {
-                        _response.IsSuccess = false;
+                MonitorService.Log.Here().Error(" There Is An Error:{Message}", ex.Message);
+                _response.IsSuccess = false;
                         _response.Message = ex.Message;
                     }
 
