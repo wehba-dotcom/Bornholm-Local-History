@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using OrderApi.Models;
 using System;
+using Monitoring;
+using System.Diagnostics;
 
 namespace OrderApi.Data
 {
@@ -17,6 +19,7 @@ namespace OrderApi.Data
 
          public async Task<Order> AddAsync(Order entity)
         {
+            using var activity = MonitorService.ActivitySource.StartActivity(" OrderRepository AddAsync  Method is called", ActivityKind.Consumer);
             if (entity.Date == null)
                 entity.Date = DateTime.Now;
             

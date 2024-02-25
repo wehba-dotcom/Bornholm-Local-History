@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet\\BornholmSlaughterhouses\\Fealles\\FeallesBaseApi.csproj": {}
+    "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\BornholmSlaughterhouses\\Fealles\\FeallesBaseApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet\\BornholmSlaughterhouses\\Fealles\\FeallesBaseApi.csproj": {
+    "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\BornholmSlaughterhouses\\Fealles\\FeallesBaseApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet\\BornholmSlaughterhouses\\Fealles\\FeallesBaseApi.csproj",
+        "projectUniqueName": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\BornholmSlaughterhouses\\Fealles\\FeallesBaseApi.csproj",
         "projectName": "FeallesBaseApi",
-        "projectPath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet\\BornholmSlaughterhouses\\Fealles\\FeallesBaseApi.csproj",
+        "projectPath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\BornholmSlaughterhouses\\Fealles\\FeallesBaseApi.csproj",
         "packagesPath": "C:\\Users\\WEHBA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet\\BornholmSlaughterhouses\\Fealles\\obj\\",
+        "outputPath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\BornholmSlaughterhouses\\Fealles\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -6,7 +6,7 @@ services:
         context: .
         dockerfile: WebApi/Dockerfile
     ports:
-        - "8003:80"
+        - 8003:80
     depends_on:
         - product-api
         - identity-api
@@ -20,7 +20,7 @@ services:
       context: .
       dockerfile: ProductApi/Dockerfile
     ports:
-      - "8000:80"
+      - 8000:80
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ConnectionStrings__ApplicationDbContextConnection: "Server=192.168.0.52;Database=productService;User Id=SA;Password=Asd123asd;trusted_connection=false;Persist Security Info=False;Encrypt=False"
@@ -32,7 +32,7 @@ services:
       context: .
       dockerfile: IdentityService/Dockerfile
     ports:
-      - "8001:80"
+      - 8001:80
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ConnectionStrings__ApplicationDbContextConnection: "Server=192.168.0.52;Database=IdentityService;User Id=SA;Password=Asd123asd;trusted_connection=false;Persist Security Info=False;Encrypt=False"
@@ -43,7 +43,7 @@ services:
       context: .
       dockerfile: OrderApi/Dockerfile
     ports:
-      - "8002:80"
+      - 8002:80
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ConnectionStrings__ApplicationDbContextConnection: "Server=192.168.0.52;Database=orderService;User Id=SA;Password=Asd123asd;trusted_connection=false;Persist Security Info=False;Encrypt=False"
@@ -57,12 +57,12 @@ services:
       SA_PASSWORD: "Asd123asd"
       MSSQL_PID: Express
     ports:
-      - "1433:1433"
+      - 1433:1433
   seq:
     image: datalust/seq
     ports:
-     - "5341:5341"
-     - "5342:80"
+     - 5341:5341
+     - 5342:80
     volumes:
      - rps_seq_data1:/data
     environment:
@@ -70,7 +70,7 @@ services:
   zipkin:
     image: openzipkin/zipkin
     ports:
-      - "9411:9411"  
+      - 9411:9411 
      
 volumes:
  rps_seq_data1:
