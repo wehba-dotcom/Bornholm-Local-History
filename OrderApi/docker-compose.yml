@@ -1,6 +1,11 @@
 version: '3.8'
 
 services:
+  apigateway:
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: ApiGateway/Dockerfile
   webapi-service:
     build:
         context: .
@@ -8,9 +13,8 @@ services:
     ports:
         - 8003:80
     depends_on:
-        - product-api
+        - apigateway
         - identity-api
-        - order-api
         - seq
         - zipkin
     restart:
@@ -49,7 +53,7 @@ services:
       ConnectionStrings__ApplicationDbContextConnection: "Server=192.168.0.52;Database=orderService;User Id=SA;Password=Asd123asd;trusted_connection=false;Persist Security Info=False;Encrypt=False"
     depends_on:
       - database
-
+      - product-api
   database:
     image: mcr.microsoft.com/mssql/server:2019-latest
     environment:

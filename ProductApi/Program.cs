@@ -11,6 +11,7 @@ using AutoMapper;
 using ProductApi.Models;
 using ProductApi.Infrastructure;
 using ProductApi.Models.Dto;
+using ProductApi;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -36,8 +37,10 @@ catch (Exception ex)
 builder.Services.AddScoped<IRepository<Product>, ProductRepository>();
 builder.Services.AddSingleton<IConverter<Product, ProductDto>, ProductConverter>();
 
-
+IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
+builder.Services.AddSingleton(mapper);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 
 //builder.Services.AddSwaggerGen();
 

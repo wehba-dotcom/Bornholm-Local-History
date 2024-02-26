@@ -21,7 +21,7 @@ namespace WebApi.Service
             {
                 ApiType = SD.ApiType.POST,
                 Data = orderDto,
-                Url = SD.OrderAPIBase + "/api/order/CreateOrder"
+                Url = SD.GateWayIBase + "/api/order/CreateOrder"
             });
         }
 
@@ -30,7 +30,7 @@ namespace WebApi.Service
             return await _baseService.SendAsync(new RequestDto()
             {
                 ApiType = SD.ApiType.GET,
-                Url = SD.OrderAPIBase + "/api/order"
+                Url = SD.GateWayIBase + "/api/order"
             });
         }
 
@@ -39,7 +39,7 @@ namespace WebApi.Service
             return await _baseService.SendAsync(new RequestDto()
             {
                 ApiType = SD.ApiType.GET,
-                Url = SD.OrderAPIBase + "/api/order/GetOrder/" + orderId
+                Url = SD.GateWayIBase + "/api/order/GetOrder/" + orderId
             });
         }
     }

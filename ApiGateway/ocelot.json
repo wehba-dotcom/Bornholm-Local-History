@@ -2,51 +2,100 @@
 
 
   "Routes": [
-    //"FeallesBaseAPI": "https://localhost:7128",
+    //"ProductAPI": "https://product-api",
     {
-      "DownstreamPathTemplate": "/api/feallesbase",
-      "DownstreamScheme": "https",
+      "DownstreamPathTemplate": "/api/product",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7128
+          "Host": "product-api",
+          "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/feallesbase",
+      "UpstreamPathTemplate": "/api/product",
       "UpstreamHttpMethod": [ "Get" ]
     },
     {
-      "DownstreamPathTemplate": "/api/feallesbase/{id}",
-      "DownstreamScheme": "https",
+      "DownstreamPathTemplate": "/api/product/{id}",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7128
+          "Host": "product-api",
+          "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/feallesbase/{id}",
+      "UpstreamPathTemplate": "/api/product/{id}",
       "UpstreamHttpMethod": [ "Get", "DELETE" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer"
       }
     },
     {
-      "DownstreamPathTemplate": "/api/feallesbase",
-      "DownstreamScheme": "https",
+      "DownstreamPathTemplate": "/api/product",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7128
+          "Host": "product-api",
+          "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/feallesbase",
+      "UpstreamPathTemplate": "/api/product",
       "UpstreamHttpMethod": [ "POST", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
+    },
+
+    //"OrderAPI": "https://prder-api",
+    {
+      "DownstreamPathTemplate": "/api/order",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "order-api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/order",
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
+    },
+   
+    {
+      "DownstreamPathTemplate": "/api/order/GetOrder/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "order-api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/order/GetOrder/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
+    },
+    
+    {
+      "DownstreamPathTemplate": "/api/order/CreateOrder",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "order-api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/order/CreateOrder",
+      "UpstreamHttpMethod": [ "POST" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer"
       }
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:7190"
+    "BaseUrl": "https://localhost:7777"
   }
 }

@@ -46,6 +46,7 @@ catch (Exception ex)
     Console.WriteLine(ex.Message);
 }
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddHttpClient();
 builder.Services.AddHttpClient("Product", u => u.BaseAddress =
 
 new Uri(builder.Configuration["ServiceUrls:ProductAPI"])).AddHttpMessageHandler<BackendApiAuthenticationHttpClientHandler>();
@@ -55,7 +56,7 @@ builder.Services.AddScoped<IRepository<Order>, OrderRepository>();
 
 
 // Register product service gateway for dependency injection
-builder.Services.AddScoped<IServiceGateway<OrderApi.Models.ProductDto>, ProductServiceGateway>();
+builder.Services.AddScoped<IServiceGateway<ProductDto>, ProductServiceGateway>();
 
 
 // Register MessagePublisher (a messaging gateway) for dependency injection

@@ -19,7 +19,7 @@ namespace WebApi.Service
             {
                 ApiType = SD.ApiType.POST,
                 Data=productDto,
-                Url = SD.ProductAPIBase + "/api/product" ,
+                Url = SD.GateWayIBase + "/api/product" ,
                 ContentType = SD.ContentType.MultipartFormData
             });
         }
@@ -29,7 +29,7 @@ namespace WebApi.Service
             return await _baseService.SendAsync(new RequestDto()
             {
                 ApiType = SD.ApiType.DELETE,
-                Url = SD.ProductAPIBase + "/api/product/" + id
+                Url = SD.OrderAPIBase + "/api/product/" + id
             }); 
         }
 
@@ -38,7 +38,7 @@ namespace WebApi.Service
             return await _baseService.SendAsync(new RequestDto()
             {
                 ApiType = SD.ApiType.GET,
-                Url = SD.ProductAPIBase + "/api/product"
+                Url = SD.GateWayIBase + "/api/product"
             });
         }
 
@@ -49,7 +49,7 @@ namespace WebApi.Service
             return await _baseService.SendAsync(new RequestDto()
             {
                 ApiType = SD.ApiType.GET,
-                Url = SD.ProductAPIBase + "/api/product/" + id
+                Url = SD.GateWayIBase + "/api/product/" + id
             });
         }
 
@@ -59,7 +59,7 @@ namespace WebApi.Service
             {
                 ApiType = SD.ApiType.PUT,
                 Data = productDto,
-                Url = SD.ProductAPIBase + "/api/product",
+                Url = SD.GateWayIBase + "/api/product",
                 ContentType = SD.ContentType.MultipartFormData
             });
         }

@@ -23,7 +23,7 @@ namespace OrderApi.Infrastructure
         public async Task<ProductDto> GetAsync(int id)
         {
             var client = _httpClientFactory.CreateClient("Product");
-            var response = await client.GetAsync($"/api/product/{id}");
+            var response = await client.GetAsync($"http://product-api/api/product/{id}");
             var apiContet = await response.Content.ReadAsStringAsync();
             var resp = JsonConvert.DeserializeObject<ResponseDto>(apiContet);
             if (resp.IsSuccess)

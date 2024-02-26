@@ -23,7 +23,9 @@ SD.AuthAPIBase = builder.Configuration["ServiceUrls:AuthAPI"];
 SD.FeallesAPIBase = builder.Configuration["ServiceUrls:Feallesbase"];
 SD.ProductAPIBase = builder.Configuration["ServiceUrls:Product"];
 SD.OrderAPIBase = builder.Configuration["ServiceUrls:Order"];
+SD.GateWayIBase = builder.Configuration["ServiceUrls:ApigateWay"];
 
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("http://apigateway") });
 builder.Services.AddScoped<ITokenProvider, TokenProvider>();
 builder.Services.AddScoped<IBaseService, BaseService>();
 builder.Services.AddScoped<IFeallesService, FeallesService>();

@@ -109,31 +109,34 @@ namespace OrderApi.Controllers
                using  var activity = MonitorService.ActivitySource.StartActivity(" OrderService Create Method is called", ActivityKind.Consumer) ;
 
                     OrderDto order = orderConverter.Convert(hiddenOrder);
-            
-                    
-              
-                    try
-                    {
-                        // Publish OrderStatusChangedMessage. If this operation
-                        // fails, the order will not be created
-                        MonitorService.Log.Here().Debug("We Intered Post Method On OrderApi Controller");
-                        string topicName = _configuration.GetValue<string>("TopicAndQueueNames:OrderCreatedTopic");
-               
-                        messagePublisher.PublishOrderStatusChangedMessage( order.OrderLines, topicName);
 
-                        order.Status = OrderDto.OrderStatus.completed;
-                        var newOrder = await repository.AddAsync(orderConverter.Convert(order));
-                        //return CreatedAtRoute("GetOrder", new { id = newOrder.Id }, newOrder);
-                          _response.Result =newOrder;
-                        MonitorService.Log.Here().Debug(" Return Obj {newOrder}",newOrder);
 
-                    }
-                    catch (Exception ex)
-                    {
-                        MonitorService.Log.Here().Error(" There Is An Error:{Message}", ex.Message);
-                        _response.IsSuccess = false;
-                        _response.Message = ex.Message;
-                    }
+
+            try
+            {
+                //if (await ProductItemsAvailable(order))
+                //{
+                    // Publish OrderStatusChangedMessage. If this operation
+                    // fails, the order will not be created
+                    MonitorService.Log.Here().Debug("We Intered Post Method On OrderApi Controller");
+                    string topicName = _configuration.GetValue<string>("TopicAndQueueNames:OrderCreatedTopic");
+
+                    messagePublisher.PublishOrderStatusChangedMessage(order.OrderLines, topicName);
+
+                    order.Status = OrderDto.OrderStatus.completed;
+                    var newOrder = await repository.AddAsync(orderConverter.Convert(order));
+                    //return CreatedAtRoute("GetOrder", new { id = newOrder.Id }, newOrder);
+                    _response.Result = newOrder;
+                    MonitorService.Log.Here().Debug(" Return Obj {newOrder}", newOrder);
+
+                //}
+            }
+            catch (Exception ex)
+            {
+                MonitorService.Log.Here().Error(" There Is An Error:{Message}", ex.Message);
+                _response.IsSuccess = false;
+                _response.Message = ex.Message;
+            }
 
             return _response;
         }
