@@ -12,6 +12,7 @@ using ProductApi.Models;
 using ProductApi.Infrastructure;
 using ProductApi.Models.Dto;
 using ProductApi;
+using Prometheus;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -98,5 +99,6 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
-
+app.UseHttpMetrics();
+app.MapMetrics();
 app.Run();

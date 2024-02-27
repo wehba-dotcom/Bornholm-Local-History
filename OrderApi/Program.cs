@@ -8,6 +8,7 @@ using OrderApi.Extensions;
 using OrderApi.Infrastructure;
 using OrderApi.Models;
 using OrderAPI.Utility;
+using Prometheus;
 using ServiceStack;
 using SharedModels;
 
@@ -123,5 +124,6 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
-
+app.UseHttpMetrics();
+app.MapMetrics();
 app.Run();

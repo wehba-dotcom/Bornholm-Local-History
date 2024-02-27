@@ -28,8 +28,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{C02DC740-B3EC-4C0E-AA30-621A5F6C92A5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Monotoring", "Monotoring", "{104B47A1-56B4-4BA0-8A99-1C151EF5BB61}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Bacholer_Projeckt\OntrialOnline\OnlineRetailer_Partial_2023\prometheus.yml = ..\..\Bacholer_Projeckt\OntrialOnline\OnlineRetailer_Partial_2023\prometheus.yml
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monitoring", "Monitoring\Monitoring.csproj", "{2B9037CF-1545-4A63-A3F3-609C21B4FD0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Monitoring", "Monitoring\Monitoring.csproj", "{2B9037CF-1545-4A63-A3F3-609C21B4FD0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

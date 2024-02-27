@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using SharedModels;
 using IdentityApi.Infrastructure;
+using Prometheus;
 
 var builder = WebApplication.CreateBuilder(args);
 string ConnectionString = "host=cow-01.rmq2.cloudamqp.com;virtualHost=vohieqyo;username=vohieqyo;password=hRtXREuzSQwNnU085CF8r_3DCKXhsQZv";
@@ -45,5 +46,6 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
-
+app.UseHttpMetrics();
+app.MapMetrics();
 app.Run();

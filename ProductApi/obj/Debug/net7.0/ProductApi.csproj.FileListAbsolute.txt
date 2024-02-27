@@ -787,3 +787,5 @@ C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouse
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\ProductApi\obj\Debug\net7.0\ProductApi.pdb
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\ProductApi\obj\Debug\net7.0\ProductApi.genruntimeconfig.cache
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\ProductApi\obj\Debug\net7.0\ref\ProductApi.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\ProductApi\bin\Debug\net7.0\Prometheus.NetStandard.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\ProductApi\bin\Debug\net7.0\Prometheus.AspNetCore.dll

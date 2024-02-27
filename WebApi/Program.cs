@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using WebApi.Service.IService;
 using WebApi.Utility;
 using Mango.Web.Service.IService;
+using Prometheus;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -75,5 +76,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
+app.UseHttpMetrics();
+app.MapMetrics();
 app.Run();

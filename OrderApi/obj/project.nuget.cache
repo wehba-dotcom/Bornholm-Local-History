@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yy7GnP9yTxZhlBw4ff0T3mQi/97JFheFQGXHJjlY1EmwR76awki2HS/StTN7jRr5m9fwH0mboxiWv9BtX336mw==",
+  "dgSpecHash": "BUHl7MzGjk4H0OZzn8kqCt+5Q8Zj/rTkMoq85RU7zMscaC9/OykLrG3+MmGb5zWGxB5WaJQm3PSHL9EaorMJGQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\BornholmSlaughterhouses\\OrderApi\\OrderApi.csproj",
   "expectedPackageFiles": [
@@ -100,6 +100,7 @@
     "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.dependencymodel\\7.0.0\\microsoft.extensions.dependencymodel.7.0.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.http\\6.0.0\\microsoft.extensions.http.6.0.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.identity.core\\7.0.0\\microsoft.extensions.identity.core.7.0.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.identity.stores\\7.0.0\\microsoft.extensions.identity.stores.7.0.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
@@ -151,6 +152,8 @@
     "C:\\Users\\WEHBA\\.nuget\\packages\\opentelemetry.exporter.zipkin\\1.6.0\\opentelemetry.exporter.zipkin.1.6.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\polly\\8.3.0\\polly.8.3.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\polly.core\\8.3.0\\polly.core.8.3.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\prometheus-net\\7.0.0\\prometheus-net.7.0.0.nupkg.sha512",
+    "C:\\Users\\WEHBA\\.nuget\\packages\\prometheus-net.aspnetcore\\7.0.0\\prometheus-net.aspnetcore.7.0.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\rabbitmq.client\\6.5.0\\rabbitmq.client.6.5.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\restsharp\\110.2.0\\restsharp.110.2.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

@@ -839,3 +839,5 @@ C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouse
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\OrderApi\obj\Debug\net7.0\OrderApi.pdb
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\OrderApi\obj\Debug\net7.0\OrderApi.genruntimeconfig.cache
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\OrderApi\obj\Debug\net7.0\ref\OrderApi.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\OrderApi\bin\Debug\net7.0\Prometheus.NetStandard.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\OrderApi\bin\Debug\net7.0\Prometheus.AspNetCore.dll
