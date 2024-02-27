@@ -1,5 +1,6 @@
-﻿using ProductApi.Models.Dto;
-using SharedModels;
+﻿
+
+using ProductApi.Models.Dto;
 
 namespace ProductApi.Models
 {
@@ -9,9 +10,10 @@ namespace ProductApi.Models
         {
             return new Product
             {
-                ID = sharedProduct.ID,
-                Navn = sharedProduct.Navn,
+                ID = sharedProduct.Id,
+                Navn = sharedProduct.Name,
                 Price = sharedProduct.Price,
+                ItemsInStock = sharedProduct.ItemsInStock,
                 ItemsReserved = sharedProduct.ItemsReserved
             };
         }
@@ -20,9 +22,10 @@ namespace ProductApi.Models
         {
             return new ProductDto
             {
-                ID = hiddenProduct.ID,
-                Navn = hiddenProduct.Navn,
+                Id = hiddenProduct.ID,
+                Name = hiddenProduct.Navn,
                 Price = hiddenProduct.Price,
+                ItemsInStock = hiddenProduct.ItemsInStock,
                 ItemsReserved = hiddenProduct.ItemsReserved
             };
         }

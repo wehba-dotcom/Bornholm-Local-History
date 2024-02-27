@@ -15,7 +15,7 @@ using System.Diagnostics;
 using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 using EasyNetQ;
 using Microsoft.DotNet.Scaffolding.Shared.Messaging;
-
+using SharedModels;
 namespace OrderApi.Controllers
 {
     [Route("api/order")]
@@ -29,7 +29,7 @@ namespace OrderApi.Controllers
             private IMapper _mapper;
             private readonly IConverter<Order, OrderDto> orderConverter;
             private IMessagePublisher messagePublisher;
-             IServiceGateway<ProductDto> productServiceGateway;
+            IServiceGateway<ProductDto> productServiceGateway;
             private ResponseDto _response;
 
         public OrderController(
@@ -38,13 +38,13 @@ namespace OrderApi.Controllers
                 IMapper mapper,
                 IRepository<Order> repos,
                 IConverter<Order, OrderDto> orderConverter,
-                IServiceGateway<ProductDto> productServiceGateway,
+                IServiceGateway<ProductDto> ServiceGateway,
                 IMessagePublisher publisher)
             {
                _configuration = configuration;
                 repository = repos;
                 this.orderConverter = orderConverter;
-                productServiceGateway = productServiceGateway;
+                productServiceGateway = ServiceGateway;
                 messagePublisher = publisher;
                 _mapper = mapper;
                 _context = context;
@@ -110,12 +110,12 @@ namespace OrderApi.Controllers
 
                     OrderDto order = orderConverter.Convert(hiddenOrder);
 
-
+           if (await ProductItemsAvailable(order))
+           { 
 
             try
             {
-                //if (await ProductItemsAvailable(order))
-                //{
+                
                     // Publish OrderStatusChangedMessage. If this operation
                     // fails, the order will not be created
                     MonitorService.Log.Here().Debug("We Intered Post Method On OrderApi Controller");
@@ -129,7 +129,7 @@ namespace OrderApi.Controllers
                     _response.Result = newOrder;
                     MonitorService.Log.Here().Debug(" Return Obj {newOrder}", newOrder);
 
-                //}
+               
             }
             catch (Exception ex)
             {
@@ -137,24 +137,31 @@ namespace OrderApi.Controllers
                 _response.IsSuccess = false;
                 _response.Message = ex.Message;
             }
-
-            return _response;
+           }
+                return _response;
         }
 
-          
+
 
         private async Task<bool> ProductItemsAvailable(OrderDto order)
+        {
+            foreach (var orderLine in order.OrderLines)
             {
-                foreach (var orderLine in order.OrderLines)
+                var orderedProduct = await productServiceGateway.GetAsync(orderLine.ProductId);
+
+                if (orderedProduct == null) // Check if product is null
                 {
-                    // Call product service to get the product ordered.
-                    var orderedProduct = await productServiceGateway.GetAsync(orderLine.ProductId);
+                    // Handle case where product is not found
+                    return false;
+                }
+
                 if (orderLine.Quantity > orderedProduct.ItemsInStock - orderedProduct.ItemsReserved)
                 {
                     return false;
                 }
-                }
-                return true;
-               }
+            }
+            return true;
         }
+
+    }
 }

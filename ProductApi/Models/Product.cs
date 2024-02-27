@@ -16,6 +16,7 @@ namespace ProductApi.Models
         public string? FaestebrevUdstedt { get; set; }
         public string? Side {  get; set; }
         public decimal Price { get; set; }
+        public int ItemsInStock { get; set; }
         public int ItemsReserved { get; internal set; }
     }
 }

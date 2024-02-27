@@ -25,7 +25,7 @@ string ConnectionString = "host=cow-01.rmq2.cloudamqp.com;virtualHost=vohieqyo;u
 //string productServiceBaseUrl = "http://localhost:8000/api/product/";
 //string customerServiceBaseUrl = "http://localhost:8001/api/auth/";
 
-//string productServiceBaseUrl = "http://localhost:5033/api/product/";
+string productServiceBaseUrl = "http://localhost:5033/api/product/";
 //string customerServiceBaseUrl = "http://localhost:7056/api/auth/";
 
 
@@ -57,12 +57,17 @@ builder.Services.AddScoped<IRepository<Order>, OrderRepository>();
 
 
 // Register product service gateway for dependency injection
-builder.Services.AddScoped<IServiceGateway<ProductDto>, ProductServiceGateway>();
+builder.Services.AddScoped<IServiceGateway<ProductDto>,ProductServiceGateway > ();
 
 
 // Register MessagePublisher (a messaging gateway) for dependency injection
 builder.Services.AddSingleton<IMessagePublisher>(new
     MessagePublisher(ConnectionString));
+
+// Register product service gateway for dependency injection
+// Register product service gateway for dependency injection
+//builder.Services.AddSingleton<IServiceGateway<ProductDto>>(new
+//     ProductServiceGateway(productServiceBaseUrl));
 
 // Register OrderConverter for dependency injection
 builder.Services.AddSingleton<IConverter<Order, OrderDto>, OrderConverter>();

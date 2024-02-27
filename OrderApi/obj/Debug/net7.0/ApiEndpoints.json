@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[OrderApi.Models.Order, OrderApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "OrderAPI.Models.Dto.ResponseDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -18,22 +18,6 @@
         "StatusCode": 200
       }
     ]
-  },
-  {
-    "ContainingType": "OrderApi.Controllers.OrderController",
-    "Method": "PostAsync",
-    "RelativePath": "api/order",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "hiddenOrder",
-        "Type": "OrderApi.Models.Order",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
   },
   {
     "ContainingType": "OrderApi.Controllers.OrderController",
@@ -50,6 +34,32 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrderApi.Controllers.OrderController",
+    "Method": "PostAsync",
+    "RelativePath": "api/order/CreateOrder",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "hiddenOrder",
+        "Type": "OrderApi.Models.Order",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "OrderAPI.Models.Dto.ResponseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "OrderApi.Controllers.OrderController",
