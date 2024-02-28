@@ -3,19 +3,13 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Monitoring;
-using OpenTelemetry.Context.Propagation;
-using OpenTelemetry;
 using OrderApi.Data;
 using OrderApi.Infrastructure;
 using OrderApi.Models;
 using OrderAPI.Models.Dto;
-using ServiceStack;
 using SharedModels;
 using System.Diagnostics;
 using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
-using EasyNetQ;
-using Microsoft.DotNet.Scaffolding.Shared.Messaging;
-using SharedModels;
 namespace OrderApi.Controllers
 {
     [Route("api/order")]
@@ -106,7 +100,7 @@ namespace OrderApi.Controllers
         [HttpPost("CreateOrder")]
         public async Task<ResponseDto> PostAsync([FromBody] Order hiddenOrder)
         {
-               using  var activity = MonitorService.ActivitySource.StartActivity(" OrderService Create Method is called", ActivityKind.Consumer) ;
+              /* using  var activity = MonitorService.ActivitySource.StartActivity(" OrderService Create Method is called", ActivityKind.Consumer)*/ ;
 
                     OrderDto order = orderConverter.Convert(hiddenOrder);
 
@@ -138,7 +132,13 @@ namespace OrderApi.Controllers
                 _response.Message = ex.Message;
             }
            }
-                return _response;
+            else
+            {
+                // Handle the case where ProductItemsAvailable returns false
+                _response.IsSuccess = false;
+                _response.Message = "Product items are not available.";
+            }
+            return _response;
         }
 
 
