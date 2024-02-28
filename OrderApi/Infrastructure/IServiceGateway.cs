@@ -5,6 +5,6 @@ namespace OrderApi.Infrastructure
 {
     public interface IServiceGateway<T>
     {
-        Task<ProductDto> GetAsync(int id);
+        Task<T> GetAsync(int id);
     }
 }

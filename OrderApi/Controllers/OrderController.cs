@@ -24,6 +24,7 @@ namespace OrderApi.Controllers
             private readonly IConverter<Order, OrderDto> orderConverter;
             private IMessagePublisher messagePublisher;
             IServiceGateway<ProductDto> productServiceGateway;
+            IServiceGateway<UserDto> userServiceGateway;
             private ResponseDto _response;
 
         public OrderController(
@@ -33,16 +34,18 @@ namespace OrderApi.Controllers
                 IRepository<Order> repos,
                 IConverter<Order, OrderDto> orderConverter,
                 IServiceGateway<ProductDto> ServiceGateway,
+                IServiceGateway<UserDto> UserServiceGAteway,
                 IMessagePublisher publisher)
             {
                _configuration = configuration;
                 repository = repos;
                 this.orderConverter = orderConverter;
                 productServiceGateway = ServiceGateway;
+                userServiceGateway= UserServiceGAteway;
                 messagePublisher = publisher;
                 _mapper = mapper;
                 _context = context;
-            _response = new ResponseDto();
+                _response = new ResponseDto();
         }
 
             // GET: orders
@@ -139,6 +142,15 @@ namespace OrderApi.Controllers
                 _response.Message = "Product items are not available.";
             }
             return _response;
+        }
+
+
+        private async Task<bool> CustomerExists(int customerId)
+        {
+            var customer = await userServiceGateway.GetAsync(customerId);
+            if (customer == null)
+            { return false; }
+            return true;
         }
 
 
