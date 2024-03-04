@@ -25,7 +25,7 @@ string ConnectionString = "host=cow-01.rmq2.cloudamqp.com;virtualHost=vohieqyo;u
 //string productServiceBaseUrl = "http://localhost:8000/api/product/";
 //string customerServiceBaseUrl = "http://localhost:8001/api/auth/";
 
-string productServiceBaseUrl = "http://localhost:5033/api/product/";
+//string productServiceBaseUrl = "http://product-api/api/product/";
 //string customerServiceBaseUrl = "http://localhost:7056/api/auth/";
 
 
@@ -34,6 +34,9 @@ IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
 builder.Services.AddSingleton(mapper);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddTransient<IDbInitializer, DbInitializer>();
+// Register product service gateway for dependency injection
+builder.Services.AddScoped<IServiceGateway<ProductDto>, ProductServiceGateway>();
+//builder.Services.AddScoped<IServiceGateway<UserDto>, IdentityServiceGateway>();
 try
 {
     var connectionString = builder.Configuration.GetConnectionString("ApplicationDbContextConnection");
@@ -56,15 +59,14 @@ new Uri(builder.Configuration["ServiceUrls:ProductAPI"])).AddHttpMessageHandler<
 builder.Services.AddScoped<IRepository<Order>, OrderRepository>();
 
 
-// Register product service gateway for dependency injection
-builder.Services.AddScoped<IServiceGateway<ProductDto>,ProductServiceGateway > ();
+
 
 
 // Register MessagePublisher (a messaging gateway) for dependency injection
 builder.Services.AddSingleton<IMessagePublisher>(new
     MessagePublisher(ConnectionString));
 
-// Register product service gateway for dependency injection
+
 // Register product service gateway for dependency injection
 //builder.Services.AddSingleton<IServiceGateway<ProductDto>>(new
 //     ProductServiceGateway(productServiceBaseUrl));
@@ -117,13 +119,6 @@ if (app.Environment.IsDevelopment())
 }
 
 
-//using (var scope = app.Services.CreateScope())
-//{
-//    var services = scope.ServiceProvider;
-//    var dbContext = services.GetService<OrderApiContext>();
-//    var dbInitializer = services.GetService<IDbInitializer>();
-//    dbInitializer.Initialize(dbContext);
-//}
 //app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();

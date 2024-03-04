@@ -134,6 +134,8 @@ C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouse
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\OpenTelemetry.Api.ProviderBuilderExtensions.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\OpenTelemetry.Exporter.Console.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\OpenTelemetry.Exporter.Zipkin.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Prometheus.NetStandard.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Prometheus.AspNetCore.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Serilog.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Serilog.Enrichers.Span.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Serilog.Formatting.Compact.dll
@@ -150,6 +152,7 @@ C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouse
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\WebApi\obj\Debug\net7.0\WebApi.AssemblyInfoInputs.cache
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\WebApi\obj\Debug\net7.0\WebApi.AssemblyInfo.cs
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\WebApi\obj\Debug\net7.0\WebApi.csproj.CoreCompileInputs.cache
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\WebApi\obj\Debug\net7.0\WebApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\WebApi\obj\Debug\net7.0\WebApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\WebApi\obj\Debug\net7.0\WebApi.RazorAssemblyInfo.cache
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\WebApi\obj\Debug\net7.0\WebApi.RazorAssemblyInfo.cs
@@ -170,6 +173,3 @@ C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouse
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\WebApi\obj\Debug\net7.0\WebApi.pdb
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\WebApi\obj\Debug\net7.0\WebApi.genruntimeconfig.cache
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\WebApi\obj\Debug\net7.0\ref\WebApi.dll
-C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Prometheus.NetStandard.dll
-C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\WebApi\bin\Debug\net7.0\Prometheus.AspNetCore.dll
-C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\WebApi\obj\Debug\net7.0\WebApi.MvcApplicationPartsAssemblyInfo.cs

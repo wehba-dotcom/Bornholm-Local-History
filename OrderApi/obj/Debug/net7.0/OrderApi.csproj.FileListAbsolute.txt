@@ -633,6 +633,8 @@ C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouse
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\OrderApi\bin\Debug\net7.0\OpenTelemetry.Exporter.Zipkin.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\OrderApi\bin\Debug\net7.0\Polly.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\OrderApi\bin\Debug\net7.0\Polly.Core.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\OrderApi\bin\Debug\net7.0\Prometheus.NetStandard.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\OrderApi\bin\Debug\net7.0\Prometheus.AspNetCore.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\OrderApi\bin\Debug\net7.0\RabbitMQ.Client.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\OrderApi\bin\Debug\net7.0\RestSharp.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\OrderApi\bin\Debug\net7.0\Serilog.dll
@@ -839,5 +841,3 @@ C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouse
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\OrderApi\obj\Debug\net7.0\OrderApi.pdb
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\OrderApi\obj\Debug\net7.0\OrderApi.genruntimeconfig.cache
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\OrderApi\obj\Debug\net7.0\ref\OrderApi.dll
-C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\OrderApi\bin\Debug\net7.0\Prometheus.NetStandard.dll
-C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\OrderApi\bin\Debug\net7.0\Prometheus.AspNetCore.dll

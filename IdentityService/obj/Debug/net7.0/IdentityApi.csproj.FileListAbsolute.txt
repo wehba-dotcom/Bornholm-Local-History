@@ -593,6 +593,8 @@ C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouse
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\IdentityService\bin\Debug\net7.0\NuGet.ProjectModel.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\IdentityService\bin\Debug\net7.0\NuGet.Protocol.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\IdentityService\bin\Debug\net7.0\NuGet.Versioning.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\IdentityService\bin\Debug\net7.0\Prometheus.NetStandard.dll
+C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\IdentityService\bin\Debug\net7.0\Prometheus.AspNetCore.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\IdentityService\bin\Debug\net7.0\RabbitMQ.Client.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\IdentityService\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\IdentityService\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -787,5 +789,3 @@ C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouse
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\IdentityService\obj\Debug\net7.0\IdentityApi.pdb
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\IdentityService\obj\Debug\net7.0\IdentityApi.genruntimeconfig.cache
 C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\IdentityService\obj\Debug\net7.0\ref\IdentityApi.dll
-C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\IdentityService\bin\Debug\net7.0\Prometheus.NetStandard.dll
-C:\Users\WEHBA\OneDrive\Skrivebord\Bacholer_Projecet_Exam\BornholmSlaughterhouses\IdentityService\bin\Debug\net7.0\Prometheus.AspNetCore.dll
