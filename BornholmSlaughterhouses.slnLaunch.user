@@ -8,11 +8,6 @@
         "DebugTarget": "http"
       },
       {
-        "Name": "OrderApi\\OrderApi.csproj",
-        "Action": "Start",
-        "DebugTarget": ""
-      },
-      {
         "Name": "ProductApi\\ProductApi.csproj",
         "Action": "Start",
         "DebugTarget": ""

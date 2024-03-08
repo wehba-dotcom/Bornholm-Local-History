@@ -18,16 +18,16 @@ public class MonitorService
 
     static MonitorService()
     {
-        // OpenTelemetry
-        TracerProvider = Sdk.CreateTracerProviderBuilder()
-             .AddZipkinExporter(o =>
-             {
-                 o.Endpoint = new Uri("http://zipkin:9411/api/v2/spans");
-             })
-            .SetSampler(new AlwaysOnSampler())
-            .AddSource(ActivitySource.Name)
-            .SetResourceBuilder(ResourceBuilder.CreateDefault().AddService(ServiceName))
-            .Build();
+        //// OpenTelemetry
+        //TracerProvider = Sdk.CreateTracerProviderBuilder()
+        //     .AddZipkinExporter(o =>
+        //     {
+        //         o.Endpoint = new Uri("http://zipkin:9411/api/v2/spans");
+        //     })
+        //    .SetSampler(new AlwaysOnSampler())
+        //    .AddSource(ActivitySource.Name)
+        //    .SetResourceBuilder(ResourceBuilder.CreateDefault().AddService(ServiceName))
+        //    .Build();
 
         // Serilog
         Serilog.Log.Logger = new LoggerConfiguration()

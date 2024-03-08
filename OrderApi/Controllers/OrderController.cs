@@ -103,7 +103,7 @@ namespace OrderApi.Controllers
         [HttpPost("CreateOrder")]
         public async Task<ResponseDto> PostAsync([FromBody] Order hiddenOrder)
         {
-              /* using  var activity = MonitorService.ActivitySource.StartActivity(" OrderService Create Method is called", ActivityKind.Consumer)*/ ;
+               using  var activity = MonitorService.ActivitySource.StartActivity(" OrderService Create Method is called", ActivityKind.Consumer) ;
 
                     OrderDto order = orderConverter.Convert(hiddenOrder);
 
