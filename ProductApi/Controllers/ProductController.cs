@@ -13,9 +13,9 @@ namespace ProductApi.Controllers
     [Authorize]
     public class ProductController : ControllerBase
     {
-        private readonly AppDbContext _db;
+        //private readonly AppDbContext _db;
         private ResponseDto _response;
-        private IMapper _mapper;
+        //private IMapper _mapper;
         private readonly IRepository<Product> _repository;
 
         public ProductController( IRepository<Product> repository)

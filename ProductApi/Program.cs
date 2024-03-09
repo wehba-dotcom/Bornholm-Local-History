@@ -36,7 +36,7 @@ catch (Exception ex)
 
 // Register repositories for dependency injection
 builder.Services.AddScoped<IRepository<Product>, ProductRepository>();
-builder.Services.AddSingleton<IConverter<Product, ProductDto>, ProductConverter>();
+//builder.Services.AddSingleton<IConverter<Product, ProductDto>, ProductConverter>();
 
 IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
 builder.Services.AddSingleton(mapper);

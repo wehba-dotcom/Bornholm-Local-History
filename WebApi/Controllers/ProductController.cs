@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Monitoring;
 using Newtonsoft.Json;
 using WebApi.Models;
-using WebApi.Models.Dto;
 using WebApi.Service.IService;
 
 namespace WebApi.Controllers
@@ -17,17 +17,20 @@ namespace WebApi.Controllers
 
         public async Task<IActionResult> Index(int pg)
         {
+           
             List<ProductDto>? list = new();
 
             ResponseDto? response = await _productService.GetAllProductsAsync();
 
             if (response != null && response.IsSuccess)
             {
+                MonitorService.Log.Here().Debug(" Intered index Meethod Success in ProductController WebApi");
                 list = JsonConvert.DeserializeObject<List<ProductDto>>(Convert.ToString(response.Result));
             }
             else
             {
                 TempData["error"] = response?.Message;
+                MonitorService.Log.Here().Error(" An Error Occured on index Method on ProductController WebApi :{response?.Message}", response?.Message);
             }
             const int pageSize = 10;
             if (pg < 1)

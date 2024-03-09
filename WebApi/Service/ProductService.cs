@@ -1,5 +1,4 @@
 ﻿using WebApi.Models;
-using WebApi.Models.Dto;
 using WebApi.Service.IService;
 using WebApi.Utility;
 
