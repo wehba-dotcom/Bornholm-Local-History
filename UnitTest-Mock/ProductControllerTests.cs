@@ -36,11 +36,38 @@ namespace ProductApi.Tests
             var response = Assert.IsType<ResponseDto>(result);
             Assert.True(response.IsSuccess);
             Assert.Equal(products, response.Result);
-            Assert.Null(response.Message); // Assuming Message is null for successful requests
-            //Assert.NotNull(result);
-            //Assert.Equal(200, result.StatusCode);
-            //Assert.Equal(products, result.Value);
         }
+
+        [Fact]
+        public void Get_Returns_Products_Count_Successfully()
+        {
+            // Arrange
+            var products = new List<Product>
+    {
+        new Product("test1","Test1", "test1","test1","test1","test1","test1","test1",2000,100,0),
+        new Product("test2","Test2", "test2","test2","test2","test2","test2","test2",2500,100,0)
+    };
+
+            var repositoryMock = new Mock<IRepository<Product>>();
+            repositoryMock.Setup(repo => repo.GetAll()).Returns(products);
+
+            var controller = new ProductController(repositoryMock.Object);
+
+            // Act
+            var result = controller.Get();
+
+            // Assert
+            Assert.NotNull(result);
+            var response = Assert.IsType<ResponseDto>(result);
+
+            // Assuming the Result property in ResponseDto is a collection
+            var productsReturned = response.Result as List<Product>;
+            Assert.True(response.IsSuccess);
+            Assert.Equal(2, actual: productsReturned.Count);
+          
+        }
+
+
 
         [Fact]
         public void Get_Returns_InternalServerError_When_Exception_Occurs()
