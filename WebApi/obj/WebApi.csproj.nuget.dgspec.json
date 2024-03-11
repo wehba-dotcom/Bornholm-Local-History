@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\BornholmSlaughterhouses\\WebApi\\WebApi.csproj": {}
+    "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\Bornholm-Local-History\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\BornholmSlaughterhouses\\Monitoring\\Monitoring.csproj": {
+    "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\Bornholm-Local-History\\Monitoring\\Monitoring.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\BornholmSlaughterhouses\\Monitoring\\Monitoring.csproj",
+        "projectUniqueName": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\Bornholm-Local-History\\Monitoring\\Monitoring.csproj",
         "projectName": "Monitoring",
-        "projectPath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\BornholmSlaughterhouses\\Monitoring\\Monitoring.csproj",
+        "projectPath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\Bornholm-Local-History\\Monitoring\\Monitoring.csproj",
         "packagesPath": "C:\\Users\\WEHBA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\BornholmSlaughterhouses\\Monitoring\\obj\\",
+        "outputPath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\Bornholm-Local-History\\Monitoring\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -99,14 +99,14 @@
         }
       }
     },
-    "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\BornholmSlaughterhouses\\WebApi\\WebApi.csproj": {
+    "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\Bornholm-Local-History\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\BornholmSlaughterhouses\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\Bornholm-Local-History\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\BornholmSlaughterhouses\\WebApi\\WebApi.csproj",
+        "projectPath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\Bornholm-Local-History\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\WEHBA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\BornholmSlaughterhouses\\WebApi\\obj\\",
+        "outputPath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\Bornholm-Local-History\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -128,8 +128,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\BornholmSlaughterhouses\\Monitoring\\Monitoring.csproj": {
-                "projectPath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\BornholmSlaughterhouses\\Monitoring\\Monitoring.csproj"
+              "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\Bornholm-Local-History\\Monitoring\\Monitoring.csproj": {
+                "projectPath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\Bornholm-Local-History\\Monitoring\\Monitoring.csproj"
               }
             }
           }

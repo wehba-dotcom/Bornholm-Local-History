@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "82Mw0yHMQYLaVk+Ini69PLeTWhVOs18eVqhTKu4v80T5wztjpIwVyS30N8ddZz/5ckr/P3yxFxt8QoEg+e6pnQ==",
+  "dgSpecHash": "3Iu/h26h9FnZTsIlsJrGna1tac9H4XXBX0e+4zdVp7vhZaCva7gmvOKevBXMBD7L28P/BLqkzPgaqm+ohoOXdQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\BornholmSlaughterhouses\\Monitoring\\Monitoring.csproj",
+  "projectFilePath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\Bornholm-Local-History\\Monitoring\\Monitoring.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.0\\microsoft.extensions.configuration.3.1.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.0\\microsoft.extensions.configuration.abstractions.3.1.0.nupkg.sha512",

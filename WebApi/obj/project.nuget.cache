@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bRxPJN44OOkB8HdgPDMjyt9kPnj1LSUgFN1aY4qAme8rMOA/Wu7WmImTPdGsRhK8DeO3Xt0Si/kT/FWwZFqGaw==",
+  "dgSpecHash": "qR891SFNDJxWCka+LiHo2UxfPcHL4GOExJAc+9s8tQgACcnzSH1bY+MlCG4+jfgpsW4Rw/GBKiyJjr0q1bIi4A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\BornholmSlaughterhouses\\WebApi\\WebApi.csproj",
+  "projectFilePath": "C:\\Users\\WEHBA\\OneDrive\\Skrivebord\\Bacholer_Projecet_Exam\\Bornholm-Local-History\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WEHBA\\.nuget\\packages\\bogus\\35.4.0\\bogus.35.4.0.nupkg.sha512",
     "C:\\Users\\WEHBA\\.nuget\\packages\\documentformat.openxml\\3.0.1\\documentformat.openxml.3.0.1.nupkg.sha512",
