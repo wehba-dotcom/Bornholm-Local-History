@@ -7,8 +7,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{4D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GateWay", "GateWay", "{FF937C58-7389-4143-BF1A-186ED98C0817}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration", "{373FDBC0-3AC3-4A38-8D56-8457096DF251}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{2B499455-3A76-452C-892A-BDA1E7B8CD00}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeallesBaseApi", "Fealles\FeallesBaseApi.csproj", "{D209B0FF-C96F-418A-A29D-4B094DBE72D2}"
@@ -36,7 +34,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Monitoring", "Monitoring\Mo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sharedmodels", "Sharedmodels", "{68189FFB-A28B-44A4-AE0D-92184E2C9C7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest-Mock", "UnitTest-Mock\UnitTest-Mock.csproj", "{FBECAA8C-1AD7-4D37-8239-0FCBBD4A9CE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest-Mock", "UnitTest-Mock\UnitTest-Mock.csproj", "{FBECAA8C-1AD7-4D37-8239-0FCBBD4A9CE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

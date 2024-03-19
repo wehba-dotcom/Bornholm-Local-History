@@ -70,33 +70,4 @@ namespace WebApi.Controllers
         }
     }
 }
-            //try
-            //{
-            //    MonitorService.Log.Here().Debug(" Intered Create Meethod in OrderController WebApi");
-            //    using (var client = _httpClientFactory.CreateClient("MyClient"))
-            //    {
-            //        // Serialize the Feallesbase object and send it in the request body
-            //        var content = new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8, "application/json");
-
-            //        // Use Uri.EscapeUriString to ensure proper URL encoding
-            //        var request = new HttpRequestMessage(HttpMethod.Post, $"http://order-api/api/order/CreateOrder")
-            //        {
-            //            Content = content
-            //        };
-
-            //        var response = await client.SendAsync(request);
-            //        MonitorService.Log.Here().Debug(" Return Obj {response}", response);
-            //        response.EnsureSuccessStatusCode(); // Ensure a successful response (status code 2xx)
-
-            //        TempData["success"] = "En annonccer tilføjet successfully";
-            //        return RedirectToAction("Index");
-            //    }
-            //}
-            //catch (HttpRequestException ex)
-            //{
-            //    MonitorService.Log.Here().Error(" An Error Occured on Create Method on OrderController WebApi :{message}",ex.Message);
-            //    // Log the exception or handle it appropriately
-            //    ViewBag.Alert = $"Noget er galt! Grunden: {ex.Message}";
-            //    return View();
-            //}
-  
+           
