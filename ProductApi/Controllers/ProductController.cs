@@ -59,71 +59,62 @@ namespace ProductApi.Controllers
             return _response;
         }
 
-       
-
-        //[HttpPost]
-        ////[Authorize(Roles = "ADMIN")]
-        //public ResponseDto Post([FromBody] ProductDto couponDto)
-        //{
-        //    try
-        //    {
-        //        Product obj = _mapper.Map<Product>(couponDto);
-        //        _db.Products.Add(obj);
-        //        _db.SaveChanges();
-        //        _response.Result = _mapper.Map<ProductDto>(obj);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        _response.IsSuccess = false;
-        //        _response.Message = ex.Message;
-        //    }
-        //    return _response;
-        //}
 
 
-        //[HttpPut]
-        ////[Authorize(Roles = "ADMIN")]
-        //public ResponseDto Put([FromBody] ProductDto fastningbookDto)
-        //{
-        //    try
-        //    {
-        //        Product obj = _mapper.Map<Product>(fastningbookDto);
-        //        _db.Products.Update(obj);
-        //        _db.SaveChanges();
-
-        //        _response.Result = _mapper.Map<ProductDto>(obj);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        _response.IsSuccess = false;
-        //        _response.Message = ex.Message;
-        //    }
-        //    return _response;
-        //}
-
-        //[HttpDelete]
-        //[Route("{id:int}")]
-        ////[Authorize(Roles = "ADMIN")]
-        //public ResponseDto Delete(int id)
-        //{
-        //    try
-        //    {
-        //        Product obj = _db.Products.First(u=>u.ID==id);
-        //        _db.Products.Remove(obj);
-        //        _db.SaveChanges();
+        [HttpPost]
+        //[Authorize(Roles = "ADMIN")]
+        public ResponseDto Post([FromBody] Product product)
+        {
+            try
+            {
+                _repository.Add(product);
+                
+        
+            }
+            catch (Exception ex)
+            {
+                _response.IsSuccess = false;
+                _response.Message = ex.Message;
+            }
+            return _response;
+        }
 
 
-        //        //var service = new Stripe.CouponService();
-        //        //service.Delete(obj.CouponCode);
+        [HttpPut]
+        //[Authorize(Roles = "ADMIN")]
+        public ResponseDto Put([FromBody] Product product)
+        {
+            try
+            {
+                _repository.Edit(product);
+
+             
+            }
+            catch (Exception ex)
+            {
+                _response.IsSuccess = false;
+                _response.Message = ex.Message;
+            }
+            return _response;
+        }
+
+        [HttpDelete]
+        [Route("{id:int}")]
+        //[Authorize(Roles = "ADMIN")]
+        public ResponseDto Delete(int id)
+        {
+            try
+            {
+                _repository.Remove(id);
 
 
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        _response.IsSuccess = false;
-        //        _response.Message = ex.Message;
-        //    }
-        //    return _response;
-        //}
+            }
+            catch (Exception ex)
+            {
+                _response.IsSuccess = false;
+                _response.Message = ex.Message;
+            }
+            return _response;
+        }
     }
 }
