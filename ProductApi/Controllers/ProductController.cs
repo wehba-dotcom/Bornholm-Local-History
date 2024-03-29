@@ -10,18 +10,17 @@ namespace ProductApi.Controllers
 {
     [Route("api/product")]
     [ApiController]
-    [Authorize]
+    
     public class ProductController : ControllerBase
     {
-        //private readonly AppDbContext _db;
+       
         private ResponseDto _response;
-        //private IMapper _mapper;
+       
         private readonly IRepository<Product> _repository;
 
         public ProductController( IRepository<Product> repository)
         {
-            //_db = db;
-            //_mapper = mapper;
+           
             _response = new ResponseDto();
             _repository = repository;
         }
@@ -62,7 +61,7 @@ namespace ProductApi.Controllers
 
 
         [HttpPost]
-        //[Authorize(Roles = "ADMIN")]
+        [Authorize(Roles = "ADMIN")]
         public ResponseDto Post([FromBody] Product product)
         {
             try
@@ -81,7 +80,7 @@ namespace ProductApi.Controllers
 
 
         [HttpPut]
-        //[Authorize(Roles = "ADMIN")]
+        [Authorize(Roles = "ADMIN")]
         public ResponseDto Put([FromBody] Product product)
         {
             try
@@ -100,7 +99,7 @@ namespace ProductApi.Controllers
 
         [HttpDelete]
         [Route("{id:int}")]
-        //[Authorize(Roles = "ADMIN")]
+        [Authorize(Roles = "ADMIN")]
         public ResponseDto Delete(int id)
         {
             try

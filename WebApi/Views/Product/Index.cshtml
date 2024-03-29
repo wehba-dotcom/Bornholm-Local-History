@@ -20,10 +20,10 @@
 
 <div class="row pt-4">
     <div class="col-4 text-right">
-        <a asp-controller="Product" asp-action="Create" class="btn btn-primary w-50"><i class="bi bi-plus-circle-fill"></i>  Tilføj Ny</a>
+        <a asp-controller="Product" asp-action="Create" class="btn btn-primary w-50"><i class="bi bi-plus-circle-fill"></i>Add New</a>
     </div>
     <div class="col-4 text-">
-        <a asp-controller="Home" asp-action="Index" class="btn btn-primary w-50"><i class="bi bi-backspace"></i>  Tilbage</a>
+        <a asp-controller="Home" asp-action="Index" class="btn btn-primary w-50"><i class="bi bi-backspace"></i> Back</a>
     </div>
 </div>
 
@@ -33,7 +33,7 @@
         Fornavne: <input type="text" name="Fornavne" />
         DeodsDato: <input type="datetime" name="DoedDato" />
         <input type="submit" value="Søg" />
-        <a asp-action="Index" class="btn btn-primary w-20"><i class="bi bi-backspace"></i>  Tilbage til fuld liste</a>
+        <a asp-action="Index" class="btn btn-primary w-20"><i class="bi bi-backspace"></i>Back To Full List</a>
     </div>
 </form>
 <form asp-controller="Product" asp-action="Index">
@@ -41,7 +41,7 @@
         ID: <input type="number" name="ID" />
 
         <input type="submit" value="Søg" />
-        <a asp-action="Index" class="btn btn-primary w-20"><i class="bi bi-backspace"></i>  Tilbage til fuld liste</a>
+        <a asp-action="Index" class="btn btn-primary w-20"><i class="bi bi-backspace"></i> Back To Full List</a>
     </div>
 </form>
 <hr />
