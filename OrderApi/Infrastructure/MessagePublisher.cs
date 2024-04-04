@@ -27,9 +27,6 @@ namespace OrderApi.Infrastructure
         public void PublishOrderStatusChangedMessage( IList<OrderLine> orderLines, string topic)
         {
 
-
-            using var Activity = MonitorService.ActivitySource.StartActivity(" OrderService Create Method is called", ActivityKind.Consumer);
-
             var message = new OrderStatusChangedMessage
             { 
                 
