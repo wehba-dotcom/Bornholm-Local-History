@@ -24,12 +24,12 @@ namespace OrderApi.Infrastructure
             bus.Dispose();
         }
 
-        public void PublishOrderStatusChangedMessage( IList<OrderLine> orderLines, string topic)
+        public void PublishOrderStatusChangedMessage( IList<OrderLine> orderLines,string customerid, string topic)
         {
 
             var message = new OrderStatusChangedMessage
             { 
-                
+                CustomerId=customerid,
                 OrderLines = orderLines 
             };
            

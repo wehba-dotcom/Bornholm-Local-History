@@ -118,7 +118,7 @@ namespace OrderApi.Controllers
                     MonitorService.Log.Here().Debug("We Intered Post Method On OrderApi Controller");
                     string topicName = _configuration.GetValue<string>("TopicAndQueueNames:OrderCreatedTopic");
 
-                    messagePublisher.PublishOrderStatusChangedMessage(order.OrderLines, topicName);
+                    messagePublisher.PublishOrderStatusChangedMessage(order.OrderLines,order.CustomerId, topicName);
 
                     order.Status = OrderDto.OrderStatus.completed;
                     var newOrder = await repository.AddAsync(orderConverter.Convert(order));
